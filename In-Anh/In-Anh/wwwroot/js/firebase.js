@@ -1,14 +1,18 @@
 ﻿
 
-$(document).ready(function () {
+$(window).on("load", function () {
     setTimeout(function () {
         firebase.init()
-    }, 2000);
-
-
-});
+    }, 2000); })
 var firebase = {
     init: async function () {
+        await $('<link>')
+            .appendTo('head')
+            .attr({
+                type: 'text/css',
+                rel: 'stylesheet',
+                href: 'https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css'
+            });
         await $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js");
         await $.getScript("https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js");
         await  $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js");
