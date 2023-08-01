@@ -8,8 +8,6 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    
-    - run: powershell iisreset /stop
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
       with:
