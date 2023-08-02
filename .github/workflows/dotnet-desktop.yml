@@ -5,8 +5,11 @@ on:
 jobs:
   build:
     runs-on: self-hosted
+    defaults:
+      run:
+        shell: cmd
     steps:
-    - run: cmd bash bash.sh
+    - run: appcmd stop sites "jinnie.shop"
     
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
@@ -14,6 +17,5 @@ jobs:
         dotnet-version: '7'
     - run: dotnet build In-Anh
     - run: dotnet publish In-Anh
-    - run: Start-IISSite -Name jinnie.shop
-    - run: echo y
+    - run: appcmd start sites "jinnie.shop"
     
