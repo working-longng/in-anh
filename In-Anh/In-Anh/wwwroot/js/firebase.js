@@ -4,11 +4,11 @@ $(window).on("load", function () {
     if ($('.data').data('islogin') == 'False') {
         setTimeout(function () {
             firebase.init()
-        }, 3000);
+        }, 2000);
     } else {
         setTimeout(() => {
             firebase.initLogin();
-        },1000)
+        },500)
     }
     
 })
