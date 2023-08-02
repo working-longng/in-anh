@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - run: bash bash.sh
+    - run: cmd bash bash.sh
     
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
