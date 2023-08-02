@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - run: Stop-IISSite -Name jinnie.shop
-    - run: echo y
+    - run: bash bash.sh
+    
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
       with:
