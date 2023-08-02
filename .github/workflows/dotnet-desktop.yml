@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - run: cmd iisreset /restart
+    - run: cmd iisreset /stop
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
       with:
