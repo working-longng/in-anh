@@ -15,10 +15,6 @@ namespace In_Anh.Models
             File.SetAttributes(filePath, FileAttributes.Hidden);
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS",filePath);
             Database = FirestoreDb.Create("jin-nie");
-
-
-
-
             if (FirebaseApp.GetInstance("jin-nie") == null)
             {
                 FirebaseApp.Create(new AppOptions()
@@ -26,8 +22,6 @@ namespace In_Anh.Models
                     Credential = GoogleCredential.FromFile(filePath),
                 },"jin-nie");
             }
-            
-            File.Delete(filePath);
         }
 
 
