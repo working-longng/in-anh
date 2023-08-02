@@ -1,3 +1,5 @@
+using Google.Api;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +14,9 @@ builder.Services.AddResponseCompression(options =>
 {
     options.EnableForHttps = true;
 });
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

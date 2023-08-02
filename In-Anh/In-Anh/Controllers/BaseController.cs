@@ -1,46 +1,60 @@
 ﻿using In_Anh.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Newtonsoft.Json;
 using System.Xml.Linq;
 
 namespace In_Anh.Controllers
 {
 
-    public class BaseController : Controller
+    public  class BaseController : Controller
     {
-        public UserModel GetUserSession()
+        public string GetUserCookies()
         {
-           var userRaw =  HttpContext.Session.GetString("User");
-            if(userRaw==null || userRaw == "")
+            var userRaw = Request.Cookies["userLogin"];
+            if (userRaw == null || userRaw == "")
             {
-                return new UserModel();
+                return "";
             }
             else
             {
-                var user = JsonConvert.DeserializeObject<UserModel>(userRaw);
-                if (user == null)
-                {
-                    return new UserModel();
-                }
-                return user;
+                return userRaw;
+
+
             }
-            
+
         }
         public bool isLogin()
         {
-            if (string.IsNullOrEmpty(GetUserSession().UserName))
+            if (string.IsNullOrEmpty(GetUserCookies()))
             {
                 return false;
             }
             return true;
         }
-        
-        //protected ISomeType SomeMember { get; set; }
 
-        public BaseController(IServiceProvider serviceProvider)
+
+        public void SetCookies(string key, string value, int? expireTime)
         {
-            //Init all properties you need
-            //SomeMember =  serviceProvider.GetRequiredService<ISomeMember>();
+            CookieOptions option = new CookieOptions();
+
+            if (expireTime.HasValue)
+                option.Expires = DateTime.Now.AddMinutes(expireTime.Value);
+            else
+                option.Expires = DateTime.Now.AddMilliseconds(10);
+
+            Response.Cookies.Append(key, value, option);
         }
+        public void RemoveCookies(string key)
+        {
+            Response.Cookies.Delete(key);
+        }
+        //protected ISomeType SomeMember { get; set; }
     }
+    
+
+
 }
+

@@ -1,9 +1,17 @@
 ﻿
 
 $(window).on("load", function () {
-    setTimeout(function () {
-        firebase.init()
-    }, 2000); })
+    if ($('.data').data('islogin') == 'False') {
+        setTimeout(function () {
+            firebase.init()
+        }, 3000);
+    } else {
+        setTimeout(() => {
+            firebase.initLogin();
+        },1000)
+    }
+    
+})
 var firebase = {
     init: async function () {
         await $('<link>')
@@ -15,7 +23,7 @@ var firebase = {
             });
         await $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js");
         await $.getScript("https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js");
-        await  $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js");
+        await $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js");
         firebase.initializeApp({
             apiKey: 'AIzaSyAC14T-jU96RqlVo5nlkL92W9n9y3akniM',
             authDomain: 'jin-nie.firebaseapp.com',
@@ -29,9 +37,47 @@ var firebase = {
         var uiConfig = {
             callbacks: {
                 signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-                    console.log(authResult);
-                    localStorage.setItem('userLogin', JSON.stringify(authResult));
-                    setLoader(false);
+                    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function (idToken) {
+                        $.ajax({
+                            url: "/Auth",
+                            data: { token: idToken }
+                            , success: function (result) {                              
+                                $('#firebaseui-auth-container').remove();
+                                $('#user-login-nav').append(result);
+
+                                setTimeout(() => {
+                                    const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                <div class="toast-header">
+                    <img lazy src="${authResult.additionalUserInfo.providerId == 'facebook.com' ? authResult.additionalUserInfo.profile.picture.data.url : authResult.additionalUserInfo.profile.picture}" class="img-photo-user rounded me-4" alt="...">
+                    <strong class="me-auto">${authResult.additionalUserInfo.profile.name}</strong>
+                    <small>just now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Wellcome Back!
+                </div>
+            </div>
+        </div>`
+                                    $('.bootstrapinit').append(toastcon);
+                                    test = $('#liveToast');
+                                    const toast = bootstrap.Toast.getOrCreateInstance(test);
+                                    toast.show();
+
+
+                                }, 50)
+
+
+                            }
+
+                        });
+                    }).catch(function (error) {
+                        // Handle error
+                    });
+
+
+
+
                     // User successfully signed in.
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
@@ -49,18 +95,40 @@ var firebase = {
                 // Leave the lines as is for the providers you want to offer your users.
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID,
                 firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                {
-                    provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-                    recaptchaParameters: {
-                        type: 'image', // 'audio'
-                        size: 'normal', // 'invisible' or 'compact'
-                        badge: 'bottomleft', //' bottomright' or 'inline' applies to invisible.
-                    },
-                    defaultCountry: 'VN', // Set default country to the United Kingdom (+44).
-                },
+
             ],
         };
         ui.start('#firebaseui-auth-container', uiConfig);
     },
+    initLogin: function () {
+        
+        var data = JSON.parse($.cookie('userLogin'))
+        
+        setTimeout(() => {
+            const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                <div class="toast-header">
+                    <img lazy src="${data.ImageUrlUser}" class="img-photo-user rounded me-4" alt="...">
+                    <strong class="me-auto">${data.UserName}</strong>
+                    <small>just now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Wellcome Back!
+                </div>
+            </div>
+        </div>`
+            $('.bootstrapinit').append(toastcon);
+            test = $('#liveToast');
+            const toast = bootstrap.Toast.getOrCreateInstance(test);
+            toast.show();
+
+
+        }, 50)
+    },
+    logout: function () {
+       $.removeCookie('userLogin', { path: '/' });
+        location.href = location.href;
+    }
 
 }

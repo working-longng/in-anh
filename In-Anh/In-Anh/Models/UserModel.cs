@@ -8,6 +8,8 @@
         public string PhoneNumber { get; set; }
        public List<AddressUser> AddressUsers { get; set; }
         public string Notes { get; set; }
+        public string ImageUrlUser { get; set; }
+        public string Uid { get; set; }
 
     }
     public class AddressUser
