@@ -6,12 +6,12 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - run: powershell Stop-WebSite jinnie.shop
+    - run: cmd  NET STOP IISADMIN
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '7'
     - run: dotnet build In-Anh
     - run: dotnet publish In-Anh
-    - run: powershell Start-WebSite jinnie.shop
+    - run: cmd  NET START IISADMIN
     
