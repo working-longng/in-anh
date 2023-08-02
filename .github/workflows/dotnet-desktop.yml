@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - run: powershell Import-Module WebAdministration
+    - run: iisreset /stop
     - run: powershell Stop-WebSite jinnie.shop
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
@@ -14,5 +14,5 @@ jobs:
         dotnet-version: '7'
     - run: dotnet build In-Anh
     - run: dotnet publish In-Anh
-    - run: powershell Start-WebSite jinnie.shop
+    - run: iisreset /noforce
     
