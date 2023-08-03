@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
   
     steps:
-    - run: cd "C:\Windows\System32\inetsrv" ; ./a.bat
+    - run: cd "C:\Windows\System32\inetsrv" ; .\a1.bat.lnk
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
       with:
