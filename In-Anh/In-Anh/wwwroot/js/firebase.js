@@ -4,14 +4,20 @@ $(window).on("load", function () {
     if ($('.data').data('islogin') == 'False') {
         setTimeout(function () {
             firebase.init()
-        }, 2000);
+        }, 500);
     } else {
         setTimeout(() => {
             firebase.initLogin();
         },500)
     }
     
+
 })
+
+$(document).on('click', '.logout', function () {
+    firebase.logout();
+});
+
 var firebase = {
     init: async function () {
         await $('<link>')
@@ -47,7 +53,7 @@ var firebase = {
 
                                 setTimeout(() => {
                                     const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
-            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true">
                 <div class="toast-header">
                     <img lazy src="${authResult.additionalUserInfo.providerId == 'facebook.com' ? authResult.additionalUserInfo.profile.picture.data.url : authResult.additionalUserInfo.profile.picture}" class="img-photo-user rounded me-4" alt="...">
                     <strong class="me-auto">${authResult.additionalUserInfo.profile.name}</strong>
@@ -102,11 +108,18 @@ var firebase = {
     },
     initLogin: function () {
         
-        var data = JSON.parse($.cookie('userLogin'))
+        
         
         setTimeout(() => {
-            const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
-            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+            $.ajax({
+                url: "/Auth/InitLogin",
+                success: function (result) {
+                    if (result.code != 200) {
+                        
+                    } else {
+                        var data = JSON.parse(result.data);
+                        const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true">
                 <div class="toast-header">
                     <img lazy src="${data.ImageUrlUser}" class="img-photo-user rounded me-4" alt="...">
                     <strong class="me-auto">${data.UserName}</strong>
@@ -118,17 +131,19 @@ var firebase = {
                 </div>
             </div>
         </div>`
-            $('.bootstrapinit').append(toastcon);
-            test = $('#liveToast');
-            const toast = bootstrap.Toast.getOrCreateInstance(test);
-            toast.show();
+                        $('.bootstrapinit').append(toastcon);
+                        test = $('#liveToast');
+                        const toast = bootstrap.Toast.getOrCreateInstance(test);
+                        toast.show();
+                    }
 
+                }
 
+            });
         }, 50)
     },
     logout: function () {
-       $.removeCookie('userLogin', { path: '/' });
+        $.removeCookie('userToken', { path: '/' });
         location.href = location.href;
     }
-
 }

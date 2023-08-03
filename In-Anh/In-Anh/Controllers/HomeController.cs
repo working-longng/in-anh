@@ -1,13 +1,16 @@
 ﻿using In_Anh.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 
 namespace In_Anh.Controllers
 {
     public class HomeController : BaseController
     {
-       
+        public HomeController(IConfiguration config) : base(config)
+        {
+        }
 
         public IActionResult Index()
         {
@@ -16,7 +19,13 @@ namespace In_Anh.Controllers
             ViewBag.IsLogin = isLogin();
             if (isLogin())
             {
-                ViewBag.UserLogin = JsonConvert.DeserializeObject<UserModel>(GetUserCookies());
+                var token = Request.Cookies["userToken"];
+
+
+                var validuser = GetUserValid(token);
+                ViewBag.UserLogin = validuser;
+
+                
             }
             return View();
         }
