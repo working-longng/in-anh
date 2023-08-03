@@ -9,8 +9,6 @@ jobs:
       run:
         shell: iisreset /stop
     steps:
-    - run: powersell stop sites "jinnie.shop" -RunAsAdmin
-    
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
       with:
