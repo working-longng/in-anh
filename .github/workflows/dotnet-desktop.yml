@@ -1,25 +1,16 @@
-name: My .NET Action
-
+name: .NET Core Desktop
 on:
   push:
-    branches: [ main ]
-
+    branches: [ "main" ]
 jobs:
   build:
     runs-on: self-hosted
-    
-    defaults:
-      run:
-        shell: cmd
-
-    steps:
-    - name: Stop example.com
-      run: appcmd stop sites "jinnie.shop"
-    
-    - name: Start example.com
-      run: appcmd start sites "jinnie.shop"
-
-    - uses: actions/checkout@v3
-
   
+    steps:
     
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7'
+    - run: dotnet build In-Anh
+    - run: dotnet publish In-Anh
