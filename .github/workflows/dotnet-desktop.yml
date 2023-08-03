@@ -13,11 +13,13 @@ jobs:
         shell: cmd
 
     steps:
-    - uses: actions/checkout@v3
-
-  
     - name: Stop example.com
       run: appcmd stop sites "jinnie.shop"
     
     - name: Start example.com
       run: appcmd start sites "jinnie.shop"
+
+    - uses: actions/checkout@v3
+
+  
+    
