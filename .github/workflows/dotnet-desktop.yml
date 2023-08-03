@@ -7,12 +7,12 @@ jobs:
     runs-on: self-hosted
   
     steps:
-    - run: cd "C:\Windows\System32\inetsrv" ; .\a1.bat.lnk
+    - run: cd "C:\Windows\System32\inetsrv" ; invoke-item .\a1.bat.lnk
     - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '7'
     - run: dotnet build In-Anh
     - run: dotnet publish In-Anh
-    - run: cd "C:\Windows\System32\inetsrv" ; .\a2.bat.lnk
+    - run: cd "C:\Windows\System32\inetsrv" ; invoke-item .\a2.bat.lnk
     
