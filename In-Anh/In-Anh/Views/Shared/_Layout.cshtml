@@ -52,15 +52,7 @@
                     </ul>
                     <ul id="user-login-nav" class="nav navbar-nav ms-auto">
                         @if(isLogin){
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Wellcome @UserData?.UserName</a>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a href="#" class="dropdown-item">Reports</a>
-                                    <a href="#" class="dropdown-item">Settings</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a onclick="return firebase.logout()"  class="dropdown-item">Logout</a>
-                                </div>
-                            </li>
+                            @Html.Partial("UserRender", UserData);
                         }
 
                        
@@ -85,12 +77,18 @@
             &copy; 2023 - In_Anh - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script  src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-cookie/jquery.cookie.min.js"></script>
-    <script  src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ 
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/jquery-cookie/jquery.cookie.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script async src="~/js/site.js" asp-append-version="true"></script>
-    <script async src="~/js/firebase.js" asp-append-version="true"></script>
+        <script async src="~/js/site.js" asp-append-version="true"></script>
+        <script async src="~/js/firebase.js" asp-append-version="true"></script>
+        <script async src="~/js/uploadimage.js" asp-append-version="true"></script>
+
+    
+    
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

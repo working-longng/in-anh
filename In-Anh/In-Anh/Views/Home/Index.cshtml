@@ -1,10 +1,40 @@
-﻿@{
+﻿@using static In_Anh.Models.ImageModel;
+@{
     ViewData["Title"] = "Home Page";
+    var lang = ViewBag.Language as Languages;
     
 }
 
 <div class="text-center">
     <h1 class="display-4">Welssscosme</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="container image-cointainer hidden">
+
+        <input type="file" multiple id="ssi-upload" class="ssi-uploadInput0 hidden">
+        <input type="file" multiple id="ssi-upload" class="ssi-uploadInput1 hidden">
+        <input type="file" multiple id="ssi-upload" class="ssi-uploadInput2 hidden">
+        <input type="file" multiple id="ssi-upload" class="ssi-uploadInput3 hidden">
+        <input type="file" multiple id="ssi-upload" class="ssi-uploadInput4 hidden">
+        <input type="file" multiple id="ssi-upload" class="ssi-uploadInput5 hidden">
+
+
+        <select class=" image-size-select w-25 form-select" aria-label="Default select example">
+            <option selected>@lang.ChooseSize</option>
+            @{
+                <option value="0">4x6</option>
+                <option value="1">6x9</option>
+                <option value="2">9x12</option>
+                <option value="3">10x15</option>
+                <option value="4">13x18</option>
+                <option value="5">15x21</option>
+                <option value="6">20x30 (~A4)</option>
+            }
+
+            
+           
+        </select>
+
+    </div>
+     
+    
 </div>
 

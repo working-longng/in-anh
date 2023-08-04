@@ -25,11 +25,11 @@ var firebase = {
             .attr({
                 type: 'text/css',
                 rel: 'stylesheet',
-                href: 'https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css'
+                href: '../lib/firebaseui/dist/firebaseui.css'
             });
-        await $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js");
-        await $.getScript("https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js");
-        await $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js");
+        await $.getScript("../lib/firebase/firebase-app-compat.js");
+        await $.getScript("../lib/firebaseui/dist/firebaseui.js");
+        await $.getScript("../lib/firebase/firebase-auth-compat.js");
         firebase.initializeApp({
             apiKey: 'AIzaSyAC14T-jU96RqlVo5nlkL92W9n9y3akniM',
             authDomain: 'jin-nie.firebaseapp.com',

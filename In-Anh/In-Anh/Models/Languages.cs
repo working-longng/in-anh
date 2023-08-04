@@ -6,6 +6,7 @@
         public string Login { get; set; }
         public string ImagePrint { get; set; }
         public string FilePrint { get; set; }
+        public string ChooseSize { get; set; }
 
 
         public Languages LanguageVN()                                           
@@ -15,7 +16,8 @@
                 Home = "Trang Chủ",
                 Login = "Đăng Nhập",
                 ImagePrint = "In Ảnh",
-                FilePrint = "In File"
+                FilePrint = "In File",
+                ChooseSize ="Thêm Size"
             };
         }
 
@@ -26,7 +28,8 @@
                 Home = "Home",
                 Login = "Login",
                 ImagePrint = "Image Print",
-                FilePrint = "File Print"
+                FilePrint = "File Print",
+                ChooseSize = "More Size"
             };
         }
 
