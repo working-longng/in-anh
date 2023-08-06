@@ -77,6 +77,8 @@ app.UseStaticFiles(new StaticFileOptions()
         };
     }
 });
+
+
 app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
