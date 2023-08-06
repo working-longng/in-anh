@@ -20,8 +20,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FirebaseAdmin" Version="2.4.0" />
     <PackageReference Include="Google.Cloud.Firestore" Version="3.3.0" />
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="13.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>

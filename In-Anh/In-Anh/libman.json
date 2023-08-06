@@ -14,6 +14,10 @@
       "provider": "unpkg",
       "library": "firebaseui@6.1.0",
       "destination": "wwwroot/lib/firebaseui/"
+    },
+    {
+      "library": "heic2any@0.0.4",
+      "destination": "wwwroot/lib/heic2any/"
     }
   ]
 }

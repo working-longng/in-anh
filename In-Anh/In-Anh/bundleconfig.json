@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "wwwroot/lib/ssi-uploader-master/dist/ssi-uploader/js/ssi-uploader.min.js",
+    "inputFiles": [
+      "wwwroot/lib/ssi-uploader-master/dist/ssi-uploader/js/ssi-uploader.js"
+    ]
+  }
+]

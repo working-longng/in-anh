@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lzQ8w1AtQWNYnJpTk28kywflQo6bx13bF1RXK24PL9Ln8Llg9WIMs1O0f9tSySpBDdyxR5rLzjPbU7glUUqtcQ==",
+  "dgSpecHash": "C1YGxHvz5Gu2foHwZnFDeAziNJs1sLJLOLk9TxHszB3R8A4AXVYbk1AnC+19TlzUHk0ZqN7MvKbAJOcP1TIx8A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\In-Anh.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,8 @@
     "C:\\Users\\Long\\.nuget\\packages\\grpc.core.api\\2.51.0\\grpc.core.api.2.51.0.nupkg.sha512",
     "C:\\Users\\Long\\.nuget\\packages\\grpc.net.client\\2.51.0\\grpc.net.client.2.51.0.nupkg.sha512",
     "C:\\Users\\Long\\.nuget\\packages\\grpc.net.common\\2.51.0\\grpc.net.common.2.51.0.nupkg.sha512",
+    "C:\\Users\\Long\\.nuget\\packages\\magick.net-q16-anycpu\\13.2.0\\magick.net-q16-anycpu.13.2.0.nupkg.sha512",
+    "C:\\Users\\Long\\.nuget\\packages\\magick.net.core\\13.2.0\\magick.net.core.13.2.0.nupkg.sha512",
     "C:\\Users\\Long\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.9\\microsoft.aspnetcore.authentication.jwtbearer.7.0.9.nupkg.sha512",
     "C:\\Users\\Long\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Long\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
