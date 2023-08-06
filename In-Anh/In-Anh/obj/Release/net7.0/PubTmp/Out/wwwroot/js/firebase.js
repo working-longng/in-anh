@@ -11,7 +11,16 @@ $(window).on("load", function () {
         },500)
     }
     
+
 })
+
+$(document).on('click', '.logout', function () {
+    $.cookie("userToken", null);
+    $.removeCookie("userToken", { path: '/' });
+
+    location.href = location.href;
+});
+
 var firebase = {
     init: async function () {
         await $('<link>')
@@ -19,11 +28,11 @@ var firebase = {
             .attr({
                 type: 'text/css',
                 rel: 'stylesheet',
-                href: 'https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css'
+                href: '../lib/firebaseui/dist/firebaseui.css'
             });
-        await $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js");
-        await $.getScript("https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js");
-        await $.getScript("https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js");
+        await $.getScript("../lib/firebase/firebase-app-compat.js");
+        await $.getScript("../lib/firebaseui/dist/firebaseui.js");
+        await $.getScript("../lib/firebase/firebase-auth-compat.js");
         firebase.initializeApp({
             apiKey: 'AIzaSyAC14T-jU96RqlVo5nlkL92W9n9y3akniM',
             authDomain: 'jin-nie.firebaseapp.com',
@@ -44,7 +53,7 @@ var firebase = {
                             , success: function (result) {                              
                                 $('#firebaseui-auth-container').remove();
                                 $('#user-login-nav').append(result);
-
+                                console.log(authResult);
                                 setTimeout(() => {
                                     const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
             <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true">
@@ -135,10 +144,5 @@ var firebase = {
 
             });
         }, 50)
-    },
-    logout: function () {
-        $.removeCookie('userToken', { path: '/' });
-        location.href = location.href;
     }
-
 }
