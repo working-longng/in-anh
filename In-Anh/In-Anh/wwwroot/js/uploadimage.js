@@ -7,7 +7,7 @@ $(document).ready(async function () {
 var lstinit = [];
 var uploader = {
     initScript: async function () {
-        await $.getScript("https://code.jquery.com/jquery.min.js");
+        //await $.getScript("https://code.jquery.com/jquery.min.js");
         await $.getScript("../lib/ssi-uploader-master/dist/ssi-uploader/js/ssi-uploader.min.js");
         await $('<link>')
             .appendTo('head')
@@ -98,7 +98,7 @@ var uploader = {
             allowDuplicates: false,
 
             // The utl to which the ajax request is sent.
-            url: 'http://ssinput.com/php/upload.php',
+            url: '/Image/Create',
 
             // Sends extra data with the request.
             data: {},
@@ -574,13 +574,13 @@ var uploader = {
 
                     // Create a FormData and append the file
                     
-                    fd.append("imageFile"+i, blob);
+                    fd.append("imageFile", blob);
                 }
             }
         }
-        if (isSubmit) {
-            ajaxImage(fd)
-        }
+        //if (isSubmit) {
+        //    ajaxImage(fd)
+        //}
     }
 
 }
@@ -589,6 +589,7 @@ function ajaxImage(fd) {
         url: "/Image/Create",
         type: "POST",
         data: fd,
+        enctype:"multipart/form-data",
         contentType: false,
         processData: false,
         cache: false,

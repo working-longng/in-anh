@@ -15,7 +15,10 @@ $(window).on("load", function () {
 })
 
 $(document).on('click', '.logout', function () {
-    firebase.logout();
+    $.cookie("userToken", null);
+    $.removeCookie("userToken", { path: '/' });
+
+    location.href = location.href;
 });
 
 var firebase = {
@@ -50,7 +53,7 @@ var firebase = {
                             , success: function (result) {                              
                                 $('#firebaseui-auth-container').remove();
                                 $('#user-login-nav').append(result);
-
+                                console.log(authResult);
                                 setTimeout(() => {
                                     const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
             <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true">
@@ -141,9 +144,5 @@ var firebase = {
 
             });
         }, 50)
-    },
-    logout: function () {
-        $.removeCookie('userToken', { path: '/' });
-        location.href = location.href;
     }
 }

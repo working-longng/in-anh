@@ -1,6 +1,11 @@
 using Google.Api;
+using In_Anh.Models;
+using In_Anh.Models.MongoModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +18,20 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+builder.Services.Configure<FormOptions>(o =>
+{
+    o.ValueLengthLimit = int.MaxValue;
+    o.MultipartBodyLengthLimit = long.MaxValue;
+});
 
+//builder.Services.Configure<ImageMgDatabase>();
+//builder.Services.AddSingleton<IImageMgDatabase>(provider =>
+//    provider.GetRequiredService<IOptions<ImageMgDatabase>>().Value);
+
+
+builder.Services.Configure<ImageMgDatabase>(
+    builder.Configuration.GetSection("ImageMgDatabase"));
+builder.Services.AddScoped<IImageMgDatabase, ImageMgDatabase>();
 builder.Services.AddResponseCompression(options =>
 {
     options.EnableForHttps = true;

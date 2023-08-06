@@ -1,9 +1,12 @@
 ﻿using In_Anh.Models;
+using In_Anh.Models.MongoModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
@@ -14,12 +17,22 @@ namespace In_Anh.Controllers
 
     public  class BaseController : Controller
     {
-        private IConfiguration _config;
-
-        public BaseController(IConfiguration config)
+        public IConfiguration _config;
+        public readonly IMongoCollection<UserModel> _usersCollection;
+        public readonly IMongoCollection<OrderModel> _ordersCollection;
+        public readonly IMongoCollection<HistoryModel> _historysCollection;
+        public BaseController(IConfiguration config, IImageMgDatabase setting)
         {
             _config = config;
+            var client = new MongoClient(_config["ImageMgDatabase:ConnectionString"]);
+            var database = client.GetDatabase(_config["ImageMgDatabase:DatabaseName"]);
+            _usersCollection = database.GetCollection<UserModel>(_config["ImageMgDatabase:UserCollectionName"]);
+            _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
+            _historysCollection = database.GetCollection<HistoryModel>(_config["ImageMgDatabase:HistoryCollectionName"]);
+
         }
+
+
         public string GetUserCookies()
         {
             var userRaw = Request.Cookies["userToken"];

@@ -2,9 +2,12 @@
 using FirebaseAdmin.Auth;
 using Google.Apis.Auth.OAuth2;
 using In_Anh.Models;
+using In_Anh.Models.MongoModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IdentityModel.Tokens.Jwt;
@@ -17,12 +20,9 @@ namespace In_Anh.Controllers
 {
     public class AuthController : BaseController
     {
-        private IConfiguration _config;
-        public AuthController(IConfiguration config) : base(config)
+        public AuthController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
         {
-            _config= config;
         }
-
 
 
         // GET: AuthController
@@ -35,16 +35,17 @@ namespace In_Anh.Controllers
             var user = await FirebaseAuth.GetAuth(FirebaseApp.GetInstance("jin-nie")).GetUserAsync(uid);
             var us = new UserModel()
             {
-                UserName = user.DisplayName ?? user.ProviderData[0].DisplayName ,
-                Email = user.Email ?? user.ProviderData[0].Email,
-                PhoneNumber = user.PhoneNumber ?? user.ProviderData[0].PhoneNumber ,
-                ImageUrlUser = user.PhotoUrl ?? user.ProviderData[0].PhotoUrl,
+                UserName =string.IsNullOrEmpty(user.DisplayName) ? user.ProviderData[0].DisplayName : user.DisplayName,
+                Email = string.IsNullOrEmpty(user.Email) ? (user.ProviderData[0].Email ?? user.Uid) : user.Email,
+                PhoneNumber = string.IsNullOrEmpty(user.PhoneNumber) ? user.ProviderData[0].PhoneNumber : user.PhoneNumber ,
+                ImageUrlUser = string.IsNullOrEmpty(user.PhotoUrl) ? user.ProviderData[0].PhotoUrl : user.PhotoUrl,
                 Uid = uid,
                 
             };
 
             SetCookies("userToken", GenerateJSONWebToken(us), 3600);
-          var  partialViewHtml = await this.RenderViewAsync("UserRender", us, true);
+            await _usersCollection.InsertOneAsync(us);
+            var  partialViewHtml = await this.RenderViewAsync("UserRender", us, true);
             return Content(partialViewHtml);
         }
 

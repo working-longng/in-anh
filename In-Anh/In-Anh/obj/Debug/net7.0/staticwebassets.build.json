@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+vhSY8HKT+0yscpGdPhEhGBdg+gSKTyG9A8VIyePXY8=",
+  "Hash": "4qI55XvCDj7MN5I609TXC0o6tlnk/8POxWv3MEe4DI0=",
   "Source": "In-Anh",
   "BasePath": "_content/In-Anh",
   "Mode": "Default",
@@ -1647,40 +1647,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\firebase\\firebase-storage-compat.min.js"
-    },
-    {
-      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\jquery-cookie\\jquery.cookie.js",
-      "SourceId": "In-Anh",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
-      "BasePath": "_content/In-Anh",
-      "RelativePath": "jquery-cookie/jquery.cookie.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\jquery-cookie\\jquery.cookie.js"
-    },
-    {
-      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\jquery-cookie\\jquery.cookie.min.js",
-      "SourceId": "In-Anh",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
-      "BasePath": "_content/In-Anh",
-      "RelativePath": "jquery-cookie/jquery.cookie.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\jquery-cookie\\jquery.cookie.min.js"
     },
     {
       "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\firebase.js",
@@ -4216,12 +4182,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\heic2any\\heic2any.min.js"
     },
     {
-      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.js",
       "SourceId": "In-Anh",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
       "BasePath": "_content/In-Anh",
-      "RelativePath": "lib/jquery/dist/jquery.js",
+      "RelativePath": "lib/jquery/jquery.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4230,15 +4196,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.min.js",
       "SourceId": "In-Anh",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
       "BasePath": "_content/In-Anh",
-      "RelativePath": "lib/jquery/dist/jquery.min.js",
+      "RelativePath": "lib/jquery/jquery.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4247,15 +4213,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.min.map",
       "SourceId": "In-Anh",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
       "BasePath": "_content/In-Anh",
-      "RelativePath": "lib/jquery/dist/jquery.min.map",
+      "RelativePath": "lib/jquery/jquery.min.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4264,15 +4230,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.js",
       "SourceId": "In-Anh",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
       "BasePath": "_content/In-Anh",
-      "RelativePath": "lib/jquery/LICENSE.txt",
+      "RelativePath": "lib/jquery/jquery.slim.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4281,7 +4247,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.js"
+    },
+    {
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "SourceId": "In-Anh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
+      "BasePath": "_content/In-Anh",
+      "RelativePath": "lib/jquery/jquery.slim.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "SourceId": "In-Anh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
+      "BasePath": "_content/In-Anh",
+      "RelativePath": "lib/jquery/jquery.slim.min.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.min.map"
     },
     {
       "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-cookie\\jquery.cookie.js",

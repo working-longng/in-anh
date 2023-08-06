@@ -1,5 +1,6 @@
 ﻿using In_Anh.Models;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
@@ -8,7 +9,7 @@ namespace In_Anh.Controllers
 {
     public class HomeController : BaseController
     {
-        public HomeController(IConfiguration config) : base(config)
+        public HomeController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
         {
         }
 

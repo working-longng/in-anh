@@ -3,10 +3,6 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "library": "jquery-cookie@1.4.1",
-      "destination": "wwwroot/jquery-cookie/"
-    },
-    {
       "library": "firebase@10.1.0",
       "destination": "wwwroot/firebase/"
     },
@@ -18,6 +14,14 @@
     {
       "library": "heic2any@0.0.4",
       "destination": "wwwroot/lib/heic2any/"
+    },
+    {
+      "library": "jquery@3.7.0",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "jquery-cookie@1.4.1",
+      "destination": "wwwroot/lib/jquery-cookie/"
     }
   ]
 }
