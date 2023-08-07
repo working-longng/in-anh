@@ -1,4 +1,5 @@
-﻿using FirebaseAdmin;
+﻿using AngleSharp.Io;
+using FirebaseAdmin;
 using FirebaseAdmin.Auth;
 using Google.Apis.Auth.OAuth2;
 using In_Anh.Models;
@@ -12,6 +13,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Text;
 using static Google.Rpc.Context.AttributeContext.Types;
@@ -28,6 +30,8 @@ namespace In_Anh.Controllers
         // GET: AuthController
         public async Task<ActionResult> IndexAsync(string token)
         {
+            
+
             FirebaseHelper.SetEnviromentVar();
             FirebaseToken decodedToken = await FirebaseAuth.GetAuth(FirebaseApp.GetInstance("jin-nie"))
     .VerifyIdTokenAsync(token);
@@ -40,11 +44,18 @@ namespace In_Anh.Controllers
                 PhoneNumber = string.IsNullOrEmpty(user.PhoneNumber) ? user.ProviderData[0].PhoneNumber : user.PhoneNumber ,
                 ImageUrlUser = string.IsNullOrEmpty(user.PhotoUrl) ? user.ProviderData[0].PhotoUrl : user.PhotoUrl,
                 Uid = uid,
-                
             };
 
+            
+            var userGet = _usersCollection.FindAsync(x => x.PhoneNumber == us.PhoneNumber).Result.FirstOrDefault();
+            if (userGet != null)
+            {
+                us.UserName = userGet.UserName;
+            }
+            else {
+                await _usersCollection.InsertOneAsync(us);
+            }
             SetCookies("userToken", GenerateJSONWebToken(us), 3600);
-            await _usersCollection.InsertOneAsync(us);
             var  partialViewHtml = await this.RenderViewAsync("UserRender", us, true);
             return Content(partialViewHtml);
         }
@@ -80,6 +91,7 @@ namespace In_Anh.Controllers
 
             var claims = new[] {
         new Claim("email", userInfo.Email ?? "" ),
+        new Claim("phone", userInfo.PhoneNumber ?? "" ),
         new Claim("name", userInfo.UserName ?? ""),
         new Claim("website", userInfo.ImageUrlUser ?? "" ),
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
@@ -88,7 +100,7 @@ namespace In_Anh.Controllers
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],
                 _config["Jwt:Issuer"],
                 claims,
-                expires: DateTime.Now.AddHours(120),
+                expires: DateTime.Now.AddHours(24 * 30),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

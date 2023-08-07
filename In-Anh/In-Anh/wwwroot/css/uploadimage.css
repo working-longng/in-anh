@@ -5,7 +5,7 @@
 #ssi-info #ssi-fileNumber {
     display: none;
 }
-div.image-size-select{
+select.image-size-select{
     min-width:134px;
 }
 

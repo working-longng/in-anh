@@ -79,6 +79,7 @@ namespace In_Anh.Controllers
                 var tokenS = tokenHandler?.ReadToken(token) as JwtSecurityToken;
                 user.Email = tokenS?.Claims?.First(claim => claim.Type == "email")?.Value;
                 user.UserName = tokenS?.Claims?.First(claim => claim.Type == "name")?.Value;
+                user.PhoneNumber = tokenS?.Claims?.First(claim => claim.Type == "phone")?.Value;
                 user.ImageUrlUser = tokenS?.Claims?.First(claim => claim.Type == "website")?.Value;
             }
             catch
