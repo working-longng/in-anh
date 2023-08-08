@@ -8,10 +8,6 @@
 <div class="text-center">
     <h1 class="display-4">Welssscosme Chinhhhhh</h1>
     <form id="formimage" class="container image-cointainer hidden">
-
-       
-      
-
         <select class=" image-size-select w-25 form-select" aria-label="Default select example">
             <option selected>@lang.ChooseSize</option>
             @{
@@ -23,42 +19,46 @@
                 <option value="5">15x21</option>
                 <option value="6">20x30 (~A4)</option>
             }
-
-            
-           
         </select>
-
     </form>
+</div>
+<button onclick="return uploader.handdleClickPrint()" id="md-print" type="button" class="pt-3 pb-3 ps-4 pe-4 position-fixed mb-5 bottom-0 start-50 translate-middle-x btn btn-primary btn-lg">@lang.Print @lang.All <span></span> @lang.Image </button>
+
+<div class=" modal fade mt-30 " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+
+                        <input required type="text" placeholder="@lang.Name*" class="form-control" id="namesm" />
+                    </div>
+                    <div class="col-md-6">
+                         
+                        <input type="tel" placeholder="@lang.Phone*" class="form-control" id="phonesm" >
+                    </div>
+                    <div class="col-12">
+
+                        <input type="text" class="form-control" id="addresssm" placeholder="@lang.Address*" />
+                    </div>
 
 
-<!-- Button trigger modal -->
+                    <div class="col-md-12">
+
+                        <textarea title="" type="text" class="form-control" id="notesm" placeholder="@lang.Note"></textarea>
+                    </div>
 
 
-
-    <button id="md-print" type="button" class="pt-3 pb-3 ps-4 pe-4 position-fixed mb-5 bottom-0 start-50 translate-middle-x btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">@lang.Print @lang.All <span></span> @lang.Image </button>
-
-
-    
-  
-
-
-<!-- Modal -->
-<div class="modal fade modal-dialog modal-dialog-centered " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button onclick="return uploader.uploadDAllImage()" type="button" class="btn btn-primary btnsm-all">@lang.Print <span></span> @lang.Image</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-</div>
-

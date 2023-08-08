@@ -17,8 +17,12 @@ using System.Diagnostics;
 
 namespace In_Anh.Controllers
 {
-    public class ImageController : Controller
+    public class ImageController : BaseController
     {
+        public ImageController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
+        {
+        }
+
         // GET: ImageController
         public ActionResult Index()
         {
@@ -36,13 +40,24 @@ namespace In_Anh.Controllers
 
         // POST: ImageController/Create
         [HttpPost]
-        
+
         public async Task<ActionResult> CreateAsync(IFormCollection data)
         {
+            var UserPhone = string.IsNullOrWhiteSpace(data?["phone"].ToString()) ? "spam" : data?["phone"].ToString();
+
+
             var localFile = "D:\\CDN\\";
-            var publicFile = "http://cdn.jinnie.shop/";
+            var publicFile = _config["Cdn:UrlCdn"];
+
+            var time = DateTime.Now;
+            var year = DateTime.Now.Year;
+            var month = DateTime.Now.Month;
+            var day = DateTime.Now.Day;
             var type = 0;
-            int.TryParse(data["type"].ToString(),out type);
+            int.TryParse(data["type"].ToString(), out type);
+            string nameType = Enum.GetName(typeof(ImageType), type) ?? "1x1";
+            var path = UserPhone + "\\" + year + "-" + month + "-" + day + "\\"+ nameType + "\\";
+
             var files = data.Files;
             var listImg = new List<ImageModel>();
 
@@ -69,7 +84,8 @@ namespace In_Anh.Controllers
                                 Message = "File Not Valid"
                             });
                         }
-                       
+                        var fileName = Guid.NewGuid().ToString() + ".png";
+                        var filePath = localFile + path + fileName;
 
                         using (var memoryStream = new MemoryStream())
                         {
@@ -86,27 +102,51 @@ namespace In_Anh.Controllers
                                     Message = "File Not Valid"
                                 });
                             }
-                        }
-                        var pathFile = Guid.NewGuid().ToString() + ".png";
-                        var filePath = localFile + pathFile;
+                            var Url = publicFile + path + fileName;
 
-                        using (var stream = System.IO.File.Create(filePath))
-                        {
-                            var Url = localFile + pathFile;
-                            await formFile.CopyToAsync(stream);
+
+                            if (!System.IO.Directory.Exists(localFile + path))
+                            {
+                                Directory.CreateDirectory(localFile + path);
+                            }
+                            
+
+                            using (FileStream f = System.IO.File.Create(filePath))
+                            {
+
+                                f.Dispose();
+                            }
+                            memoryStream.Position = 0;
+                            using (MagickImage image = new MagickImage(memoryStream))
+                            {
+                                image.Format = MagickFormat.Png;
+                                if (image.Width > image.Height * 1.4)
+                                {
+                                    image.Rotate(90);
+                                }
+                                image.Write(filePath);
+                                image.Dispose();
+                            }
+
                             if (listImg.Any(x => (int)x.Type == type))
                             {
+
+                                listImg.Where(x => (int)x.Type == type)?.FirstOrDefault()?.Url.Add(path + fileName);
                                 
-                                listImg.Where(x => (int)x.Type == type)?.FirstOrDefault()?.Url.Add(Url);
                             }
-                            else {
+                            else
+                            {
                                 listImg.Add(new ImageModel()
                                 {
                                     Type = (ImageType)type,
-                                    Url = new List<string> { Url },
+                                    Url = new List<string> { path + fileName }
+                                   
                                 });
                             }
+
+
                         }
+
                     }
 
 
@@ -137,18 +177,18 @@ namespace In_Anh.Controllers
         }
         private async void PrintImages(List<ImageModel> imgs)
         {
-            
+
             using (Image<Rgba32> image = new((int)MilimeterToPixel(210), (int)MilimeterToPixel(297)))
             {
                 image.Mutate(x => x.BackgroundColor(Color.White));
                 foreach (ImageModel im in imgs)
                 {
-                   
-                        if (im.Url.Count > 0)
-                        {
+
+                    if (im.Url.Count > 0)
+                    {
                         foreach (var item in im.Url)
                         {
-                            using (Image imsc =  Image.Load(item))
+                            using (Image imsc = Image.Load(item))
                             {
                                 if (im.Type == ImageType.t4x6)
                                 {
@@ -156,12 +196,12 @@ namespace In_Anh.Controllers
                                     int h = (int)MilimeterToPixel(60);
                                     int howManyCountWidth = (int)MilimeterToPixel(210) / w;
                                     int howManyCountHeight = (int)MilimeterToPixel(297) / h;
-                                    
+
                                     int fspacingx = (int)MilimeterToPixel(1);
                                     int spacingx = (int)MilimeterToPixel(2);
 
                                     int fspacingy = fspacingx;
-                                    int spacingy = ((int)MilimeterToPixel(297) - (howManyCountHeight * h) - fspacingy)/ howManyCountHeight;
+                                    int spacingy = ((int)MilimeterToPixel(297) - (howManyCountHeight * h) - fspacingy) / howManyCountHeight;
                                     imsc.Mutate(c => c.Resize(w, h));
                                     var poin = new Point();
                                     var index = im.Url.IndexOf(item);
@@ -169,17 +209,17 @@ namespace In_Anh.Controllers
                                     var posiony = 0;
                                     var numberMod = index % howManyCountWidth;
                                     var numberNoMod = index / howManyCountWidth;
-                                    
+
                                     var totalSpcx = 0;
                                     var totalSpcy = 0;
 
                                     if (numberMod == 0)
                                     {
-                                         totalSpcx = fspacingx;
+                                        totalSpcx = fspacingx;
                                     }
                                     else
                                     {
-                                        totalSpcx = fspacingx + numberMod*(w+spacingx);
+                                        totalSpcx = fspacingx + numberMod * (w + spacingx);
                                     }
                                     if (numberNoMod == 0)
                                     {
@@ -187,18 +227,18 @@ namespace In_Anh.Controllers
                                     }
                                     else
                                     {
-                                        totalSpcy = fspacingy+ numberNoMod*(h+spacingy);
+                                        totalSpcy = fspacingy + numberNoMod * (h + spacingy);
                                     }
 
 
                                     poin.X = totalSpcx;
                                     poin.Y = totalSpcy;
-                                    image.Mutate(c => c.DrawImage(imsc,poin,1 ));
+                                    image.Mutate(c => c.DrawImage(imsc, poin, 1));
                                     imsc.Dispose();
                                 }
                             }
                         }
-                        }
+                    }
                 }
                 // Resize the image in place and return it for chaining.
                 // 'x' signifies the current image processing context.
@@ -207,17 +247,17 @@ namespace In_Anh.Controllers
                 // The library automatically picks an encoder based on the file extension then
                 // encodes and write the data to disk.
                 // You can optionally set the encoder to choose.
-               
-              image.Save("D:\\imgs\\img.png");
+
+                image.Save("D:\\imgs\\img.png");
                 //Process p = new Process();
-                
+
                 //p.StartInfo.Verb = "Print";
                 //p.Start();
                 image.Dispose();
             }
         }
 
-        private float MilimeterToPixel(int valueMl, float dpi=221)
+        private float MilimeterToPixel(int valueMl, float dpi = 221)
         {
             return 0.03937007F * dpi * valueMl * 10;
         }

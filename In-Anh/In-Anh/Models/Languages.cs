@@ -10,6 +10,12 @@
         public string Print { get; set; }
         public string Image { get; set; }
         public string All { get; set; }
+        public string Name { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
+        public string Province { get; set; }
+        public string Ward { get; set; }
+        public string Note { get; set; }
 
 
         public Languages LanguageVN()                                           
@@ -23,7 +29,13 @@
                 ChooseSize ="Thêm Size",
                 Print ="In",
                 Image ="Ảnh",
-                All ="Tất Cả"
+                All ="Tất Cả",
+                Address ="Địa Chỉ",
+                Name ="Tên",
+                Phone = "Số Điện Thoại",
+                Province = "Tỉnh Thành",
+                Ward ="Quận, Huyện",
+                Note = "Ghi Chú"
             };
         }
 
@@ -38,8 +50,13 @@
                 ChooseSize = "More Size",
                 All= "All",
                 Image ="Image",
-                Print ="Print"
-                
+                Print ="Print",
+                Address = "Address",
+                Name = "Name",
+                Phone = "Phone",
+                Province = "Province",
+                Ward = "Ward",
+                Note= "Note"
             };
         }
 
