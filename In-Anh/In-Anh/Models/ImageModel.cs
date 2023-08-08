@@ -1,10 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
 namespace In_Anh.Models
 {
     public class ImageModel
     {
+        [BsonId]
+        public ObjectId _Id { get; set; }
         public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

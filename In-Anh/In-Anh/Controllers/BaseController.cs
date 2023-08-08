@@ -48,6 +48,33 @@ namespace In_Anh.Controllers
             }
 
         }
+        public string GetOrderIdUserCookies()
+        {
+            var id = Request.Cookies["userOrderTemp"];
+            if (id == null || id == "")
+            {
+                return "";
+            }
+            else
+            {
+                return id;
+            }
+
+        } 
+        public string GetPhoneUserCookies()
+        {
+            var id = Request.Cookies["userPhone"];
+            if (id == null || id == "")
+            {
+                return "";
+            }
+            else
+            {
+                return id;
+            }
+
+        }
+
         public bool isLogin()
         {
             if (string.IsNullOrEmpty(GetUserCookies()))

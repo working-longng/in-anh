@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
 using System;
 using Newtonsoft.Json;
+using MongoDB.Driver;
+using Newtonsoft.Json;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 using In_Anh.Models;
@@ -43,8 +45,7 @@ namespace In_Anh.Controllers
 
         public async Task<ActionResult> CreateAsync(IFormCollection data)
         {
-            var UserPhone = string.IsNullOrWhiteSpace(data?["phone"].ToString()) ? "spam" : data?["phone"].ToString();
-
+            var UserPhone = string.IsNullOrWhiteSpace(GetPhoneUserCookies().ToString()) ? "spam" : GetPhoneUserCookies().ToString();
 
             var localFile = "D:\\CDN\\";
             var publicFile = _config["Cdn:UrlCdn"];
@@ -56,9 +57,11 @@ namespace In_Anh.Controllers
             var type = 0;
             int.TryParse(data["type"].ToString(), out type);
             string nameType = Enum.GetName(typeof(ImageType), type) ?? "1x1";
-            var path = UserPhone + "\\" + year + "-" + month + "-" + day + "\\"+ nameType + "\\";
+            var id = GetOrderIdUserCookies();
+            var path = UserPhone + "\\" + year + "-" + month + "-" + day + "\\" + id + "\\" + nameType + "\\";
 
             var files = data.Files;
+
             var listImg = new List<ImageModel>();
 
             long size = files.Sum(f => f.Length);
@@ -84,7 +87,7 @@ namespace In_Anh.Controllers
                                 Message = "File Not Valid"
                             });
                         }
-                        var fileName = Guid.NewGuid().ToString() + ".png";
+                        var fileName = Guid.NewGuid().ToString() + ".jpg";
                         var filePath = localFile + path + fileName;
 
                         using (var memoryStream = new MemoryStream())
@@ -92,7 +95,7 @@ namespace In_Anh.Controllers
                             await formFile.CopyToAsync(memoryStream);
                             var buffer = memoryStream.GetBuffer();
                             string content = System.Text.Encoding.UTF8.GetString(buffer);
-                            if (Regex.IsMatch(content, @"<script|<html|<head|<title|<body|<pre|<table|<a\s+href|<img|<plaintext|<cross\-domain\-policy",
+                            if (Regex.IsMatch(content, @"<script|<cross\-domain\-policy",
                                 RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Multiline))
                             {
                                 return new JsonResult(new
@@ -109,7 +112,7 @@ namespace In_Anh.Controllers
                             {
                                 Directory.CreateDirectory(localFile + path);
                             }
-                            
+
 
                             using (FileStream f = System.IO.File.Create(filePath))
                             {
@@ -119,32 +122,11 @@ namespace In_Anh.Controllers
                             memoryStream.Position = 0;
                             using (MagickImage image = new MagickImage(memoryStream))
                             {
-                                image.Format = MagickFormat.Png;
-                                if (image.Width > image.Height * 1.4)
-                                {
-                                    image.Rotate(90);
-                                }
+                                image.Format = MagickFormat.Jpeg;
+                                image.Quality = 100;
                                 image.Write(filePath);
                                 image.Dispose();
-                            }
-
-                            if (listImg.Any(x => (int)x.Type == type))
-                            {
-
-                                listImg.Where(x => (int)x.Type == type)?.FirstOrDefault()?.Url.Add(path + fileName);
-                                
-                            }
-                            else
-                            {
-                                listImg.Add(new ImageModel()
-                                {
-                                    Type = (ImageType)type,
-                                    Url = new List<string> { path + fileName }
-                                   
-                                });
-                            }
-
-
+                            }                        
                         }
 
                     }
@@ -170,10 +152,30 @@ namespace In_Anh.Controllers
             return new JsonResult(new
             {
                 Code = 200,
-                Data = new { listImg },
+                Data = new { },
                 Message = "Success"
             });
 
+        }
+
+        [HttpGet]
+        public ActionResult CreareOrderID(string orderID, string phone)
+        {
+            var userGet = _ordersCollection.FindAsync(x => x.Phone == phone).Result.FirstOrDefault();
+           
+                _ordersCollection.InsertOneAsync(new OrderModel()
+                {
+                    OrderId = orderID,
+                    Phone = phone
+                });
+            
+            
+              return new JsonResult(new
+            {
+                Code = 200,
+                Data = new { },
+                Message = "success"
+            });
         }
         private async void PrintImages(List<ImageModel> imgs)
         {

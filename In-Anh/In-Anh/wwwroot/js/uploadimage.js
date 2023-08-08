@@ -608,11 +608,38 @@ var uploader = {
         
         var address = $('#addresssm').val();
 
-        if (!name || !phone || !address) {
-            alert('Thiếu Thông Tin')
-        }
-        if (!validatePhone(phone)) {
+        if (!name) {
+            alert('Bạn Chưa Nhập Tên')
+        } else if (!address) {
+            alert('Bạn Chưa Nhập Địa Chỉ')
+        } else if (!isVietnamesePhoneNumberValid(phone)) {
             alert('Sai Số Điện Thoại')
+        } else {
+            var id = randomIntFromInterval(11111, 99999);
+            var oldid = $.cookie("userOrder");
+            if (oldid == undefined || oldid == "") {
+                $.cookie("userOrder", id, { expires: 365 });
+                
+            } else {
+                $.cookie("userOrder", oldid + ";" + id, { expires: 365 });
+            }
+            $.cookie("userOrderTemp", id, { expires: 1 });
+            $.cookie("userPhone", phone, { expires: 365 });
+
+            $.ajax({
+                url: "/Image/CreareOrderID",
+                type: "Get",
+                data: { orderID: id, phone: phone },
+                async: true,
+                success: function (result) {
+                    setTimeout(() => {
+                        $('.ssi-push-please').trigger('click');
+                    }, 100);
+                }
+
+            });
+
+            
         }
 
             
@@ -660,13 +687,10 @@ function b64toBlob(b64Data, contentType, sliceSize) {
     return blob;
 }
 
-function validatePhone(txtPhone) {
-    var a = document.getElementById(txtPhone).value;
-    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-    if (filter.test(a)) {
-        return true;
-    }
-    else {
-        return false;
-    }
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function isVietnamesePhoneNumberValid(number) {
+    return /(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b/.test(number);
 }

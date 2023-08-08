@@ -1,22 +1,20 @@
-﻿using AngleSharp.Io;
+﻿
 using FirebaseAdmin;
 using FirebaseAdmin.Auth;
-using Google.Apis.Auth.OAuth2;
+
 using In_Anh.Models;
-using In_Anh.Models.MongoModel;
-using Microsoft.AspNetCore.Http;
+
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
+
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
 using System.IdentityModel.Tokens.Jwt;
-using System.Net;
-using System.Net.Http;
+
 using System.Security.Claims;
 using System.Text;
-using static Google.Rpc.Context.AttributeContext.Types;
+
 
 namespace In_Anh.Controllers
 {

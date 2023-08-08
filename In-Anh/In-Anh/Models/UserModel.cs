@@ -1,7 +1,12 @@
-﻿namespace In_Anh.Models
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+
+namespace In_Anh.Models
 {
     public class UserModel
     {
+        [BsonId]
+        public ObjectId Id { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }   
