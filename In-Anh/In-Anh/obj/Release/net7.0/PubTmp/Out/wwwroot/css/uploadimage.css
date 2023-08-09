@@ -5,7 +5,7 @@
 #ssi-info #ssi-fileNumber {
     display: none;
 }
-div.image-size-select{
+select.image-size-select{
     min-width:134px;
 }
 
@@ -14,4 +14,7 @@ div.image-size-select{
         width: calc(100%/3 - 4px);
     }
     
+}
+.ssi-push-please {
+    display: none;
 }

@@ -32,7 +32,7 @@
             '<span class="ssi-InputLabel">' +
             '<button class="ssi-button success">' + this.language.chooseFiles + '</button>' +
             '</span>').append(element);
-        var $uploadBtn = $('<button id="ssi-uploadBtn" class="ssi-button success ssi-hidden" >' +
+        var $uploadBtn = $('<button id="ssi-uploadBtn" class="ssi-push-please ssi-button success ssi-hidden" >' +
             '<span class="ssi-btnIn">' + this.language.upload + '&nbsp;</span>' +
             '<div id="ssi-up_loading" class="ssi-btnIn"></div></button>');
         var $clearBtn = $('<button id="ssi-clearBtn" class="ssi-hidden ssi-button info" >' + this.language.clear +
@@ -530,8 +530,7 @@
                 async: true,
                 beforeSend: function (xhr, settings) {
                     thisS.uploadList[ii] = xhr;
-                    console.log("TCL: ajaxLoopRequest -> thisS.toUpload", thisS.toUpload)
-                    console.log("TCL: ajaxLoopRequest -> ii", ii)
+                    
                     $uploadBtn.find('#ssi-up_loading') //add spiner to uploadbutton
                         .html('<i class="fa fa-spinner fa-pulse"></i>');
                     var fileInfo = {

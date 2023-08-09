@@ -23,3 +23,6 @@ body {
 .hidden{
     display:none!important ;
 }
+div.modal{
+    top:43vh;
+}

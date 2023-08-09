@@ -1,17 +1,17 @@
 ﻿
 
 $(window).on("load", function () {
-    if ($('.data').data('islogin') == 'False') {
-        setTimeout(function () {
-            firebase.init()
-        }, 500);
-    } else {
-        setTimeout(() => {
-            firebase.initLogin();
-        },500)
+    if (location.href.indexOf('view=dev') > 0) {
+        if ($('.data').data('islogin') == 'False') {
+            setTimeout(function () {
+                firebase.init()
+            }, 500);
+        } else {
+            setTimeout(() => {
+                firebase.initLogin();
+            }, 500)
+        }
     }
-    
-
 })
 
 $(document).on('click', '.logout', function () {
@@ -58,13 +58,13 @@ var firebase = {
                                     const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
             <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true">
                 <div class="toast-header">
-                    <img lazy src="${authResult.additionalUserInfo.providerId == 'facebook.com' ? authResult.additionalUserInfo.profile.picture.data.url : authResult.additionalUserInfo.profile.picture}" class="img-photo-user rounded me-4" alt="...">
-                    <strong class="me-auto">${authResult.additionalUserInfo.profile.name}</strong>
+                   
+                    
                     <small>just now</small>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body">
-                    Wellcome Back!
+                    Wellcome ${authResult.user.phoneNumber}
                 </div>
             </div>
         </div>`
@@ -72,8 +72,6 @@ var firebase = {
                                     test = $('#liveToast');
                                     const toast = bootstrap.Toast.getOrCreateInstance(test);
                                     toast.show();
-
-
                                 }, 50)
 
 
@@ -101,10 +99,19 @@ var firebase = {
             signInFlow: 'popup',
 
             signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-
+                {
+                    provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+                    recaptchaParameters: {
+                        type: 'image', // 'audio'
+                        size: 'normal', // 'invisible' or 'compact'
+                        badge: 'bottomleft' //' bottomright' or 'inline' applies to invisible.
+                    },
+                    defaultCountry: 'VN', // Set default country to the United Kingdom (+44).
+                    // For prefilling the national number, set defaultNationNumber.
+                    // This will only be observed if only phone Auth provider is used since
+                    // for multiple providers, the NASCAR screen will always render first
+                    // with a 'sign in with phone number' button.
+                }
             ],
         };
         ui.start('#firebaseui-auth-container', uiConfig);
@@ -124,13 +131,13 @@ var firebase = {
                         const toastcon = ` <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
             <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true">
                 <div class="toast-header">
-                    <img lazy src="${data.ImageUrlUser}" class="img-photo-user rounded me-4" alt="...">
-                    <strong class="me-auto">${data.UserName}</strong>
+                    
+                    <strong class="me-auto">${data.phoneNumber}</strong>
                     <small>just now</small>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body">
-                    Wellcome Back!
+                    Wellcome ${data.userName}
                 </div>
             </div>
         </div>`

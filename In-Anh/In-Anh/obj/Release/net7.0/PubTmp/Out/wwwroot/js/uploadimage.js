@@ -1,5 +1,5 @@
 ﻿
-$(document).ready(async function () {
+$(window).ready(async function () {
     await uploader.initScript();
     uploader.selected();
     $('.image-cointainer').removeClass('hidden')
@@ -36,7 +36,7 @@ var uploader = {
             url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {},
+            data: {type:0},
 
             // en, gr
             locale: 'en',
@@ -101,7 +101,7 @@ var uploader = {
             url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {},
+            data: { type: 1 },
 
             // en, gr
             locale: 'en',
@@ -163,10 +163,10 @@ var uploader = {
             allowDuplicates: false,
 
             // The utl to which the ajax request is sent.
-            url: 'http://ssinput.com/php/upload.php',
+            url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {},
+            data: { type: 2 },
 
             // en, gr
             locale: 'en',
@@ -228,10 +228,10 @@ var uploader = {
             allowDuplicates: false,
 
             // The utl to which the ajax request is sent.
-            url: 'http://ssinput.com/php/upload.php',
+            url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {},
+            data: { type: 3 },
 
             // en, gr
             locale: 'en',
@@ -293,10 +293,10 @@ var uploader = {
             allowDuplicates: false,
 
             // The utl to which the ajax request is sent.
-            url: 'http://ssinput.com/php/upload.php',
+            url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {},
+            data: { type: 4 },
 
             // en, gr
             locale: 'en',
@@ -358,10 +358,10 @@ var uploader = {
             allowDuplicates: false,
 
             // The utl to which the ajax request is sent.
-            url: 'http://ssinput.com/php/upload.php',
+            url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {},
+            data: { type: 5 },
 
             // en, gr
             locale: 'en',
@@ -423,10 +423,10 @@ var uploader = {
             allowDuplicates: false,
 
             // The utl to which the ajax request is sent.
-            url: 'http://ssinput.com/php/upload.php',
+            url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {},
+            data: { type: 6},
 
             // en, gr
             locale: 'en',
@@ -581,8 +581,69 @@ var uploader = {
         //if (isSubmit) {
         //    ajaxImage(fd)
         //}
-    }
+    },
+    handdleClickPrint:  function () {
+       
+        var lstimg = 0;
+        for (var i = 0; i < 7; i++) {
+            var imgjq = $('.ssi-uploadInput' + i).parents('.ssi-uploader').find('img').length;
+            lstimg += imgjq
 
+        }
+        if (lstimg == 0) {
+            $('button.btnsm-all').find('span').html(lstimg);
+            $('button.btnsm-all').attr('disabled','');
+        } else {
+            $('button.btnsm-all').removeAttr('disabled')
+             $('button.btnsm-all').find('span').html(lstimg);
+        }
+        
+        $(document.querySelector('#exampleModal')).modal('show');
+        
+    },
+    uploadDAllImage: function () {
+        var name = $('#namesm').val();
+        
+        var phone = $('#phonesm').val();
+        
+        var address = $('#addresssm').val();
+
+        if (!name) {
+            alert('Bạn Chưa Nhập Tên')
+        } else if (!address) {
+            alert('Bạn Chưa Nhập Địa Chỉ')
+        } else if (!isVietnamesePhoneNumberValid(phone)) {
+            alert('Sai Số Điện Thoại')
+        } else {
+            var id = randomIntFromInterval(11111, 99999);
+            var oldid = $.cookie("userOrder");
+            if (oldid == undefined || oldid == "") {
+                $.cookie("userOrder", id, { expires: 365 });
+                
+            } else {
+                $.cookie("userOrder", oldid + ";" + id, { expires: 365 });
+            }
+            $.cookie("userOrderTemp", id, { expires: 1 });
+            $.cookie("userPhone", phone, { expires: 365 });
+
+            $.ajax({
+                url: "/Image/CreareOrderID",
+                type: "Get",
+                data: { orderID: id, phone: phone },
+                async: true,
+                success: function (result) {
+                    setTimeout(() => {
+                        $('.ssi-push-please').trigger('click');
+                    }, 100);
+                }
+
+            });
+
+            
+        }
+
+            
+    }
 }
 function ajaxImage(fd) {
     $.ajax({
@@ -624,4 +685,12 @@ function b64toBlob(b64Data, contentType, sliceSize) {
 
     var blob = new Blob(byteArrays, { type: contentType });
     return blob;
+}
+
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function isVietnamesePhoneNumberValid(number) {
+    return /(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b/.test(number);
 }

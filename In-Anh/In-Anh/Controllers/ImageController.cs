@@ -185,7 +185,7 @@ namespace In_Anh.Controllers
                 return new JsonResult(new
                 {
                     Code = 200,
-                    Data = new { message=e },
+                    Data = new { message= e },
                     Message = "success"
                 });
             }
