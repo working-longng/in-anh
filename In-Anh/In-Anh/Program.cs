@@ -24,9 +24,9 @@ builder.Services.Configure<FormOptions>(o =>
     o.MultipartBodyLengthLimit = long.MaxValue;
 });
 
-//builder.Services.Configure<ImageMgDatabase>();
-//builder.Services.AddSingleton<IImageMgDatabase>(provider =>
-//    provider.GetRequiredService<IOptions<ImageMgDatabase>>().Value);
+
+builder.Services.AddSingleton<IImageMgDatabase>(provider =>
+    provider.GetRequiredService<IOptions<ImageMgDatabase>>().Value);
 
 
 builder.Services.Configure<ImageMgDatabase>(
@@ -55,7 +55,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 
 var app = builder.Build();
-
+//app.UseDeveloperExceptionPage();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -80,7 +80,7 @@ app.UseStaticFiles(new StaticFileOptions()
 
 app.UseSession();
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+
 app.UseResponseCompression();
 app.UseRouting();
 app.UseCors("AllPolicy");

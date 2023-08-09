@@ -73,7 +73,18 @@ var uploader = {
 
             // Extends the default options of $.ajax function:
             // https://api.jquery.com/jquery.ajax/
-            ajaxOptions: {},
+            ajaxOptions: {
+                beforeSend: function () {
+                    // setting a timeout
+                    $.LoadingOverlay("show");
+                },
+                success: function (data) {
+                    $.LoadingOverlay("hide");
+                },
+                error: function (xhr) { // if error occured
+                    $.LoadingOverlay("hide");
+                },
+            },
 
             // The files allowed to be uploaded. 
             allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif','heic'],
@@ -138,7 +149,18 @@ var uploader = {
 
             // Extends the default options of $.ajax function:
             // https://api.jquery.com/jquery.ajax/
-            ajaxOptions: {},
+            ajaxOptions: {
+                beforeSend: function () {
+                    // setting a timeout
+                    $.LoadingOverlay("show");
+                },
+                success: function (data) {
+                    $.LoadingOverlay("hide");
+                },
+                error: function (xhr) { // if error occured
+                    $.LoadingOverlay("hide");
+                },
+            },
 
             // The files allowed to be uploaded. 
             allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],
@@ -203,7 +225,18 @@ var uploader = {
 
             // Extends the default options of $.ajax function:
             // https://api.jquery.com/jquery.ajax/
-            ajaxOptions: {},
+            ajaxOptions: {
+                beforeSend: function () {
+                    // setting a timeout
+                    $.LoadingOverlay("show");
+                },
+                success: function (data) {
+                    $.LoadingOverlay("hide");
+                },
+                error: function (xhr) { // if error occured
+                    $.LoadingOverlay("hide");
+                },
+            },
 
             // The files allowed to be uploaded. 
             allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],
@@ -268,7 +301,18 @@ var uploader = {
 
             // Extends the default options of $.ajax function:
             // https://api.jquery.com/jquery.ajax/
-            ajaxOptions: {},
+            ajaxOptions: {
+                beforeSend: function () {
+                    // setting a timeout
+                    $.LoadingOverlay("show");
+                },
+                success: function (data) {
+                    $.LoadingOverlay("hide");
+                },
+                error: function (xhr) { // if error occured
+                    $.LoadingOverlay("hide");
+                },
+            },
 
             // The files allowed to be uploaded. 
             allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],
@@ -333,7 +377,18 @@ var uploader = {
 
             // Extends the default options of $.ajax function:
             // https://api.jquery.com/jquery.ajax/
-            ajaxOptions: {},
+            ajaxOptions: {
+                beforeSend: function () {
+                    // setting a timeout
+                    $.LoadingOverlay("show");
+                },
+                success: function (data) {
+                    $.LoadingOverlay("hide");
+                },
+                error: function (xhr) { // if error occured
+                    $.LoadingOverlay("hide");
+                },
+            },
 
             // The files allowed to be uploaded. 
             allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],
@@ -398,7 +453,18 @@ var uploader = {
 
             // Extends the default options of $.ajax function:
             // https://api.jquery.com/jquery.ajax/
-            ajaxOptions: {},
+            ajaxOptions: {
+                beforeSend: function () {
+                    // setting a timeout
+                    $.LoadingOverlay("show");
+                },
+                success: function (data) {
+                    $.LoadingOverlay("hide");
+                },
+                error: function (xhr) { // if error occured
+                    $.LoadingOverlay("hide");
+                },
+            },
 
             // The files allowed to be uploaded. 
             allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],
@@ -463,7 +529,18 @@ var uploader = {
 
             // Extends the default options of $.ajax function:
             // https://api.jquery.com/jquery.ajax/
-            ajaxOptions: {},
+            ajaxOptions: {
+                beforeSend: function () {
+                    // setting a timeout
+                    $.LoadingOverlay("show");
+                },
+                success: function (data) {
+                    $.LoadingOverlay("hide");
+                },
+                error: function (xhr) { // if error occured
+                    $.LoadingOverlay("hide");
+                },
+            },
 
             // The files allowed to be uploaded. 
             allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif'],
@@ -607,7 +684,7 @@ var uploader = {
         var phone = $('#phonesm').val();
         
         var address = $('#addresssm').val();
-
+        
         if (!name) {
             alert('Bạn Chưa Nhập Tên')
         } else if (!address) {
@@ -634,6 +711,7 @@ var uploader = {
                 success: function (result) {
                     setTimeout(() => {
                         $('.ssi-push-please').trigger('click');
+                        $(document.querySelector('#exampleModal')).modal('hide');
                     }, 100);
                 }
 

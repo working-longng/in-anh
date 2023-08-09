@@ -35,13 +35,13 @@
         var $uploadBtn = $('<button id="ssi-uploadBtn" class="ssi-push-please ssi-button success ssi-hidden" >' +
             '<span class="ssi-btnIn">' + this.language.upload + '&nbsp;</span>' +
             '<div id="ssi-up_loading" class="ssi-btnIn"></div></button>');
-        var $clearBtn = $('<button id="ssi-clearBtn" class="ssi-hidden ssi-button info" >' + this.language.clear +
+        var $clearBtn = $('<button id="ssi-clearBtn" style="display:inline-block !important" class="ssi-hidden ssi-button info" >' + this.language.clear +
             '</button>');
-        var $abortBtn = $('<button id="ssi-abortBtn" class="ssi-button error ssi-cancelAll ssi-hidden" ><span class="inBtn">' + this.language.abort + ' </span></button>');
+       
         if (this.options.inForm) {
             $uploadBtn.hide();
         }
-        this.$element.append($('<div class="ssi-buttonWrapper">').append($chooseBtn, $abortBtn, $uploadBtn, $clearBtn));
+        this.$element.append($('<div class="ssi-buttonWrapper">').append($chooseBtn, $uploadBtn, $clearBtn));
         var $uploadBox;
         if (!this.options.preview) {
             this.$element.addClass('ssi-uploaderNP');
@@ -150,22 +150,11 @@
                 $uploadBtn.addClass('ssi-hidden');
             }
         });
-        $uploadBox.on('click', '.ssi-abortUpload', function (e) {//abort one element
-            e.preventDefault();
-            var $eventTarget = $(e.currentTarget);
-            var index = $eventTarget.data('delete');// get the element id
-            thisS.abort(index); // abort request
-        });
         //----------------------------UPLOADFILES------------------------------------
         $uploadBtn.click(function (e) {// upload the files
             e.preventDefault();
             thisS.uploadFiles();
         });
-        $abortBtn.click(function (e) { // abort all requests
-            e.preventDefault();
-            thisS.abortAll();
-        });
-
     };
     function tooltip($target, text, thisS) {
         $target = $($target);
@@ -189,14 +178,6 @@
             .removeClass('ssi-fadeOut');
         return $toolTip;
     }
-
-    Ssi_upload.prototype.abortAll = function () {
-        for (var i = 0; i < this.uploadList.length; i++) { //all element in the list
-            if (typeof this.uploadList[i] === 'object') {// check if not deleted
-                this.abort(i);
-            }
-        }
-    };
     Ssi_upload.prototype.toUploadFiles = function (files) {
         if (typeof this.options.maxNumberOfFiles === 'number') {
             if ((this.inProgress + this.pending) >= this.options.maxNumberOfFiles) {// if in progress files + pending files are more than the number that we have define as max number of files pre download
@@ -463,7 +444,6 @@
                     }
                 }
             }
-            this.$element.find('#ssi-abortBtn').removeClass('ssi-hidden');
             this.$element.find('.ssi-removeBtn')
                 .addClass('ssi-abortUpload')
                 .removeClass('ssi-removeBtn')
@@ -734,35 +714,10 @@
         thisS.$element.find('.ssi-uploadDetails').removeClass('ssi-uploadBoxOpened');
         thisS.$element.find('.ssi-namePreview').html(cutFileName(fileName, ext, 15));//short the name and put it to the name preview
     };
-    Ssi_upload.prototype.abort = function (index, title, mmsg) {//abort a request
-        if (typeof title === 'undefined') {//if no title
-            this.uploadList[index].abort();// abort the element
-            this.totalProgress[index] = '';
-            title = mmsg || 'Aborted';
-            this.aborted++;// one more aborted file
-        } else if (typeof title !== 'string') {//if not string that means that the request aborted with the beforeEachUpload callback and no message returned
-            title = '';
-        }
-        //nothing of the above happened that means the user aborted the request with the beforeUpload callback and returned a message
-        var msg = this.language.aborted;
-        if (!this.options.preview) {
-            msg = '<span class="ban7w"></span>';
-        }
-        setElementMessage(this, index, 'error', msg, (title));
-        this.$element.find('#ssi-uploadProgress' + index).removeClass('ssi-hidden').addClass('ssi-canceledProgressBar');
-        this.toUpload[index] = undefined;
-        this.uploadList[index] = undefined;
-        this.imgNames[index] = undefined;
-        this.$element.find('#ssi-clearBtn').prop("disabled", false);
-        this.inProgress--;//one less in progress file
-        if (getCompleteStatus(this)) {//if no more file in progress
-            finishUpload(this);
-        }
-
-    };
+  
 
     var finishUpload = function (thisS) {//when every uplaod ends
-        thisS.$element.find('#ssi-abortBtn').addClass('ssi-hidden');
+        
         if (!thisS.options.preview) {//display tha main message in the name preview
             var type = 'error', title = '', msg = '';
             if (thisS.abortedWithError > 0) { //if no errors

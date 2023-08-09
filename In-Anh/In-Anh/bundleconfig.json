@@ -28,5 +28,11 @@
     "inputFiles": [
       "wwwroot/lib/jquery-cookie/jquery.cookie.js"
     ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/jquery-loading-overlay/loadingoverlay.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery-loading-overlay/loadingoverlay.js"
+    ]
   }
 ]
