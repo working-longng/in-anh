@@ -161,21 +161,34 @@ namespace In_Anh.Controllers
         [HttpGet]
         public ActionResult CreareOrderID(string orderID, string phone)
         {
-            var userGet = _ordersCollection.FindAsync(x => x.Phone == phone).Result.FirstOrDefault();
-           
+            try
+            {
+                var userGet = _ordersCollection.FindAsync(x => x.Phone == phone).Result.FirstOrDefault();
+
                 _ordersCollection.InsertOneAsync(new OrderModel()
                 {
                     OrderId = orderID,
                     Phone = phone
                 });
-            
-            
-              return new JsonResult(new
+
+
+                return new JsonResult(new
+                {
+                    Code = 200,
+                    Data = new { },
+                    Message = "success"
+                });
+            }
+            catch (Exception e)
             {
-                Code = 200,
-                Data = new { },
-                Message = "success"
-            });
+
+                return new JsonResult(new
+                {
+                    Code = 200,
+                    Data = new { message=e },
+                    Message = "success"
+                });
+            }
         }
         private async void PrintImages(List<ImageModel> imgs)
         {
