@@ -405,6 +405,14 @@
       "PackagePath": "staticwebassets\\img\\chevron-right-solid1.svg"
     },
     {
+      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\trash-can-solid.svg",
+      "PackagePath": "staticwebassets\\img\\trash-can-solid.svg"
+    },
+    {
+      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin.js"
+    },
+    {
       "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\firebase.js",
       "PackagePath": "staticwebassets\\js\\firebase.js"
     },

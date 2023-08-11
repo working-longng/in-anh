@@ -16,6 +16,8 @@ using Image = SixLabors.ImageSharp.Image;
 using Point = SixLabors.ImageSharp.Point;
 using Color = SixLabors.ImageSharp.Color;
 using System.Diagnostics;
+using static MongoDB.Driver.WriteConcern;
+using static In_Anh.Models.OrderModel;
 
 namespace In_Anh.Controllers
 {
@@ -126,7 +128,7 @@ namespace In_Anh.Controllers
                                 image.Quality = 100;
                                 image.Write(filePath);
                                 image.Dispose();
-                            }                        
+                            }
                         }
 
                     }
@@ -159,17 +161,49 @@ namespace In_Anh.Controllers
         }
 
         [HttpGet]
-        public ActionResult CreareOrderID(string orderID, string phone)
+        public async Task<ActionResult> CreareOrderID(string orderID, string phone,string Address,string name)
         {
             try
             {
-                var userGet = _ordersCollection.FindAsync(x => x.Phone == phone).Result.FirstOrDefault();
+                var userGetOrder = _ordersCollection.FindAsync(x => x.Phone == phone).Result.FirstOrDefault();
 
-                _ordersCollection.InsertOneAsync(new OrderModel()
+                var detail = new OrderDetail()
                 {
                     OrderId = orderID,
-                    Phone = phone
-                });
+                    Address = Address,
+                    UserEmail = "",
+                    IsActive = false,
+                    Phone= phone,
+                    DayOrder = new DateTime(DateTime.Now.Ticks)
+                };
+                if (userGetOrder == null)
+                {
+                    var orderDetail = new List<OrderDetail>
+                    {
+                        detail
+                    };
+
+                    await _ordersCollection.InsertOneAsync(new OrderModel()
+                    {
+                        ListDetail = orderDetail,
+                        Phone= phone,
+                    }); ;
+                }
+                else
+                {
+                    List<OrderDetail> orders = new List<OrderDetail>(userGetOrder.ListDetail)
+                    {
+                        detail
+                    };
+                    var filter = Builders<OrderModel>.Filter
+     .Eq(x => x.Phone, phone);
+                    var update = Builders<OrderModel>.Update
+                        .Set(y => y.ListDetail, orders);
+                    await _ordersCollection.UpdateOneAsync
+                        
+                        
+                        (filter, update);
+                }
 
 
                 return new JsonResult(new
@@ -185,7 +219,7 @@ namespace In_Anh.Controllers
                 return new JsonResult(new
                 {
                     Code = 200,
-                    Data = new { message= e.Message },
+                    Data = new { message = e.Message },
                     Message = "success"
                 });
             }

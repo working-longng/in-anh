@@ -11,7 +11,7 @@ using MongoDB.Driver;
 using Newtonsoft.Json;
 
 using System.IdentityModel.Tokens.Jwt;
-
+using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
 
@@ -53,7 +53,9 @@ namespace In_Anh.Controllers
             else {
                 await _usersCollection.InsertOneAsync(us);
             }
-            SetCookies("userToken", GenerateJSONWebToken(us), 3600);
+            string tks = GenerateJSONWebToken(us);
+            SetCookies("userToken", tks, 3600);
+
             var  partialViewHtml = await this.RenderViewAsync("UserRender", us, true);
             return Content(partialViewHtml);
         }

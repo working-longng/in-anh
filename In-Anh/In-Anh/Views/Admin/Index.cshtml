@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<List<OrderDetail>>
+@{
+    var totalPage = (int)ViewBag.TotalPage;
+}
+<script src="~/js/admin.js"></script>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            foreach (var data in item)
+            {
+                <tr>
+                    <th scope="row">@data.Phone</th>
+                    <td>@data.OrderId</td>
+                    <td>@data.DayOrder.ToString("HH:mm dd/MM/yyyy")</td>
+                    <td>@data.Address</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@if(totalPage>0){
+    <nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        @for (int i = 0; i < totalPage; i++)
+        {
+            <li class="page-item"><a class="page-link" onclick="return admin.paging(@(i+1))" >@(i+1)</a></li>
+        }
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav>
+}

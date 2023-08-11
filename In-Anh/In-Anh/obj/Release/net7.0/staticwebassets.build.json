@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p9uRcfALJuW15/Q5FwR7+oA3e4GyDHUFHRmhKNpH098=",
+  "Hash": "5wAqogy30X9o2P6HqvIDCMb2kM8OwDLm4u4ONy+PzWk=",
   "Source": "In-Anh",
   "BasePath": "_content/In-Anh",
   "Mode": "Default",
@@ -1749,6 +1749,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\chevron-right-solid1.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\trash-can-solid.svg",
+      "SourceId": "In-Anh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
+      "BasePath": "_content/In-Anh",
+      "RelativePath": "img/trash-can-solid.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\trash-can-solid.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\admin.js",
+      "SourceId": "In-Anh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
+      "BasePath": "_content/In-Anh",
+      "RelativePath": "js/admin.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin.js"
     },
     {
       "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\firebase.js",
