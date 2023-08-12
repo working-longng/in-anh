@@ -1,1275 +1,1279 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\In-Anh.bundle.scp.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\In-Anh.bundle.scp.css",
       "PackagePath": "staticwebassets\\In-Anh.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\css\\navbar.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\css\\navbar.css",
       "PackagePath": "staticwebassets\\css\\navbar.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\css\\uploadimage.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\css\\uploadimage.css",
       "PackagePath": "staticwebassets\\css\\uploadimage.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-analytics-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-analytics-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-analytics-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-analytics.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-analytics.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-analytics.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-analytics.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-check-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-check-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-check-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-check.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-check.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-check.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-check.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-app.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-app.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-app.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-cordova.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-cordova.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth-cordova.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-cordova.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-cordova.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth-cordova.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-cordova.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth-cordova.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth-cordova.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-auth.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-auth.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-database-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-database-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-database-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-database.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-database.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-database.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-database.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-lite.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-lite.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore-lite.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-lite.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-lite.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore-lite.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-lite.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore-lite.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore-lite.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-firestore.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-firestore.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-functions-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-functions-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-functions-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-functions.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-functions.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-functions.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-functions.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-installations-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-installations-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-installations-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-installations.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-installations.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-installations.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-installations.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-sw.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-sw.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging-sw.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-sw.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-sw.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging-sw.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-sw.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging-sw.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging-sw.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-messaging.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-messaging.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.es2017.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.es2017.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-standalone-compat.es2017.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.es2017.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.es2017.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-standalone-compat.es2017.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.es2017.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.es2017.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-standalone-compat.es2017.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-standalone-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-standalone-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance-standalone-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance-standalone-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-performance.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-performance.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-remote-config-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-remote-config-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-remote-config-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-remote-config.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-remote-config.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-remote-config.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-remote-config.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage-compat.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-storage-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage-compat.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-storage-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage-compat.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-storage-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-storage.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage.js.map",
       "PackagePath": "staticwebassets\\firebase\\firebase-storage.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\firebase\\firebase-storage.min.js",
       "PackagePath": "staticwebassets\\firebase\\firebase-storage.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\bars.svg",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\bars.svg",
       "PackagePath": "staticwebassets\\img\\bars.svg"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-left-solid.svg",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-left-solid.svg",
       "PackagePath": "staticwebassets\\img\\chevron-left-solid.svg"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-left-solid1.svg",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-left-solid1.svg",
       "PackagePath": "staticwebassets\\img\\chevron-left-solid1.svg"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-rgsolid.svg",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-rgsolid.svg",
       "PackagePath": "staticwebassets\\img\\chevron-rgsolid.svg"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-right-solid.svg",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-right-solid.svg",
       "PackagePath": "staticwebassets\\img\\chevron-right-solid.svg"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-right-solid1.svg",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\chevron-right-solid1.svg",
       "PackagePath": "staticwebassets\\img\\chevron-right-solid1.svg"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\trash-can-solid.svg",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\eye-solid.svg",
+      "PackagePath": "staticwebassets\\img\\eye-solid.svg"
+    },
+    {
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\img\\trash-can-solid.svg",
       "PackagePath": "staticwebassets\\img\\trash-can-solid.svg"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\admin.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\js\\admin.js",
       "PackagePath": "staticwebassets\\js\\admin.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\firebase.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\js\\firebase.js",
       "PackagePath": "staticwebassets\\js\\firebase.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\js\\uploadimage.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\js\\uploadimage.js",
       "PackagePath": "staticwebassets\\js\\uploadimage.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\ajax-loader.gif",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\ajax-loader.gif",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\ajax-loader.gif"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.carousel.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.carousel.css",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\owl.carousel.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.carousel.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\owl.carousel.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.default.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\owl.theme.default.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.default.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\owl.theme.default.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.green.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.green.css",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\owl.theme.green.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.green.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.theme.green.min.css",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\owl.theme.green.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.video.play.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\assets\\owl.video.play.png",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\assets\\owl.video.play.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\owl.carousel.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\owl.carousel.js",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\owl.carousel.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\owl.carousel.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\OwlCarousel2\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\owl.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-analytics-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-analytics-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-analytics-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-analytics.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-analytics.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-analytics.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-analytics.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-check-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-check-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-check-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-check.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-check.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-check.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-check.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-app.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-app.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-cordova.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-cordova.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth-cordova.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-cordova.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-cordova.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth-cordova.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-cordova.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth-cordova.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth-cordova.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-auth.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-auth.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-database-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-database-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-database-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-database.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-database.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-database.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-database.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-lite.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-lite.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore-lite.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-lite.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-lite.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore-lite.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-lite.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore-lite.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore-lite.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-firestore.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-firestore.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-functions-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-functions-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-functions-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-functions.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-functions.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-functions.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-functions.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-installations-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-installations-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-installations-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-installations.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-installations.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-installations.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-installations.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-sw.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-sw.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging-sw.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-sw.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-sw.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging-sw.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-sw.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging-sw.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging-sw.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-messaging.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-messaging.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.es2017.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.es2017.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-standalone-compat.es2017.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.es2017.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.es2017.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-standalone-compat.es2017.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.es2017.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.es2017.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-standalone-compat.es2017.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-standalone-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-standalone-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance-standalone-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance-standalone-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-performance.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-performance.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-remote-config-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-remote-config-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-remote-config-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-remote-config.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-remote-config.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-remote-config.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-remote-config.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage-compat.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage-compat.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-storage-compat.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage-compat.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage-compat.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-storage-compat.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage-compat.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage-compat.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-storage-compat.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-storage.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage.js.map",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-storage.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebase\\firebase-storage.min.js",
       "PackagePath": "staticwebassets\\lib\\firebase\\firebase-storage.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\LICENSE",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\firebaseui"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\README.md",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\README.md",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\README.md"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\esm.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\esm.js",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\dist\\esm.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\externs\\firebaseui-externs.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\externs\\firebaseui-externs.js",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\dist\\externs\\firebaseui-externs.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\firebaseui.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\firebaseui.css",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\dist\\firebaseui.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\firebaseui.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\firebaseui.js",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\dist\\firebaseui.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\index.d.ts",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\index.d.ts",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\dist\\index.d.ts"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\npm.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\dist\\npm.js",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\dist\\npm.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\package.json",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\firebaseui\\package.json",
       "PackagePath": "staticwebassets\\lib\\firebaseui\\package.json"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\heic2any\\heic2any.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\heic2any\\heic2any.js",
       "PackagePath": "staticwebassets\\lib\\heic2any\\heic2any.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\heic2any\\heic2any.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\heic2any\\heic2any.min.js",
       "PackagePath": "staticwebassets\\lib\\heic2any\\heic2any.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-cookie\\jquery.cookie.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-cookie\\jquery.cookie.js",
       "PackagePath": "staticwebassets\\lib\\jquery-cookie\\jquery.cookie.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-cookie\\jquery.cookie.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-cookie\\jquery.cookie.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-cookie\\jquery.cookie.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-easy-loading\\jquery.loading.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-easy-loading\\jquery.loading.js",
       "PackagePath": "staticwebassets\\lib\\jquery-easy-loading\\jquery.loading.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-easy-loading\\jquery.loading.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-easy-loading\\jquery.loading.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-easy-loading\\jquery.loading.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-loading-overlay\\loadingoverlay.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-loading-overlay\\loadingoverlay.js",
       "PackagePath": "staticwebassets\\lib\\jquery-loading-overlay\\loadingoverlay.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-loading-overlay\\loadingoverlay.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-loading-overlay\\loadingoverlay.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-loading-overlay\\loadingoverlay.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-loading-overlay\\loadingoverlay.min.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-loading-overlay\\loadingoverlay.min.js.map",
       "PackagePath": "staticwebassets\\lib\\jquery-loading-overlay\\loadingoverlay.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\.gitignore",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\.gitignore",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\.gitignore"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\.npmignore",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\.npmignore",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\.npmignore"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\CHANGELOG.md",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\CHANGELOG.md",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\CHANGELOG.md"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\LICENSE",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\README.md",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\README.md",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\README.md"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\bower.json",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\bower.json",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\bower.json"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\LICENSE",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\README.md",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\README.md",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\README.md"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\index.html",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\index.html",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\index.html"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\package.json",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\package.json",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\package.json"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\CHANGELOG.md",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\CHANGELOG.md",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\CHANGELOG.md"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.js",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.min.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.min.js",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.min.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.min.js.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.min.js.map",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\js\\ssi-uploader.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\images\\sprite.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\images\\sprite.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\images\\sprite.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.css",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.min.css",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.min.css",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.min.css"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.min.css.map",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.min.css.map",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\dist\\ssi-uploader\\styles\\ssi-uploader.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\gulpfile.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\gulpfile.js",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\gulpfile.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\package-lock.json",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\package-lock.json",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\package-lock.json"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\package.json",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\package.json",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\package.json"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\index.html",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\index.html",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\index.html"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\js\\ssi-uploader.js",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\js\\ssi-uploader.js",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\js\\ssi-uploader.js"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Check-23.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Check-23.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Check-23.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Check-7.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Check-7.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Check-7.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Exclamation-7.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Exclamation-7.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Exclamation-7.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Exclamation23.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Exclamation23.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\Exclamation23.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-10.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-10.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-10.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-23.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-23.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-23.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-7.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-7.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-7.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-7w.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-7w.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\ban-7w.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\trash-10.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\trash-10.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\trash-10.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\trash-7.png",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\trash-7.png",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\images\\trash-7.png"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\sprite.scss",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\sprite.scss",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\sprite.scss"
     },
     {
-      "Id": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\ssi-uploader.scss",
+      "Id": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\wwwroot\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\ssi-uploader.scss",
       "PackagePath": "staticwebassets\\lib\\ssi-uploader-master\\src\\ssi-uploader\\styles\\ssi-uploader.scss"
     },
     {

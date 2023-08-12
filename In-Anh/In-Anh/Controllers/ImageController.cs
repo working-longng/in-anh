@@ -49,7 +49,7 @@ namespace In_Anh.Controllers
         {
             var UserPhone = string.IsNullOrWhiteSpace(GetPhoneUserCookies().ToString()) ? "spam" : GetPhoneUserCookies().ToString();
 
-            var localFile = "D:\\CDN\\";
+            var localFile = _config["Cdn:LocalPath"];
             var publicFile = _config["Cdn:UrlCdn"];
 
             var time = DateTime.Now;
@@ -161,7 +161,7 @@ namespace In_Anh.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> CreareOrderID(string orderID, string phone,string Address,string name)
+        public async Task<ActionResult> CreareOrderID(string orderID, string phone,string address,string name,string note)
         {
             try
             {
@@ -170,8 +170,10 @@ namespace In_Anh.Controllers
                 var detail = new OrderDetail()
                 {
                     OrderId = orderID,
-                    Address = Address,
+                    Address = address,
                     UserEmail = "",
+                    Name = name,
+                    Note = note,
                     IsActive = false,
                     Phone= phone,
                     DayOrder = new DateTime(DateTime.Now.Ticks)

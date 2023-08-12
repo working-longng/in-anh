@@ -1,5 +1,6 @@
 ﻿var keyword = "";
 var page = 0;
+
 var admin = {
     init: function () {
 
@@ -8,13 +9,24 @@ var admin = {
         $.ajax({
             url: "/Admin/GetData",
             type: "get",
+            beforeSend: function () {
+                $.LoadingOverlay("show");
+            },
             data: { pageIndex: index, keyw: keyword },
             success: function (result) {
-                page = pageIndex
-                data: fd
+                $.LoadingOverlay("hide");
+                $('.container-tb').html(result)
+                
 
             }
         });
+    },
+    viewDetail: function () {
+        $(document.querySelector('#exampleModalAdmin')).modal('show');
+    }, removeDetail: function () {
+
+    },print: function () {
+
     }
 
     }

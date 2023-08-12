@@ -684,6 +684,7 @@ var uploader = {
         var phone = $('#phonesm').val();
         
         var address = $('#addresssm').val();
+        var notesm = $('#notesm').val();
         
         if (!name) {
             alert('Bạn Chưa Nhập Tên')
@@ -706,7 +707,7 @@ var uploader = {
             $.ajax({
                 url: "/Image/CreareOrderID",
                 type: "Get",
-                data: { orderID: id, phone: phone },
+                data: { orderID: id, phone: phone, name: name, address: address, note: notesm },
                 async: true,
                 success: function (result) {
                     setTimeout(() => {

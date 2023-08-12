@@ -28,5 +28,16 @@ namespace In_Anh.Models
         public bool IsActive { get; set; }
         public DateTime DayOrder { get; set; }
         public string Phone { get; set; }
+        public string Name { get; set; }
+        public string Note { get; set; }
+        public Active? Active  { get; set; }
+    }
+   
+    public enum Active
+    { 
+        Inactive,
+        Process,
+        Pending,
+        Done
     }
 }
