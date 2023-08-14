@@ -31,6 +31,7 @@ namespace In_Anh.Models
         public string Name { get; set; }
         public string Note { get; set; }
         public Active? Active  { get; set; }
+        public List<string> Urls { get; set; }
     }
    
     public enum Active

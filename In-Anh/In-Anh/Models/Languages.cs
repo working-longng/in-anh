@@ -3,6 +3,7 @@
     public class Languages
     {
         public string Home { get; set; }
+        public string History { get; set; }
         public string Login { get; set; }
         public string ImagePrint { get; set; }
         public string FilePrint { get; set; }
@@ -16,13 +17,18 @@
         public string Province { get; set; }
         public string Ward { get; set; }
         public string Note { get; set; }
-
+        public string Status0 { get; set; }
+        public string Status1 { get; set; }
+        public string Status2 { get; set; }
+        public string Status3 { get; set; }
+        public string Status4 { get; set; }
 
         public Languages LanguageVN()                                           
         {
             return new Languages()
             {
                 Home = "Trang Chủ",
+                History ="Lịch Sử",
                 Login = "Đăng Nhập",
                 ImagePrint = "In Ảnh",
                 FilePrint = "In File",
@@ -35,7 +41,11 @@
                 Phone = "Số Điện Thoại",
                 Province = "Tỉnh Thành",
                 Ward ="Quận, Huyện",
-                Note = "Ghi Chú"
+                Note = "Ghi Chú",
+                Status0 ="Chờ Xác Nhận",
+                Status1 ="Đang Xử Lý",
+                Status2="Tạm Treo",
+                Status3 ="Hoàn Thành"
             };
         }
 
@@ -44,7 +54,7 @@
             return new Languages()
             {
                 Home = "Home",
-                Login = "Login",
+                Login = "Login",History ="History",
                 ImagePrint = "Image Print",
                 FilePrint = "File Print",
                 ChooseSize = "More Size",
@@ -56,7 +66,11 @@
                 Phone = "Phone",
                 Province = "Province",
                 Ward = "Ward",
-                Note= "Note"
+                Note= "Note",
+                Status0="Inactive",
+                Status1="Active",
+                Status2="Pending",
+                Status3="Done"
             };
         }
 

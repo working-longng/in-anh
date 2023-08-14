@@ -134,7 +134,7 @@
 
     <form id="formimage" class="container image-cointainer hidden">
         <select class=" image-size-select w-25 form-select" aria-label="Default select example">
-            <option selected>@lang.ChooseSize</option>
+            <option value="-1" selected>@lang.ChooseSize</option>
             @{
                 <option value="0">4x6</option>
                 <option value="1">6x9</option>
@@ -147,7 +147,7 @@
         </select>
     </form>
 </div>
-<button onclick="return uploader.handdleClickPrint()" id="md-print" type="button" class="pt-3 pb-3 ps-4 pe-4 position-fixed mb-5 bottom-0 start-50 translate-middle-x btn btn-primary btn-lg">@lang.Print @lang.All <span></span> @lang.Image </button>
+<button onclick="return uploader.handdleClickPrint()" id="md-print" type="button" class="hidden pt-3 pb-3 ps-4 pe-4 position-fixed mb-5 bottom-0 start-50 translate-middle-x btn btn-primary btn-lg">@lang.Print @lang.All <span></span> @lang.Image </button>
 
 <div class=" modal fade mt-30 " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

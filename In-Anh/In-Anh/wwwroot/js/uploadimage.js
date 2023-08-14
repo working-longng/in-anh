@@ -560,6 +560,8 @@ var uploader = {
 
     selected: function () {
         $('.image-size-select').on('change', async function () {
+            
+            $('#md-print').removeClass('hidden')
             var optionsl = $(this).find(":selected").val() * 1;
             switch (optionsl) {
                 case 0:
@@ -628,6 +630,7 @@ var uploader = {
                 default:
                     break;
             }
+            $('.image-size-select').val(-1)
         });
     },
     submitData: function () {

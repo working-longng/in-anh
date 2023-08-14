@@ -27,6 +27,25 @@ var admin = {
 
     },print: function () {
 
+    }, changestatus: function (e, phonecs, orderid) {
+        console.log(phonecs);
+        $.ajax({
+            url: "/Admin/ChangeStatus",
+            type: "get",
+            data: { phone: phonecs, orderID: orderid, newstatus:$(e).val() },
+            beforeSend: function () {
+                $.LoadingOverlay("show");
+            },
+            success: function (result) {
+                $.LoadingOverlay("hide");
+                alert("Success");
+
+
+            }, error: function () {
+                $.LoadingOverlay("hide");
+                alert("Fail");
+            }
+        });
     }
 
     }

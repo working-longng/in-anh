@@ -60,7 +60,20 @@ namespace In_Anh.Controllers
                 return id;
             }
 
-        } 
+        }
+        public string[] GetOrderIdsUserCookies()
+        {
+            var id = Request.Cookies["userOrder"];
+            if (id == null || id == "")
+            {
+                return null;
+            }
+            else
+            {
+                return id.Split(';').ToArray();
+            }
+
+        }
         public string GetPhoneUserCookies()
         {
             var id = Request.Cookies["userPhone"];
@@ -82,6 +95,36 @@ namespace In_Anh.Controllers
                 return false;
             }
             return true;
+        }
+
+        public List<ImageModel> GetListImage(string phone, string orderID, string date)
+        {
+            string path = _config["Cdn:LocalPath"];
+
+            var lstimgs = new List<ImageModel>();
+            foreach (var item in Enum.GetNames(typeof(ImageType)))
+            {
+                var type = item.ToString();
+
+                var filePath = path + phone + "\\" + date + "\\" + orderID + "\\" + type + "\\";
+                if (Directory.Exists(filePath))
+                {
+                    string[] filePaths = Directory.GetFiles(filePath, "*.jpg",
+                                        SearchOption.TopDirectoryOnly);
+
+                    Enum.TryParse(type, true, out ImageType result);
+
+                    lstimgs.Add(new ImageModel()
+                    {
+                        Type = result,
+                        OrginUrl = filePaths.ToList(),
+
+                    });
+
+                }
+            }
+
+            return lstimgs;
         }
         public UserModel GetUserValid(string token)
         {

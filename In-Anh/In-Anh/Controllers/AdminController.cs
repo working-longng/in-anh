@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using System.Drawing.Printing;
+using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
 
 namespace In_Anh.Controllers
 {
@@ -17,7 +18,11 @@ namespace In_Anh.Controllers
         public ActionResult Index(string keyw = "")
         {
 
+            Languages lang = new Languages().LanguageVN();
+            ViewBag.Language = lang;
+            ViewBag.IsLogin = isLogin();
 
+       
             //var token = Request.Cookies["userToken"];
 
 
@@ -67,34 +72,35 @@ namespace In_Anh.Controllers
             
         }
 
-        private List<ImageModel> GetListImage(string phone,string orderID,string date)
+      
+        public async Task<ActionResult> ChangeStatusAsync(string phone,string orderID,int newStatus)
         {
-            string path = _config["Cdn:LocalPath"];
-           
-            var lstimgs= new List<ImageModel>();
-            foreach (var item in Enum.GetNames(typeof(ImageType)))
+            var filter = Builders<OrderModel>.Filter.And(Builders<OrderModel>.Filter.Eq(x=>x.Phone, phone), Builders<OrderModel>.Filter.Where(x=>x.ListDetail.Any(y=>y.OrderId == orderID)));
+          var  a =  _ordersCollection.Find(filter).FirstOrDefault();
+
+            var oldData = _ordersCollection.FindAsync(filter).Result.FirstOrDefault();
+            if (oldData != null)
             {
-                var type = item.ToString();
-
-                var filePath= path + phone + "\\" + date + "\\" +orderID+ "\\" +type+"\\";
-                if (Directory.Exists(filePath))
+                var dataDetails = oldData.ListDetail.ToList();
+                if(dataDetails.Find(x => x.OrderId == orderID) != null)
                 {
-                    string[] filePaths = Directory.GetFiles(filePath, "*.jpg",
-                                        SearchOption.TopDirectoryOnly);
+                    dataDetails.Find(x => x.OrderId == orderID).Active = (Active) newStatus;
+                    var update = Builders<OrderModel>.Update
+                     .Set(x => x.ListDetail, dataDetails);
 
-                    Enum.TryParse(type, true, out ImageType result);
-
-                    lstimgs.Add(new ImageModel()
-                    {
-                        Type = result,
-                        OrginUrl = filePaths.ToList(),
-
-                    });
-                    
+                    var data = await _ordersCollection.FindOneAndUpdateAsync(filter, update);
+                    return Ok();
                 }
+
+
+
             }
            
-            return lstimgs;
+                   
+       
+            //await _ordersCollection.UpdateOneAsync
+            //    (filter, update);
+            return BadRequest();
         }
         // GET: AdminController/Details/5
         public ActionResult Details(int id)

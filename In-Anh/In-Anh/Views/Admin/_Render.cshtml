@@ -15,7 +15,7 @@
             <th scope="col">Address</th>
             <th scope="col">Note</th>
             <th scope="col">Order Day</th>
-            <th scope="col">Order Day</th>
+            <th scope="col">Status</th>
             <th scope="col">Process</th>
         </tr>
     </thead>
@@ -32,7 +32,7 @@
                 
                 <td>@item.DayOrder.ToString("HH:mm dd/MM/yyyy")</td>
                 <th>
-                    <select class="form-select">
+                    <select class="form-select" onchange="return admin.changestatus(this,'@item.Phone',@item.OrderId)">
                         @foreach (Active ac in (Active[])Enum.GetValues(typeof(Active)))
                         {
                             if (ac==item.Active)
