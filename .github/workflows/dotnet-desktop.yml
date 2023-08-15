@@ -16,4 +16,4 @@ jobs:
       with:
         dotnet-version: '7'
    
-    - run: dotnet publish In-Anh/In-Anh.sln -c Release --force --no-restore
+    - run: dotnet publish In-Anh/In-Anh.sln -c Release --force --no-restore --output publishCode
