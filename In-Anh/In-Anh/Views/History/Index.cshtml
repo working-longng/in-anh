@@ -5,9 +5,8 @@
 @{
     ViewData["Title"] = "History Page";
     // var count = (int)TempData["Count"];
-    var lang = ViewBag.Language as Languages;
-    var page = ViewBag.Page;
-    var pageSize = ViewBag.PageSize;
+    var lang = ViewBag.Language == null ? null :  ViewBag.Language as Languages;
+ 
 }
 <script src="~/js/history.js"></script>
 <link href="~/css/history.css" rel="stylesheet" />

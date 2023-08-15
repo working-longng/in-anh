@@ -1,9 +1,9 @@
 ﻿@model List<OrderDetail>
 @{
     
-    var lang = ViewBag.Language as Languages;
-    var page = ViewBag.Page;
-    var pageSize = ViewBag.PageSize;
+    var lang = ViewBag.Language == null ? null : ViewBag.Language as Languages;
+    var page = ViewBag.Page == null ? 0 : ViewBag.Page;
+    var pageSize = ViewBag.PageSize == null ? 2 : ViewBag.PageSize;
 }
 @foreach (var item in Model)
 {
@@ -31,10 +31,10 @@
                                             var text = "";
                                             switch (item.Active == null ? 0 : (int)item.Active)
                                             {
-                                                case 0: text = lang.Status0; break;
-                                                case 1: text = lang.Status1; break;
-                                                case 2: text = lang.Status2; break;
-                                                case 3: text = lang.Status3; break;
+                                                case 0: text = lang?.Status0; break;
+                                                case 1: text = lang?.Status1; break;
+                                                case 2: text = lang?.Status2; break;
+                                                case 3: text = lang?.Status3; break;
 
                                                 default: break;
                                             }
@@ -130,7 +130,7 @@
                             </address>
                         </div>
                         <div class="card-body">
-                            <h3 class="h6">@lang.Note</h3>
+                            <h3 class="h6">@lang?.Note</h3>
                             <p>@item.Note</p>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 ﻿@using static In_Anh.Models.ImageModel;
 @{
     ViewData["Title"] = "Home Page";
-    var lang = ViewBag.Language as Languages;
+	var lang = ViewBag.Language == null ? null : ViewBag.Language as Languages;
     
 }
 
@@ -134,7 +134,7 @@
 
     <form id="formimage" class="container image-cointainer hidden">
         <select class=" image-size-select w-25 form-select" aria-label="Default select example">
-            <option value="-1" selected>@lang.ChooseSize</option>
+            <option value="-1" selected>@lang?.ChooseSize</option>
             @{
                 <option value="0">4x6</option>
                 <option value="1">6x9</option>
@@ -147,7 +147,7 @@
         </select>
     </form>
 </div>
-<button onclick="return uploader.handdleClickPrint()" id="md-print" type="button" class="hidden pt-3 pb-3 ps-4 pe-4 position-fixed mb-5 bottom-0 start-50 translate-middle-x btn btn-primary btn-lg">@lang.Print @lang.All <span></span> @lang.Image </button>
+<button onclick="return uploader.handdleClickPrint()" id="md-print" type="button" class="hidden pt-3 pb-3 ps-4 pe-4 position-fixed mb-5 bottom-0 start-50 translate-middle-x btn btn-primary btn-lg">@lang?.Print @lang?.All <span></span> @lang?.Image </button>
 
 <div class=" modal fade mt-30 " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -160,21 +160,21 @@
                 <form class="row g-3 needs-validation" novalidate>
                     <div class="col-md-6">
 
-                        <input required type="text" placeholder="@lang.Name*" class="form-control" id="namesm" />
+                        <input required type="text" placeholder="@lang?.Name*" class="form-control" id="namesm" />
                     </div>
                     <div class="col-md-6">
                          
-                        <input type="tel" placeholder="@lang.Phone*" class="form-control" id="phonesm" >
+                        <input type="tel" placeholder="@lang?.Phone*" class="form-control" id="phonesm" >
                     </div>
                     <div class="col-12">
 
-                        <input type="text" class="form-control" id="addresssm" placeholder="@lang.Address*" />
+                        <input type="text" class="form-control" id="addresssm" placeholder="@lang?.Address*" />
                     </div>
 
 
                     <div class="col-md-12">
 
-                        <textarea title="" type="text" class="form-control" id="notesm" placeholder="@lang.Note"></textarea>
+                        <textarea title="" type="text" class="form-control" id="notesm" placeholder="@lang?.Note"></textarea>
                     </div>
 
 
@@ -182,7 +182,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button onclick="return uploader.uploadDAllImage()" type="button" class="btn btn-primary btnsm-all">@lang.Print <span></span> @lang.Image</button>
+                <button onclick="return uploader.uploadDAllImage()" type="button" class="btn btn-primary btnsm-all">@lang?.Print <span></span> @lang?.Image</button>
             </div>
         </div>
     </div>

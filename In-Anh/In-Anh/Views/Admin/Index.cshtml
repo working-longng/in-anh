@@ -3,7 +3,7 @@
 *@
 @model List<OrderDetail>
 @{
-    var totalPage = (int)ViewBag.TotalPage;
+    var totalPage = ViewBag.TotalPage == null ? 0 : (int)ViewBag.TotalPage;
     var page = 0;
 }
 <script src="~/js/admin.js"></script>

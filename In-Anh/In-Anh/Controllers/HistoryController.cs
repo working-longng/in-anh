@@ -21,6 +21,7 @@ namespace In_Anh.Controllers
             ViewBag.PageSize = pageSize;
             ViewBag.IsLogin = false;
             var lstId = GetOrderIdsUserCookies();
+            
             var phone = GetPhoneUserCookies();
             var orderLst = new List<OrderDetail>() { };
             if (string.IsNullOrEmpty(phone) || lstId == null || lstId.Length ==0)
@@ -30,7 +31,7 @@ namespace In_Anh.Controllers
             var orderqr = _ordersCollection.AsQueryable().Where(x => x.ListDetail.Any(x => lstId.Contains(x.OrderId)) && x.Phone == phone).Select(x => x.ListDetail);
             var count = orderqr.Count();
             TempData["Count"] = count;
-            var data = orderqr.FirstOrDefault().OrderByDescending(y=>y.DayOrder).Take(pageSize).ToList();
+            var data = orderqr?.FirstOrDefault()?.OrderByDescending(y=>y.DayOrder).Take(pageSize).ToList();
             
             
             if (data ==null || !data.Any())

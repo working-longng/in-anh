@@ -1,7 +1,7 @@
 ﻿@{
-    var lang = ViewBag.Language as Languages;
-    var isLogin =(bool) ViewBag.IsLogin;
-    var UserData = ViewBag.UserLogin as UserModel;
+    var lang = ViewBag.Language ==null? null: ViewBag.Language as Languages;
+    var isLogin = ViewBag.IsLogin ==null ? false : (bool) ViewBag.IsLogin;
+    var UserData = ViewBag.UserLogin == null ? null : ViewBag.UserLogin as UserModel;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -40,10 +40,10 @@
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">@lang.Home</a>
+                            <a href="/" class="nav-link">@lang?.Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/History" class="nav-link">@lang.History</a>
+                            <a href="/History" class="nav-link">@lang?.History</a>
                         </li>
                         
                     </ul>
