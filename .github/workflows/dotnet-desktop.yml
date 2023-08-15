@@ -19,6 +19,6 @@ jobs:
     - run: |
              stop-webapppool jinnie.shop
              stop-iissite -Name jinnie.shop -Confirm: $false
+             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
              start-webapppool jinnie.shop
-             start-iissite jinnie.shop
-    - run: dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+             start-iissite jinnie.shop 
