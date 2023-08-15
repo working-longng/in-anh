@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\In-Anh.csproj": {}
+    "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\In-Anh.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\In-Anh.csproj": {
+    "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\In-Anh.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\In-Anh.csproj",
+        "projectUniqueName": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\In-Anh.csproj",
         "projectName": "In-Anh",
-        "projectPath": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\In-Anh.csproj",
-        "packagesPath": "C:\\Users\\Long\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\obj\\",
+        "projectPath": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\In-Anh.csproj",
+        "packagesPath": "C:\\Users\\Long Nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Long Nguyen\\Desktop\\anh\\in-anh\\In-Anh\\In-Anh\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Long\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Long Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

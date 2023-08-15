@@ -30,7 +30,7 @@ namespace In_Anh.Controllers
             var orderqr = _ordersCollection.AsQueryable().Where(x => x.ListDetail.Any(x => lstId.Contains(x.OrderId)) && x.Phone == phone).Select(x => x.ListDetail);
             var count = orderqr.Count();
             TempData["Count"] = count;
-            var data = orderqr.Take(pageSize).FirstOrDefault();
+            var data = orderqr.FirstOrDefault().OrderByDescending(y=>y.DayOrder).Take(pageSize).ToList();
             
             
             if (data ==null || !data.Any())
@@ -40,74 +40,52 @@ namespace In_Anh.Controllers
 
             return View(data);
         }
+        public async Task<ActionResult> GetData(int page)
+        {
+            Languages lang = new Languages().LanguageVN();
+            ViewBag.Language = lang;
+            ViewBag.Page = 0;
+            ViewBag.PageSize = pageSize;
+            ViewBag.IsLogin = false;
 
+
+            var lstId = GetOrderIdsUserCookies();
+            var phone = GetPhoneUserCookies();
+            var orderLst = new List<OrderDetail>() { };
+            if (string.IsNullOrEmpty(phone) || lstId == null || lstId.Length == 0)
+            {
+                return new JsonResult(new
+                {
+                    Code = 201,
+                    Data = new { },
+                    Message = "File Not Valid"
+                });
+            }
+            var orderqr = _ordersCollection.AsQueryable().Where(x => x.ListDetail.Any(x => lstId.Contains(x.OrderId)) && x.Phone == phone).Select(x => x.ListDetail);
+            
+           
+            var data = orderqr.FirstOrDefault().OrderByDescending(y => y.DayOrder).Skip(page * pageSize).Take(pageSize).ToList();
+
+
+            if (data == null || !data.Any())
+            {
+                return new JsonResult(new
+                {
+                    Code = 201,
+                    Data = new { },
+                    Message = "File Not Valid"
+                });
+            }
+            var partialViewHtml = await this.RenderViewAsync("_RenderItem", data, true);
+            return new JsonResult(new
+            {
+                Code = 200,
+                Data = new { html=partialViewHtml },
+                Message = ""
+            });
+
+        }
         // GET: HistoryController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
-        // GET: HistoryController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: HistoryController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HistoryController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: HistoryController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HistoryController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: HistoryController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

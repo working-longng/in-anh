@@ -34,8 +34,8 @@ namespace In_Anh.Controllers
             //}
             try
             {
-                var a = GetListImage("0762414222", "31236", "2023-8-12");
-                var userGetOrder = _ordersCollection.Find(_ => keyw == "" ? true : _.Phone.Contains(keyw)).ToList().SelectMany(y => y.ListDetail).OrderByDescending(x => x.DayOrder).Skip(0 * PAGING).Take(PAGING).ToList();
+                //var a = GetListImage("0762414222", "31236", "2023-8-12");
+                var userGetOrder = _ordersCollection.Find(_ => true ).ToList().SelectMany(y => y.ListDetail).Where(c=>c.OrderId.Contains(keyw) || c.Phone.Contains(keyw)).OrderByDescending(x => x.DayOrder).Skip(0 * PAGING).Take(PAGING).ToList();
                 var count = _ordersCollection.Find(_ => keyw == "" ? true : _.Phone.Contains(keyw)).ToList().SelectMany(y => y.ListDetail).Count();
                 ViewBag.IsLogin = true;
                 var ttp = Math.Ceiling((decimal)count / (decimal)PAGING);
@@ -62,7 +62,7 @@ namespace In_Anh.Controllers
             //{
             //    return BadRequest();
             //}
-            var userGetOrder = _ordersCollection.Find(_ => keyw == "" ? true : _.Phone.Contains(keyw)).ToList().SelectMany(y => y.ListDetail).OrderByDescending(x => x.DayOrder).Skip(pageIndex * PAGING).Take(PAGING).ToList();
+            var userGetOrder = _ordersCollection.Find(_ =>true).ToList().SelectMany(y => y.ListDetail).Where(c => c.OrderId.Contains(keyw) || c.Phone.Contains(keyw)).OrderByDescending(x => x.DayOrder).Skip(pageIndex * PAGING).Take(PAGING).ToList();
             ViewBag.IsLogin = true;
             ViewBag.Page = pageIndex;
             ViewBag.TotalPage = Convert.ToInt32(TempData["TotalPage"]);
