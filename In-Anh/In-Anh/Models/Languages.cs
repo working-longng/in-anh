@@ -22,13 +22,15 @@
         public string Status2 { get; set; }
         public string Status3 { get; set; }
         public string Status4 { get; set; }
-
+        public string NotHaveOrder { get; set; }
+        public string CancleOrder { get; set; }
+        public string CancleOrderValid { get; set; }
         public Languages LanguageVN()                                           
         {
             return new Languages()
             {
                 Home = "Trang Chủ",
-                History ="Lịch Sử",
+                History ="Lịch Sử Đặt Hàng",
                 Login = "Đăng Nhập",
                 ImagePrint = "In Ảnh",
                 FilePrint = "In File",
@@ -45,7 +47,10 @@
                 Status0 ="Chờ Xác Nhận",
                 Status1 ="Đang Xử Lý",
                 Status2="Tạm Treo",
-                Status3 ="Hoàn Thành"
+                Status3 ="Hoàn Thành",
+                NotHaveOrder ="Bạn chưa có đơn hàng",
+                CancleOrder ="Hủy Đơn Hàng",
+                CancleOrderValid ="Bạn Có Chắc Hủy Đơn Này"
             };
         }
 
@@ -70,7 +75,10 @@
                 Status0="Inactive",
                 Status1="Active",
                 Status2="Pending",
-                Status3="Done"
+                Status3="Done",
+                NotHaveOrder = "You don't have order",
+                CancleOrder ="Cancle Order",
+                CancleOrderValid ="You Ready To Cancle Order?"
             };
         }
 

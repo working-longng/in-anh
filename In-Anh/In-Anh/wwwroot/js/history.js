@@ -44,5 +44,36 @@ var historyinanh = {
                 
             }
         });
+    },
+    cancle: function () {
+        
+        if (confirm("Bạn Muốn Hủy Đơn Này") == true) {
+            $.ajax({
+                url: "/History/CancleOrder",
+                type: "get",
+                beforeSend: function (phone,id) {
+                    $.LoadingOverlay("show");
+                },
+                data: { phone:phone, orderId: id },
+                success: function (result) {
+
+                    $.LoadingOverlay("hide");
+
+
+                    if (result.code == 200) {
+                        alert("Thành Công");
+                    } else {
+                        alert("Thất Bại")
+                    }
+
+
+
+                }, error: function () {
+
+                }
+            });
+        } else {
+            
+        }
     }
 }

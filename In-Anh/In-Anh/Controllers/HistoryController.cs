@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using System.Linq;
 
 namespace In_Anh.Controllers
 {
@@ -28,25 +29,26 @@ namespace In_Anh.Controllers
             {
                 return View(orderLst);
             }
-            var orderqr = _ordersCollection.AsQueryable().Where(x => x.ListDetail.Any(x => lstId.Contains(x.OrderId)) && x.Phone == phone).Select(x => x.ListDetail);
-            var count = orderqr.Count();
-            TempData["Count"] = count;
-            var data = orderqr?.FirstOrDefault()?.OrderByDescending(y=>y.DayOrder).Take(pageSize).ToList();
+            var orderqr = _ordersCollection?.AsQueryable()?.Where(x => x.Phone == phone).FirstOrDefault()?.ListDetail.Where(x => lstId.Contains(x.OrderId)).ToList();
+            
+            var data = orderqr?.OrderByDescending(y=>y.DayOrder).Take(pageSize).ToList();
             
             
             if (data ==null || !data.Any())
             {
                 return View(orderLst);
             }
-
+            foreach (var item in data)
+            {
+                item.Images = GetListImage(item.Phone, item.OrderId, item.DayOrder.ToString("yyyy-M-dd"));
+            }
             return View(data);
         }
         public async Task<ActionResult> GetData(int page)
         {
             Languages lang = new Languages().LanguageVN();
             ViewBag.Language = lang;
-            ViewBag.Page = 0;
-            ViewBag.PageSize = pageSize;
+            
             ViewBag.IsLogin = false;
 
 
@@ -62,10 +64,10 @@ namespace In_Anh.Controllers
                     Message = "File Not Valid"
                 });
             }
-            var orderqr = _ordersCollection.AsQueryable().Where(x => x.ListDetail.Any(x => lstId.Contains(x.OrderId)) && x.Phone == phone).Select(x => x.ListDetail);
+            var orderqr = _ordersCollection?.AsQueryable()?.Where(x => x.Phone == phone).FirstOrDefault()?.ListDetail.Where(x => lstId.Contains(x.OrderId)).ToList();
             
-           
-            var data = orderqr.FirstOrDefault().OrderByDescending(y => y.DayOrder).Skip(page * pageSize).Take(pageSize).ToList();
+
+            var data = orderqr?.OrderByDescending(y => y.DayOrder).Skip(page * pageSize).Take(pageSize).ToList();
 
 
             if (data == null || !data.Any())
@@ -76,6 +78,10 @@ namespace In_Anh.Controllers
                     Data = new { },
                     Message = "File Not Valid"
                 });
+            }
+            foreach (var item in data)
+            {
+                item.Images = GetListImage(item.Phone, item.OrderId,item.DayOrder.ToString("yyyy-mm"));
             }
             var partialViewHtml = await this.RenderViewAsync("_RenderItem", data, true);
             return new JsonResult(new

@@ -32,6 +32,7 @@ namespace In_Anh.Models
         public string Note { get; set; }
         public Active? Active  { get; set; }
         public List<string> Urls { get; set; }
+        public List<ImageModel>? Images { get; set; }
     }
    
     public enum Active

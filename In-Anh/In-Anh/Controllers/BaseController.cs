@@ -111,14 +111,14 @@ namespace In_Anh.Controllers
                 {
                     string[] filePaths = Directory.GetFiles(filePath, "*.jpg",
                                         SearchOption.TopDirectoryOnly);
-
+                    var Urls = filePaths.ToList().Select(x => x.ToString().Replace(@path,"")).ToList();
                     Enum.TryParse(type, true, out ImageType result);
 
                     lstimgs.Add(new ImageModel()
                     {
                         Type = result,
                         OrginUrl = filePaths.ToList(),
-
+                        Url= Urls
                     });
 
                 }

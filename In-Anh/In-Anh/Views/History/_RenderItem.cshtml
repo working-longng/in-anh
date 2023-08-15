@@ -23,7 +23,7 @@
                         <div class="card-body">
                             <div class="mb-3 d-flex justify-content-between">
                                 <div>
-                                    <span class="me-3">@item.DayOrder.ToString("dd/MM/yyyy")</span>
+                                    <span class="me-3">@item.DayOrder.ToLocalTime().ToString("dd/MM/yyyy")</span>
                                     <span class="me-3">#@item.OrderId</span>
                                     @*<span class="me-3">Visa -1234</span>*@
                                     <span class="badge rounded-pill bg-info">
@@ -43,16 +43,11 @@
                                     </span>
                                 </div>
                                 <div class="d-flex">
-                                    <button class="btn btn-link p-0 me-3 d-none d-lg-block btn-icon-text"><i class="bi bi-download"></i> <span class="text">Invoice</span></button>
-                                    <div class="dropdown">
-                                        <button class="btn btn-link p-0 text-muted" type="button" data-bs-toggle="dropdown">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-printer"></i> Print</a></li>
-                                        </ul>
-                                    </div>
+                                    @if(item.Active == Active.Inactive)
+                                    {
+                                        <button onclick="return historyinanh.cancle('@item.Phone','@item.OrderId')" class="btn btn-link "><span class="text">@lang?.CancleOrder</span></button>
+                                    }
+
                                 </div>
                             </div>
                             <table class="table table-borderless">
