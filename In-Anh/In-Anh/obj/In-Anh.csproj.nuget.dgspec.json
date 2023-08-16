@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[3.3.0, )"
             },
+            "Lucene.Net": {
+              "target": "Package",
+              "version": "[3.0.3, )"
+            },
             "Magick.NET-Q16-AnyCPU": {
               "target": "Package",
               "version": "[13.2.0, )"
@@ -67,6 +71,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             },
             "SixLabors.ImageSharp": {
               "target": "Package",

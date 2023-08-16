@@ -1,5 +1,6 @@
 ﻿using In_Anh.Models;
 using In_Anh.Models.MongoModel;
+using In_Anh.RabitMQ;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
@@ -21,7 +22,9 @@ namespace In_Anh.Controllers
         public readonly IMongoCollection<UserModel> _usersCollection;
         public readonly IMongoCollection<OrderModel> _ordersCollection;
         public readonly IMongoCollection<HistoryModel> _historysCollection;
-        public BaseController(IConfiguration config, IImageMgDatabase setting)
+        public readonly IRabitMQProducer _rabitMQProducer;
+
+        public BaseController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer)
         {
             _config = config;
             var client = new MongoClient(_config["ImageMgDatabase:ConnectionString"]);
@@ -29,7 +32,7 @@ namespace In_Anh.Controllers
             _usersCollection = database.GetCollection<UserModel>(_config["ImageMgDatabase:UserCollectionName"]);
             _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
             _historysCollection = database.GetCollection<HistoryModel>(_config["ImageMgDatabase:HistoryCollectionName"]);
-
+            _rabitMQProducer = rabitMQProducer;
         }
 
 

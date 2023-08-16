@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZolX1qL8ro0VPEBdtqoePh4mfKc0BkjRvBZICRrYvA0=",
+  "Hash": "VDuZB9BN49RcpyOLdi/x20uTRgT9Szuj6cH8lO//dFE=",
   "Source": "In-Anh",
   "BasePath": "_content/In-Anh",
   "Mode": "Default",
@@ -1783,6 +1783,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\eye-solid.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\google02287cb5c708860d.html",
+      "SourceId": "In-Anh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\",
+      "BasePath": "_content/In-Anh",
+      "RelativePath": "img/google02287cb5c708860d.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\google02287cb5c708860d.html"
     },
     {
       "Identity": "C:\\Users\\Long\\Desktop\\ANHANHAN\\In-Anh\\In-Anh\\wwwroot\\img\\trash-can-solid.svg",
