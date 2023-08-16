@@ -1,4 +1,5 @@
 ﻿using In_Anh.Models;
+using In_Anh.RabitMQ;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -9,9 +10,11 @@ namespace In_Anh.Controllers
     public class HistoryController : BaseController
     {
         private static readonly int pageSize = 2;
-        public HistoryController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
+
+        public HistoryController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer) : base(config, setting, rabitMQProducer)
         {
         }
+
 
         // GET: HistoryController
         public ActionResult Index()

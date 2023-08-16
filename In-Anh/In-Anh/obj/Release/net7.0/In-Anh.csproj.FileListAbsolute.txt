@@ -268,3 +268,4 @@ C:\Users\Long Nguyen\Desktop\anh\in-anh\In-Anh\In-Anh\obj\Release\net7.0\refint\
 C:\Users\Long Nguyen\Desktop\anh\in-anh\In-Anh\In-Anh\obj\Release\net7.0\In-Anh.pdb
 C:\Users\Long Nguyen\Desktop\anh\in-anh\In-Anh\In-Anh\obj\Release\net7.0\In-Anh.genruntimeconfig.cache
 C:\Users\Long Nguyen\Desktop\anh\in-anh\In-Anh\In-Anh\obj\Release\net7.0\ref\In-Anh.dll
+C:\Users\Long Nguyen\Desktop\anh\in-anh\In-Anh\In-Anh\bin\Release\net7.0\RabbitMQ.Client.dll

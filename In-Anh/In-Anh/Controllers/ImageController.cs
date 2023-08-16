@@ -18,14 +18,17 @@ using Color = SixLabors.ImageSharp.Color;
 using System.Diagnostics;
 using static MongoDB.Driver.WriteConcern;
 using static In_Anh.Models.OrderModel;
+using In_Anh.RabitMQ;
+using In_Anh.Models.RabitMQModel;
 
 namespace In_Anh.Controllers
 {
     public class ImageController : BaseController
     {
-        public ImageController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
+        public ImageController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer) : base(config, setting, rabitMQProducer)
         {
         }
+
 
         // GET: ImageController
         public ActionResult Index()
@@ -47,12 +50,14 @@ namespace In_Anh.Controllers
 
         public async Task<ActionResult> CreateAsync(IFormCollection data)
         {
+
+
             var UserPhone = string.IsNullOrWhiteSpace(GetPhoneUserCookies().ToString()) ? "spam" : GetPhoneUserCookies().ToString();
 
             var localFile = _config["Cdn:LocalPath"];
-            var publicFile = _config["Cdn:UrlCdn"];
+            
 
-            var time = DateTime.Now;
+          
             var year = DateTime.Now.Year;
             var month = DateTime.Now.Month;
             var day = DateTime.Now.Day;
@@ -61,93 +66,121 @@ namespace In_Anh.Controllers
             string nameType = Enum.GetName(typeof(ImageType), type) ?? "1x1";
             var id = GetOrderIdUserCookies();
             var path = UserPhone + "\\" + year + "-" + month + "-" + day + "\\" + id + "\\" + nameType + "\\";
+            ;
+            var filePath = localFile + path;
 
-            var files = data.Files;
-
-            var listImg = new List<ImageModel>();
-
-            long size = files.Sum(f => f.Length);
-
-            try
+            if (data.Files.Count > 0)
             {
-                foreach (var formFile in files)
+                var file = data.Files[0];
+                if (file.Length > 0)
                 {
-                    if (formFile.Length > 0)
+                    using (var memoryStream = new MemoryStream())
                     {
-
-                        if (!string.Equals(formFile.ContentType, "image/jpg", StringComparison.OrdinalIgnoreCase) &&
-               !string.Equals(formFile.ContentType, "image/jpeg", StringComparison.OrdinalIgnoreCase) &&
-               !string.Equals(formFile.ContentType, "image/pjpeg", StringComparison.OrdinalIgnoreCase) &&
-               !string.Equals(formFile.ContentType, "image/gif", StringComparison.OrdinalIgnoreCase) &&
-               !string.Equals(formFile.ContentType, "image/x-png", StringComparison.OrdinalIgnoreCase) &&
-               !string.Equals(formFile.ContentType, "image/png", StringComparison.OrdinalIgnoreCase))
+                        await file.CopyToAsync(memoryStream);
+                        var fileSream = memoryStream.ToArray();
+                        memoryStream.Dispose();
+                        _rabitMQProducer.SendProductMessage(new RabitMQSendData()
                         {
-                            return new JsonResult(new
-                            {
-                                Code = 400,
-                                Data = new { },
-                                Message = "File Not Valid"
-                            });
-                        }
-                        var fileName = Guid.NewGuid().ToString() + ".jpg";
-                        var filePath = localFile + path + fileName;
-
-                        using (var memoryStream = new MemoryStream())
+                            File = fileSream,
+                            path = filePath,
+                        });
+                        return new JsonResult(new
                         {
-                            await formFile.CopyToAsync(memoryStream);
-                            var buffer = memoryStream.GetBuffer();
-                            string content = System.Text.Encoding.UTF8.GetString(buffer);
-                            if (Regex.IsMatch(content, @"<script|<cross\-domain\-policy",
-                                RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Multiline))
-                            {
-                                return new JsonResult(new
-                                {
-                                    Code = 400,
-                                    Data = new { },
-                                    Message = "File Not Valid"
-                                });
-                            }
-                            var Url = publicFile + path + fileName;
-
-
-                            if (!System.IO.Directory.Exists(localFile + path))
-                            {
-                                Directory.CreateDirectory(localFile + path);
-                            }
-
-
-                            using (FileStream f = System.IO.File.Create(filePath))
-                            {
-
-                                f.Dispose();
-                            }
-                            memoryStream.Position = 0;
-                            using (MagickImage image = new MagickImage(memoryStream))
-                            {
-                                image.Format = MagickFormat.Jpeg;
-                                image.Quality = 100;
-                                image.Write(filePath);
-                                image.Dispose();
-                            }
-                        }
-
+                            Code = 200,
+                            Data = new { },
+                            Message = "Success"
+                        });
                     }
-
-
-
                 }
-            }
-            catch (Exception e)
-            {
-
-                return new JsonResult(new
-                {
-                    Code = 400,
-                    Data = new { },
-                    Message = "Error System"
-                });
 
             }
+
+
+
+            //var listImg = new List<ImageModel>();
+
+            //long size = files.Sum(f => f.Length);
+
+            //try
+            //{
+            //    foreach (var formFile in files)
+            //    {
+            //        if (formFile.Length > 0)
+            //        {
+
+            //            if (!string.Equals(formFile.ContentType, "image/jpg", StringComparison.OrdinalIgnoreCase) &&
+            //   !string.Equals(formFile.ContentType, "image/jpeg", StringComparison.OrdinalIgnoreCase) &&
+            //   !string.Equals(formFile.ContentType, "image/pjpeg", StringComparison.OrdinalIgnoreCase) &&
+            //   !string.Equals(formFile.ContentType, "image/gif", StringComparison.OrdinalIgnoreCase) &&
+            //   !string.Equals(formFile.ContentType, "image/x-png", StringComparison.OrdinalIgnoreCase) &&
+            //   !string.Equals(formFile.ContentType, "image/png", StringComparison.OrdinalIgnoreCase))
+            //            {
+            //                return new JsonResult(new
+            //                {
+            //                    Code = 400,
+            //                    Data = new { },
+            //                    Message = "File Not Valid"
+            //                });
+            //            }
+            //            var fileName = Guid.NewGuid().ToString() + ".jpg";
+            //            var filePath = localFile + path + fileName;
+
+            //            using (var memoryStream = new MemoryStream())
+            //            {
+            //                await formFile.CopyToAsync(memoryStream);
+            //                var buffer = memoryStream.GetBuffer();
+            //                string content = System.Text.Encoding.UTF8.GetString(buffer);
+            //                if (Regex.IsMatch(content, @"<script|<cross\-domain\-policy",
+            //                    RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Multiline))
+            //                {
+            //                    return new JsonResult(new
+            //                    {
+            //                        Code = 400,
+            //                        Data = new { },
+            //                        Message = "File Not Valid"
+            //                    });
+            //                }
+            //                var Url = publicFile + path + fileName;
+
+
+            //                if (!System.IO.Directory.Exists(localFile + path))
+            //                {
+            //                    Directory.CreateDirectory(localFile + path);
+            //                }
+
+
+            //                using (FileStream f = System.IO.File.Create(filePath))
+            //                {
+
+            //                    f.Dispose();
+            //                }
+            //                memoryStream.Position = 0;
+            //                using (MagickImage image = new MagickImage(memoryStream))
+            //                {
+            //                    image.Format = MagickFormat.Jpeg;
+            //                    image.Quality = 100;
+            //                    image.Write(filePath);
+            //                    image.Dispose();
+            //                }
+            //            }
+
+            //        }
+
+
+
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+
+            //    return new JsonResult(new
+            //    {
+            //        Code = 400,
+            //        Data = new { },
+            //        Message = "Error System"
+            //    });
+
+            //}
 
 
             //PrintImages(listImg);
@@ -161,7 +194,7 @@ namespace In_Anh.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> CreareOrderID(string orderID, string phone,string address,string name,string note)
+        public async Task<ActionResult> CreareOrderID(string orderID, string phone, string address, string name, string note)
         {
             try
             {
@@ -175,7 +208,7 @@ namespace In_Anh.Controllers
                     Name = name,
                     Note = note,
                     IsActive = false,
-                    Phone= phone,
+                    Phone = phone,
                     DayOrder = new DateTime(DateTime.Now.Ticks)
                 };
                 if (userGetOrder == null)
@@ -188,7 +221,7 @@ namespace In_Anh.Controllers
                     await _ordersCollection.InsertOneAsync(new OrderModel()
                     {
                         ListDetail = orderDetail,
-                        Phone= phone,
+                        Phone = phone,
                     }); ;
                 }
                 else
@@ -202,8 +235,8 @@ namespace In_Anh.Controllers
                     var update = Builders<OrderModel>.Update
                         .Set(y => y.ListDetail, orders);
                     await _ordersCollection.UpdateOneAsync
-                        
-                        
+
+
                         (filter, update);
                 }
 

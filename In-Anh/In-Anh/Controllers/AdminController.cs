@@ -1,4 +1,5 @@
 ﻿using In_Anh.Models;
+using In_Anh.RabitMQ;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -10,9 +11,11 @@ namespace In_Anh.Controllers
     public class AdminController : BaseController
     {
         private const int PAGING = 43;
-        public AdminController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
+
+        public AdminController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer) : base(config, setting, rabitMQProducer)
         {
         }
+
 
         // GET: AdminController
         public ActionResult Index(string keyw = "")

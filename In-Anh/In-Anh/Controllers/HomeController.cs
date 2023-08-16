@@ -1,4 +1,5 @@
 ﻿using In_Anh.Models;
+using In_Anh.RabitMQ;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Newtonsoft.Json;
@@ -9,7 +10,7 @@ namespace In_Anh.Controllers
 {
     public class HomeController : BaseController
     {
-        public HomeController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
+        public HomeController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer) : base(config, setting, rabitMQProducer)
         {
         }
 

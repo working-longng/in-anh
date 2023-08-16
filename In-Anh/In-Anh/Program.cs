@@ -1,6 +1,7 @@
 using Google.Api;
 using In_Anh.Models;
 using In_Anh.Models.MongoModel;
+using In_Anh.RabitMQ;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.Options;
@@ -28,6 +29,7 @@ builder.Services.Configure<FormOptions>(o =>
 builder.Services.AddSingleton<IImageMgDatabase>(provider =>
     provider.GetRequiredService<IOptions<ImageMgDatabase>>().Value);
 
+builder.Services.AddScoped<IRabitMQProducer, RabitMQProducer>();
 
 builder.Services.Configure<ImageMgDatabase>(
     builder.Configuration.GetSection("ImageMgDatabase"));

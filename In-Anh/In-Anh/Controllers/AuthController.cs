@@ -3,9 +3,8 @@ using FirebaseAdmin;
 using FirebaseAdmin.Auth;
 
 using In_Anh.Models;
-
+using In_Anh.RabitMQ;
 using Microsoft.AspNetCore.Mvc;
-
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using Newtonsoft.Json;
@@ -20,9 +19,10 @@ namespace In_Anh.Controllers
 {
     public class AuthController : BaseController
     {
-        public AuthController(IConfiguration config, IImageMgDatabase setting) : base(config, setting)
+        public AuthController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer) : base(config, setting, rabitMQProducer)
         {
         }
+
 
 
         // GET: AuthController
