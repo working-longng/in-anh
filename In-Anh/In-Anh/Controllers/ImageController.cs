@@ -176,7 +176,9 @@ namespace In_Anh.Controllers
                     Note = note,
                     IsActive = false,
                     Phone= phone,
-                    DayOrder = new DateTime(DateTime.Now.Ticks)
+                    DayOrder = new DateTime(DateTime.Now.Ticks),
+                    Active = Active.Inactive
+                    
                 };
                 if (userGetOrder == null)
                 {
