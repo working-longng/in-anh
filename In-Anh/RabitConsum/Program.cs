@@ -11,11 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 ConnectionFactory factory = new ConnectionFactory();
-factory.UserName = "admin";
-factory.Password = "admin";
-factory.VirtualHost = "/";
-factory.HostName = "jinnie.shop";
-factory.Port = AmqpTcpEndpoint.UseDefaultPort;
+factory.Uri = new Uri("amqp://admin:admin@jinnie.shop/%2f");
 
 ConnectionFactory.DefaultAddressFamily = AddressFamily.InterNetwork;
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -23,7 +19,7 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 using var connection = factory.CreateConnection();
 //Here we create channel with session and model
 using var channel = connection.CreateModel();
-
+channel.BasicQos(0, 1, false);
 var props = new HashMap<string, object>();
 //channel.QueueDeclare("images", exclusive: false);
 channel.QueueDeclareNoWait("images", false, false, true, props);

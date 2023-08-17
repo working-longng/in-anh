@@ -74,18 +74,21 @@ namespace In_Anh.Controllers
                     var file = data.Files[0];
                     if (file.Length > 0)
                     {
-                        using (var memoryStream = new MemoryStream())
-                        {
-                            await file.CopyToAsync(memoryStream);
-                            var fileSream = memoryStream.ToArray();
-                            memoryStream.Dispose();
-                            _rabitMQProducer.SendProductMessage(new RabitMQSendData()
-                            {
-                                File = fileSream,
-                                path = filePath,
-                            });
+                        byte[] fileSream;
 
+                       await using (var memoryStream = new MemoryStream())
+                        {
+                            file.OpenReadStream();
+                            await file.CopyToAsync(memoryStream);
+                            fileSream = memoryStream.ToArray();
+                            memoryStream.Dispose();
                         }
+                        _rabitMQProducer.SendProductMessage(new RabitMQSendData()
+                        {
+                            File = fileSream,
+                            path = filePath,
+                        });
+
                     }
 
                 }
@@ -188,7 +191,7 @@ namespace In_Anh.Controllers
             }
             catch (Exception e)
             {
-
+                var a = e.Message;
                 throw;
             }
 
