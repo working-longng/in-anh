@@ -33,6 +33,7 @@ namespace In_Anh.Controllers
             _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
             _historysCollection = database.GetCollection<HistoryModel>(_config["ImageMgDatabase:HistoryCollectionName"]);
             _rabitMQProducer = rabitMQProducer;
+
         }
 
 

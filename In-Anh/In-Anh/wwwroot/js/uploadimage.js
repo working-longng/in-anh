@@ -36,7 +36,7 @@ var uploader = {
             url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: {type:0},
+            data: { type: 0 },
 
             // en, gr
             locale: 'en',
@@ -87,7 +87,7 @@ var uploader = {
             },
 
             // The files allowed to be uploaded. 
-            allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif','heic'],
+            allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'heic'],
 
             // The method that will be used to display the messages.
             errorHandler: {
@@ -492,7 +492,7 @@ var uploader = {
             url: '/Image/Create',
 
             // Sends extra data with the request.
-            data: { type: 6},
+            data: { type: 6 },
 
             // en, gr
             locale: 'en',
@@ -560,7 +560,7 @@ var uploader = {
 
     selected: function () {
         $('.image-size-select').on('change', async function () {
-            
+
             $('#md-print').removeClass('hidden')
             var optionsl = $(this).find(":selected").val() * 1;
             switch (optionsl) {
@@ -637,7 +637,7 @@ var uploader = {
         var isSubmit = false;
         var fd = new FormData();
         for (var i = 0; i < 7; i++) {
-            var imgjq = $('.ssi-uploadInput'+i).parents('.ssi-uploader').find('img');
+            var imgjq = $('.ssi-uploadInput' + i).parents('.ssi-uploader').find('img');
             if (imgjq.length > 0) {
                 isSubmit = true;
                 for (var j = 0; j < imgjq.length; j++) {
@@ -653,7 +653,7 @@ var uploader = {
                     var blob = b64toBlob(realData, contentType);
 
                     // Create a FormData and append the file
-                    
+
                     fd.append("imageFile", blob);
                 }
             }
@@ -662,8 +662,8 @@ var uploader = {
         //    ajaxImage(fd)
         //}
     },
-    handdleClickPrint:  function () {
-       
+    handdleClickPrint: function () {
+
         var lstimg = 0;
         for (var i = 0; i < 7; i++) {
             var imgjq = $('.ssi-uploadInput' + i).parents('.ssi-uploader').find('img').length;
@@ -672,23 +672,23 @@ var uploader = {
         }
         if (lstimg == 0) {
             $('button.btnsm-all').find('span').html(lstimg);
-            $('button.btnsm-all').attr('disabled','');
+            $('button.btnsm-all').attr('disabled', '');
         } else {
             $('button.btnsm-all').removeAttr('disabled')
-             $('button.btnsm-all').find('span').html(lstimg);
+            $('button.btnsm-all').find('span').html(lstimg);
         }
-        
+
         $(document.querySelector('#exampleModal')).modal('show');
-        
+
     },
     uploadDAllImage: function () {
         var name = $('#namesm').val();
-        
+
         var phone = $('#phonesm').val();
-        
+
         var address = $('#addresssm').val();
         var notesm = $('#notesm').val();
-        
+
         if (!name) {
             alert('Bạn Chưa Nhập Tên')
         } else if (!address) {
@@ -700,7 +700,7 @@ var uploader = {
             var oldid = $.cookie("userOrder");
             if (oldid == undefined || oldid == "") {
                 $.cookie("userOrder", id, { expires: 365 });
-                
+
             } else {
                 $.cookie("userOrder", oldid + ";" + id, { expires: 365 });
             }
@@ -712,19 +712,25 @@ var uploader = {
                 type: "Get",
                 data: { orderID: id, phone: phone, name: name, address: address, note: notesm },
                 async: true,
-                success: function (result) {
-                    setTimeout(() => {
-                        $('.ssi-push-please').trigger('click');
-                        $(document.querySelector('#exampleModal')).modal('hide');
-                    }, 100);
+                success: async function (result) {
+                    $.LoadingOverlay("show");
+
+                    for (var i = 0; i < $('.ssi-push-please').length; i++) {
+                        console.log(1111);
+                        await new Promise(resolve => setTimeout(resolve, 1500));
+                        $($('.ssi-push-please')[i]).trigger('click')
+                    }
+                    
+                    $(document.querySelector('#exampleModal')).modal('hide');
+                    
                 }
 
             });
 
-            
+
         }
 
-            
+
     }
 }
 function ajaxImage(fd) {
@@ -732,7 +738,7 @@ function ajaxImage(fd) {
         url: "/Image/Create",
         type: "POST",
         data: fd,
-        enctype:"multipart/form-data",
+        enctype: "multipart/form-data",
         contentType: false,
         processData: false,
         cache: false,

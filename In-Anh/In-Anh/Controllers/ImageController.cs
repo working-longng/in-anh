@@ -20,6 +20,10 @@ using static MongoDB.Driver.WriteConcern;
 using static In_Anh.Models.OrderModel;
 using In_Anh.RabitMQ;
 using In_Anh.Models.RabitMQModel;
+using RabbitMQ.Client;
+using System.Net.Sockets;
+using System.Net;
+using System.Text;
 
 namespace In_Anh.Controllers
 {
@@ -53,11 +57,7 @@ namespace In_Anh.Controllers
             try
             {
                 var UserPhone = string.IsNullOrWhiteSpace(GetPhoneUserCookies().ToString()) ? "spam" : GetPhoneUserCookies().ToString();
-
                 var localFile = _config["Cdn:LocalPath"];
-
-
-
                 var year = DateTime.Now.Year;
                 var month = DateTime.Now.Month;
                 var day = DateTime.Now.Day;
@@ -68,10 +68,19 @@ namespace In_Anh.Controllers
                 var path = UserPhone + "\\" + year + "-" + month + "-" + day + "\\" + id + "\\" + nameType + "\\";
                 ;
                 var filePath = localFile + path;
+                var lstRabitMQSendData= new List<RabitMQSendData>();
+                ConnectionFactory factory = new ConnectionFactory();
+                factory.Uri = new Uri("amqp://admin:admin@jinnie.shop/%2f");
 
-                if (data.Files.Count > 0)
+                ConnectionFactory.DefaultAddressFamily = AddressFamily.InterNetwork;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                //Create the RabbitMQ connection using connection factory details as i mentioned above
+                IConnection connection = factory.CreateConnection();
+                IModel channel = connection.CreateModel();
+                for (int i = 0; i < data.Files.Count; i++)
                 {
-                    var file = data.Files[0];
+
+                    var file = data.Files[i];
                     if (file.Length > 0)
                     {
                         byte[] fileSream;
@@ -83,18 +92,22 @@ namespace In_Anh.Controllers
                             fileSream = memoryStream.ToArray();
                             memoryStream.Dispose();
                         }
-                        _rabitMQProducer.SendProductMessage(new RabitMQSendData()
+                        var json = JsonConvert.SerializeObject(new RabitMQSendData()
                         {
                             File = fileSream,
-                            path = filePath,
+                            Path = filePath,
+                            TypeActive = (Active)type
                         });
+                        var body = Encoding.UTF8.GetBytes(json);
+                        Thread.Sleep(50);
+                        _rabitMQProducer.SendProductMessage(connection, channel, body);
 
                     }
-
                 }
 
-
-
+                Thread.Sleep(2000);
+                channel.Dispose();
+                connection.Dispose();
                 //var listImg = new List<ImageModel>();
 
                 //long size = files.Sum(f => f.Length);
@@ -188,6 +201,7 @@ namespace In_Anh.Controllers
                     Data = new { },
                     Message = "Success"
                 });
+
             }
             catch (Exception e)
             {

@@ -37,7 +37,7 @@
             '<div id="ssi-up_loading" class="ssi-btnIn"></div></button>');
         var $clearBtn = $('<button id="ssi-clearBtn" style="display:inline-block !important" class="ssi-hidden ssi-button info" >' + this.language.clear +
             '</button>');
-       
+
         if (this.options.inForm) {
             $uploadBtn.hide();
         }
@@ -467,219 +467,263 @@
             while (!thisS.toUpload[i]) { // do it until you find a file
                 i++;
             }
-            var file = thisS.toUpload[i]
-            thisS.tryToTransform(file, function (newFile) {
-                var formData = thisS.appendFileToFormData(newFile)
-                ajaxLoopRequest(formData, i)
-            })
-        }
-        //--------------start of ajax request-----------------------
-        function ajaxLoopRequest(formData, ii) {
-            var selector = 'table.ssi-imgToUploadTable';
-            if (!thisS.options.preview) {
-                selector = 'tr.ssi-toUploadTr'
-            }
-            var uploadBar = thisS.$element.find('#ssi-uploadProgress' + ii);//get the file's  progress bar
-            uploadBar.removeClass('ssi-hidden') //make it visible
-                .parents(selector).removeClass('ssi-pending');
-            var ajaxOptions = $.extend({}, {//store the request to the uploadList variable
-                xhr: function () {
-                    var xhr = new window.XMLHttpRequest();
-                    xhr.upload.addEventListener('progress', function (e) {// add event listener to progress
-                        if (e.lengthComputable) {
-                            var percentComplete = (e.loaded / e.total) * 100;// calculate the progress
-                            if (uploadBar) {
-                                uploadBar.css({
-                                    width: percentComplete + '%'//update the progress bar width according to the progress
-                                });
-                            }
-                            thisS.totalProgress[ii] = percentComplete;//store the progress to the array
-                            var sum = arraySum(thisS.totalProgress) / (thisS.inProgress + thisS.successfulUpload);//and calculate the overall progress
-                            if (!thisS.options.preview) {
-                                thisS.$element.find('#ssi-uploadProgressNoPreview')
-                                    .removeClass('ssi-hidden')
-                                    .css({
-                                        width: sum + '%'
-                                    });
-                            }
-                            $uploadBtn.find('#ssi-up_loading').html(Math.ceil(sum) + '%');// add to upload button the current overall progress percent number
-                        }
-                    }, false);
-                    return xhr;
-                },
-                async: true,
-                beforeSend: function (xhr, settings) {
-                    thisS.uploadList[ii] = xhr;
+            console.log(i);
+            var formdatas = new FormData();
+            $.each(this.options.data, function (key, value) {// append all extra data
+                formdatas.append(key, value);
+            });
+
+            
+            for (var k = i; k < thisS.toUpload.length + 1; k++) {
+                if (k < thisS.toUpload.length) {// if more files exist start the next request
                     
-                    $uploadBtn.find('#ssi-up_loading') //add spiner to uploadbutton
-                        .html('<i class="fa fa-spinner fa-pulse"></i>');
-                    var fileInfo = {
-                        name: thisS.toUpload[ii].name,//send some info of the file
-                        type: thisS.toUpload[ii].type,
-                        size: (thisS.toUpload[ii].size / 1024).toFixed(2)
-                    };
-                    if (typeof thisS.options.beforeEachUpload === 'function') {
-                        try {
-                            // execute the beforeEachUpload callback and save the returned value
-                            var msg = thisS.options.beforeEachUpload(fileInfo, xhr, settings);
-                        } catch (err) {
-                            if (err.name == 'Error') {
-                                thisS.abort(ii, undefined, err.message);//call the abort function
-                            } else {
-                                if (!thisS.options.ignoreCallbackErrors) {
-                                    console.log('There is an error in beforeEachUpload callback. Filename:' + thisS.toUpload[ii].name);
-                                    console.log(err);
-                                    thisS.abort(ii, undefined, thisS.language.wentWrong);//call the abort function
-                                }
-                            }
-                            return;
-                        }
-                    }
-                    thisS.$element.find('input.ssi-uploadInput').trigger('beforeEachUpload.ssi-uploader', [fileInfo]);
-                    if (xhr.status === 0) {
-                        if (xhr.statusText === 'canceled') {//if user used beforeEachUpload to abort the request
-                            if (typeof msg === 'undefined') {//if no message
-                                msg = false; //because user have already aborted the request set to false or anything else except undefined to prevent to abort it again
-                            }
-                            thisS.abortedWithError++;// we have one error more
-                            thisS.abort(ii, msg);//call the abort function
-                        }
-                    }
-                },
-                type: 'POST',
-                method: 'POST',
-                data: formData,
-                cache: false,
+                    const nextFile = thisS.toUpload[k];
+                    thisS.tryToTransform(nextFile, function (newFile) {
+                        
+                        formdatas.append(this.inputName, newFile);
+                        //console.log(formdatas.get(this.inputName));
+                        // var formData = thisS.appendFileToFormData(newFile)
+                        //ajaxLoopRequest(formData, i)
+                    })
+                }
+            }
+
+            /*console.log(formdatas);*/
+
+            $.ajax({
+                url: "/Image/Create",
+                type: "post",
+                data: formdatas,
+                beforeSend: function () { $.LoadingOverlay("show"); },
                 contentType: false,
                 processData: false,
-                url: thisS.options.url,
-                error: function (request, error) {
-                    if (error !== 'abort') {
-                        uploadBar.addClass('ssi-canceledProgressBar');
-                        var msg = thisS.language.error;
-                        thisS.abortedWithError++;//add one more error
-                        thisS.totalProgress.splice(ii, 1); //remove from progress array
-                        if (!thisS.options.preview) {
-                            msg = '<span class="exclamation7"></span>';
-                        }
-                        setElementMessage(thisS, ii, 'error', msg, thisS.language.serverError);
-                        thisS.totalProgress[ii] = '';
-                        thisS.inProgress--;
-                        $clearBtn.prop("disabled", false);
-                        if (typeof thisS.options.onEachUpload === 'function') {//execute the onEachUpload callback
-                            try {
-                                thisS.options.onEachUpload({//and return some info
-                                    uploadStatus: 'error',
-                                    responseMsg: thisS.language.serverError,
-                                    name: thisS.toUpload[ii].name,
-                                    size: (thisS.toUpload[ii].size / 1024).toFixed(2),
-                                    type: thisS.toUpload[ii].type
-                                });
-                            } catch (err) {
-                                if (!thisS.options.ignoreCallbackErrors) {
-                                    console.log('There is an error in onEachUpload callback. File name:' + thisS.toUpload[ii].name);
-                                    console.log(err);
-                                }
-                            }
-                        }
-                        if (getCompleteStatus(thisS)) {//if no more elements in progress
-                            finishUpload(thisS);
-                        }
-                        console.log(arguments);//log the error
-                        console.log(" Ajax error: " + error);
-                    }
-                }
-            }, thisS.options.ajaxOptions);
-            $.ajax(ajaxOptions).done(function (responseData, textStatus, jqXHR) {
-                var msg, title = '', dataType = 'error', spanClass = 'exclamation', data;
-                try {
-                    data = $.parseJSON(responseData);
-                } catch (err) {
-                    data = responseData;
-                }
-                if (thisS.options.responseValidation) {
-                    var valData = thisS.options.responseValidation;
-                    if (typeof valData.validationKey === 'object' && valData.resultKey == 'validationKey') {
-                        if (data.hasOwnProperty(valData.validationKey.success)) {
-                            cb(true, data[valData.validationKey.success]);
-                        } else {
-                            cb(false, data[valData.validationKey.error]);
-                        }
-                    } else {
-                        if (data[valData.validationKey] == valData.success) {
-                            cb(true, data[valData.resultKey]);
-                        } else {
-                            cb(false, data[valData.resultKey]);
-                        }
-                    }
-                } else {
-                    if (jqXHR.status == 200) {
-                        cb(true, data);
-                    } else {
-                        cb(false, data);
-                    }
-                }
-                function cb(result, data) {
-                    if (result) {//if response type is success
-                        dataType = 'success';
-                        msg = thisS.language.success;
-                        spanClass = 'check';
-                        thisS.successfulUpload++;// one more successful upload
-                    } else {
-                        uploadBar.addClass('ssi-canceledProgressBar');
-                        if (thisS.options.preview) {
-                            msg = thisS.language.error;
-                        }
-                        thisS.abortedWithError++;
-                    }
-                    title = data;
+                async: true,
+                success: function (result) {
+                    $.LoadingOverlay("hide");
+                    $.LoadingOverlay("hide");
+                    //setTimeout(() => {
+                    //    $('.ssi-push-please').trigger('click');
+                    //    $(document.querySelector('#exampleModal')).modal('hide');
+                    //}, 100);
+                }, error: function (e) {
+                    console.log(e);
+                    $.LoadingOverlay("hide");
                 }
 
-                if (!thisS.options.preview) {
-                    msg = '<span class="' + spanClass + '7"></span>';
-                }
-                setElementMessage(thisS, ii, dataType, msg, title);
-                var fileInfo = {//and return some info
-                    uploadStatus: dataType,
-                    responseMsg: title,
-                    name: thisS.toUpload[ii].name,
-                    size: (thisS.toUpload[ii].size / 1024).toFixed(2),
-                    type: thisS.toUpload[ii].type
-                };
-                if (typeof thisS.options.onEachUpload === 'function') {//execute the onEachUpload callback
-                    try {
-                        thisS.options.onEachUpload(fileInfo, data);
-                    } catch (err) {
-                        console.log('There is an error in onEachUpload callback');
-                        console.log(err);
-                    }
-                }
-                thisS.$element.find('input.ssi-uploadInput').trigger('onEachUpload.ssi-uploader', [fileInfo]);
-                thisS.inProgress--;//one less in progress upload
-                $clearBtn.prop("disabled", false);
-                if (getCompleteStatus(thisS)) {//if no more files in progress
-                    finishUpload(thisS);
-                }
-                // thisS.totalProgress[ii]='';
-                thisS.uploadList[ii] = '';
-                thisS.toUpload[ii] = '';
-                thisS.imgNames[ii] = '';
             });
-            //--------------end of ajax request-----------------------
-
-            i = ii;
-            i++;//go to the next element
-            while (!thisS.toUpload[i] && typeof thisS.toUpload[i] !== 'undefined') {// do it until you find a file
-                i++;
-            }
-            if (i < thisS.toUpload.length) {// if more files exist start the next request
-                const nextFile = thisS.toUpload[i]
-                thisS.tryToTransform(nextFile, function (newFile) {
-                    var formData = thisS.appendFileToFormData(newFile)
-                    ajaxLoopRequest(formData, i)
-                })
-            }
+            //var file = thisS.toUpload[i]
+            //thisS.tryToTransform(file, function (newFile) {
+            //    var formData = thisS.appendFileToFormData(newFile)
+            //    ajaxLoopRequest(formData, i)
+            //})
         }
+        //--------------start of ajax request-----------------------
+        //function ajaxLoopRequest(formData, ii) {
+        //    var selector = 'table.ssi-imgToUploadTable';
+        //    if (!thisS.options.preview) {
+        //        selector = 'tr.ssi-toUploadTr'
+        //    }
+        //    var uploadBar = thisS.$element.find('#ssi-uploadProgress' + ii);//get the file's  progress bar
+        //    uploadBar.removeClass('ssi-hidden') //make it visible
+        //        .parents(selector).removeClass('ssi-pending');
+        //    var ajaxOptions = $.extend({}, {//store the request to the uploadList variable
+        //        xhr: function () {
+        //            var xhr = new window.XMLHttpRequest();
+        //            xhr.upload.addEventListener('progress', function (e) {// add event listener to progress
+        //                if (e.lengthComputable) {
+        //                    var percentComplete = (e.loaded / e.total) * 100;// calculate the progress
+        //                    if (uploadBar) {
+        //                        uploadBar.css({
+        //                            width: percentComplete + '%'//update the progress bar width according to the progress
+        //                        });
+        //                    }
+        //                    thisS.totalProgress[ii] = percentComplete;//store the progress to the array
+        //                    var sum = arraySum(thisS.totalProgress) / (thisS.inProgress + thisS.successfulUpload);//and calculate the overall progress
+        //                    if (!thisS.options.preview) {
+        //                        thisS.$element.find('#ssi-uploadProgressNoPreview')
+        //                            .removeClass('ssi-hidden')
+        //                            .css({
+        //                                width: sum + '%'
+        //                            });
+        //                    }
+        //                    $uploadBtn.find('#ssi-up_loading').html(Math.ceil(sum) + '%');// add to upload button the current overall progress percent number
+        //                }
+        //            }, false);
+        //            return xhr;
+        //        },
+        //        async: true,
+        //        beforeSend: function (xhr, settings) {
+        //            thisS.uploadList[ii] = xhr;
+
+        //            $uploadBtn.find('#ssi-up_loading') //add spiner to uploadbutton
+        //                .html('<i class="fa fa-spinner fa-pulse"></i>');
+        //            var fileInfo = {
+        //                name: thisS.toUpload[ii].name,//send some info of the file
+        //                type: thisS.toUpload[ii].type,
+        //                size: (thisS.toUpload[ii].size / 1024).toFixed(2)
+        //            };
+        //            if (typeof thisS.options.beforeEachUpload === 'function') {
+        //                try {
+        //                    // execute the beforeEachUpload callback and save the returned value
+        //                    var msg = thisS.options.beforeEachUpload(fileInfo, xhr, settings);
+        //                } catch (err) {
+        //                    if (err.name == 'Error') {
+        //                        thisS.abort(ii, undefined, err.message);//call the abort function
+        //                    } else {
+        //                        if (!thisS.options.ignoreCallbackErrors) {
+        //                            console.log('There is an error in beforeEachUpload callback. Filename:' + thisS.toUpload[ii].name);
+        //                            console.log(err);
+        //                            thisS.abort(ii, undefined, thisS.language.wentWrong);//call the abort function
+        //                        }
+        //                    }
+        //                    return;
+        //                }
+        //            }
+        //            thisS.$element.find('input.ssi-uploadInput').trigger('beforeEachUpload.ssi-uploader', [fileInfo]);
+        //            if (xhr.status === 0) {
+        //                if (xhr.statusText === 'canceled') {//if user used beforeEachUpload to abort the request
+        //                    if (typeof msg === 'undefined') {//if no message
+        //                        msg = false; //because user have already aborted the request set to false or anything else except undefined to prevent to abort it again
+        //                    }
+        //                    thisS.abortedWithError++;// we have one error more
+        //                    thisS.abort(ii, msg);//call the abort function
+        //                }
+        //            }
+        //        },
+        //        type: 'POST',
+        //        method: 'POST',
+        //        data: formData,
+        //        cache: false,
+        //        contentType: false,
+        //        processData: false,
+        //        url: thisS.options.url,
+        //        error: function (request, error) {
+        //            if (error !== 'abort') {
+        //                uploadBar.addClass('ssi-canceledProgressBar');
+        //                var msg = thisS.language.error;
+        //                thisS.abortedWithError++;//add one more error
+        //                thisS.totalProgress.splice(ii, 1); //remove from progress array
+        //                if (!thisS.options.preview) {
+        //                    msg = '<span class="exclamation7"></span>';
+        //                }
+        //                setElementMessage(thisS, ii, 'error', msg, thisS.language.serverError);
+        //                thisS.totalProgress[ii] = '';
+        //                thisS.inProgress--;
+        //                $clearBtn.prop("disabled", false);
+        //                if (typeof thisS.options.onEachUpload === 'function') {//execute the onEachUpload callback
+        //                    try {
+        //                        thisS.options.onEachUpload({//and return some info
+        //                            uploadStatus: 'error',
+        //                            responseMsg: thisS.language.serverError,
+        //                            name: thisS.toUpload[ii].name,
+        //                            size: (thisS.toUpload[ii].size / 1024).toFixed(2),
+        //                            type: thisS.toUpload[ii].type
+        //                        });
+        //                    } catch (err) {
+        //                        if (!thisS.options.ignoreCallbackErrors) {
+        //                            console.log('There is an error in onEachUpload callback. File name:' + thisS.toUpload[ii].name);
+        //                            console.log(err);
+        //                        }
+        //                    }
+        //                }
+        //                if (getCompleteStatus(thisS)) {//if no more elements in progress
+        //                    finishUpload(thisS);
+        //                }
+        //                console.log(arguments);//log the error
+        //                console.log(" Ajax error: " + error);
+        //            }
+        //        }
+        //    }, thisS.options.ajaxOptions);
+        //    $.ajax(ajaxOptions).done(function (responseData, textStatus, jqXHR) {
+        //        var msg, title = '', dataType = 'error', spanClass = 'exclamation', data;
+        //        try {
+        //            data = $.parseJSON(responseData);
+        //        } catch (err) {
+        //            data = responseData;
+        //        }
+        //        if (thisS.options.responseValidation) {
+        //            var valData = thisS.options.responseValidation;
+        //            if (typeof valData.validationKey === 'object' && valData.resultKey == 'validationKey') {
+        //                if (data.hasOwnProperty(valData.validationKey.success)) {
+        //                    cb(true, data[valData.validationKey.success]);
+        //                } else {
+        //                    cb(false, data[valData.validationKey.error]);
+        //                }
+        //            } else {
+        //                if (data[valData.validationKey] == valData.success) {
+        //                    cb(true, data[valData.resultKey]);
+        //                } else {
+        //                    cb(false, data[valData.resultKey]);
+        //                }
+        //            }
+        //        } else {
+        //            if (jqXHR.status == 200) {
+        //                cb(true, data);
+        //            } else {
+        //                cb(false, data);
+        //            }
+        //        }
+        //        function cb(result, data) {
+        //            if (result) {//if response type is success
+        //                dataType = 'success';
+        //                msg = thisS.language.success;
+        //                spanClass = 'check';
+        //                thisS.successfulUpload++;// one more successful upload
+        //            } else {
+        //                uploadBar.addClass('ssi-canceledProgressBar');
+        //                if (thisS.options.preview) {
+        //                    msg = thisS.language.error;
+        //                }
+        //                thisS.abortedWithError++;
+        //            }
+        //            title = data;
+        //        }
+
+        //        if (!thisS.options.preview) {
+        //            msg = '<span class="' + spanClass + '7"></span>';
+        //        }
+        //        setElementMessage(thisS, ii, dataType, msg, title);
+        //        var fileInfo = {//and return some info
+        //            uploadStatus: dataType,
+        //            responseMsg: title,
+        //            name: thisS.toUpload[ii].name,
+        //            size: (thisS.toUpload[ii].size / 1024).toFixed(2),
+        //            type: thisS.toUpload[ii].type
+        //        };
+        //        if (typeof thisS.options.onEachUpload === 'function') {//execute the onEachUpload callback
+        //            try {
+        //                thisS.options.onEachUpload(fileInfo, data);
+        //            } catch (err) {
+        //                console.log('There is an error in onEachUpload callback');
+        //                console.log(err);
+        //            }
+        //        }
+        //        thisS.$element.find('input.ssi-uploadInput').trigger('onEachUpload.ssi-uploader', [fileInfo]);
+        //        thisS.inProgress--;//one less in progress upload
+        //        $clearBtn.prop("disabled", false);
+        //        if (getCompleteStatus(thisS)) {//if no more files in progress
+        //            finishUpload(thisS);
+        //        }
+        //        // thisS.totalProgress[ii]='';
+        //        thisS.uploadList[ii] = '';
+        //        thisS.toUpload[ii] = '';
+        //        thisS.imgNames[ii] = '';
+        //    });
+        //    //--------------end of ajax request-----------------------
+
+        //    i = ii;
+        //    i++;//go to the next element
+        //    while (!thisS.toUpload[i] && typeof thisS.toUpload[i] !== 'undefined') {// do it until you find a file
+        //        i++;
+        //    }
+        //    if (i < thisS.toUpload.length) {// if more files exist start the next request
+        //        const nextFile = thisS.toUpload[i]
+        //        thisS.tryToTransform(nextFile, function (newFile) {
+        //            var formData = thisS.appendFileToFormData(newFile)
+        //            ajaxLoopRequest(formData, i)
+        //        })
+        //    }
+        //}
     };
     var setElementMessage = function (thisS, index, msgType, msg, title) {
         var className = '', elementSelector = 'table.ssi-imgToUploadTable', element;
@@ -714,10 +758,10 @@
         thisS.$element.find('.ssi-uploadDetails').removeClass('ssi-uploadBoxOpened');
         thisS.$element.find('.ssi-namePreview').html(cutFileName(fileName, ext, 15));//short the name and put it to the name preview
     };
-  
+
 
     var finishUpload = function (thisS) {//when every uplaod ends
-        
+
         if (!thisS.options.preview) {//display tha main message in the name preview
             var type = 'error', title = '', msg = '';
             if (thisS.abortedWithError > 0) { //if no errors

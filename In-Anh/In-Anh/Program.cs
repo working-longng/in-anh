@@ -4,6 +4,7 @@ using In_Anh.Models.MongoModel;
 using In_Anh.RabitMQ;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
@@ -54,8 +55,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
            ValidateIssuerSigningKey = true
        };
    });
+builder.Services.Configure<IISServerOptions>(options =>
+{
+    options.MaxRequestBodySize = int.MaxValue;
+});
 
-
+builder.Services.Configure<KestrelServerOptions>(options =>
+{
+    options.Limits.MaxRequestBodySize = int.MaxValue; // if don't set default value is: 30 MB
+});
+builder.Services.AddHostedService<RabitMQConsumer>();
 var app = builder.Build();
 app.UseDeveloperExceptionPage();
 // Configure the HTTP request pipeline.

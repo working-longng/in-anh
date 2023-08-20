@@ -8,34 +8,36 @@ using System.Text;
 
 namespace In_Anh.RabitMQ
 {
-    public class RabitMQProducer : IRabitMQProducer
+    public class RabitMQProducer : IRabitMQProducer 
     {
-        public void SendProductMessage<T>(T message)
+        public void SendProductMessage(IConnection connection, IModel channel, byte[] body)
         {
 
             try
             { //Here we specify the Rabbit MQ Server. we use rabbitmq docker image and use it
-                ConnectionFactory factory = new ConnectionFactory();
-                factory.Uri = new Uri("amqp://admin:admin@jinnie.shop/%2f");
-
-                ConnectionFactory.DefaultAddressFamily = AddressFamily.InterNetwork;
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                //Create the RabbitMQ connection using connection factory details as i mentioned above
-                using IConnection connection = factory.CreateConnection();
+                
                 //Here we create channel with session and model
-                using IModel channel = connection.CreateModel();
-                channel.ConfirmSelect();
+                 
+                //channel.ConfirmSelect();
                 var props = new HashMap<string, object>();
                 //channel.QueueDeclare("images", exclusive: false);
-                channel.QueueDeclare("images", false, false,true, props);
-                
-                //Serialize the message
-                var json = JsonConvert.SerializeObject(message);
-                var body = Encoding.UTF8.GetBytes(json);
-                //put the data on to the product queue
-                channel.BasicPublish(exchange: "", routingKey: "images", body: body);
-                channel.WaitForConfirmsOrDie(TimeSpan.FromSeconds(20));
+                channel.QueueDeclareNoWait(queue: "image",
+                      durable: true,
+                      exclusive: false,
+                      autoDelete: true,
+                      arguments: null);
 
+                //Serialize the message
+                
+                //put the data on to the product queue
+                channel.BasicPublish(exchange: string.Empty,
+                     routingKey: "image",
+                     basicProperties: null,
+                     body: body);
+
+                //channel.BasicPublish(exchange: "", routingKey: "image", body: body);
+                //channel.WaitForConfirmsOrDie(TimeSpan.FromSeconds(2));
+               
             }
             catch (Exception e)
             {
@@ -47,6 +49,17 @@ namespace In_Anh.RabitMQ
             
             //declare the queue after mentioning name and a few property related to that
 
+        }
+        public void setTimeout(Action TheAction, int Timeout)
+        {
+            Thread t = new Thread(
+                () =>
+                {
+                    Thread.Sleep(Timeout);
+                    TheAction.Invoke();
+                }
+            );
+            t.Start();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿@{
     var lang = ViewBag.Language ==null? null: ViewBag.Language as Languages;
     var isLogin = ViewBag.IsLogin ==null ? false : (bool) ViewBag.IsLogin;
-    var UserData = ViewBag.UserLogin == null ? null : ViewBag.UserLogin as UserModel;
+    var UserData = ViewBag?.UserLogin == null ? null : ViewBag.UserLogin as UserModel;
 }
 <!DOCTYPE html>
 <html lang="en">
