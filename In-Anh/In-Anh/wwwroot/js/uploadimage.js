@@ -688,7 +688,7 @@ var uploader = {
 
         var address = $('#addresssm').val();
         var notesm = $('#notesm').val();
-
+        var totalimg = $('button.btnsm-all').find('span').html() * 1;
         if (!name) {
             alert('Bạn Chưa Nhập Tên')
         } else if (!address) {
@@ -702,6 +702,13 @@ var uploader = {
                 $.cookie("userOrder", id, { expires: 365 });
 
             } else {
+                var old = $.cookie("userOrder").split(';');
+                if (old.length > 20) {
+                    var lstold = old.reverse().slice(0, 20).reverse();
+                    $.cookie("userOrder", JSON.stringify(lstold));
+                }
+
+
                 $.cookie("userOrder", oldid + ";" + id, { expires: 365 });
             }
             $.cookie("userOrderTemp", id, { expires: 1 });
@@ -710,19 +717,22 @@ var uploader = {
             $.ajax({
                 url: "/Image/CreareOrderID",
                 type: "Get",
-                data: { orderID: id, phone: phone, name: name, address: address, note: notesm },
+                beforeSend: function () { $.LoadingOverlay("show"); },
+                data: { orderID: id, phone: phone, name: name, address: address, note: notesm, total: totalimg },
                 async: true,
                 success: async function (result) {
-                    $.LoadingOverlay("show");
-
+                    
                     for (var i = 0; i < $('.ssi-push-please').length; i++) {
-                        console.log(1111);
                         await new Promise(resolve => setTimeout(resolve, 1500));
-                        $($('.ssi-push-please')[i]).trigger('click')
+                        if (i == $('.ssi-push-please').length - 1) {
+                            $('#mytoast').data('isshow', true);
+                            
+                        }
+                        $($('.ssi-push-please')[i]).trigger('click');
                     }
-                    
-                    $(document.querySelector('#exampleModal')).modal('hide');
-                    
+                    $.LoadingOverlay("hide");
+                }, error: function () {
+                    $.LoadingOverlay("hide");
                 }
 
             });

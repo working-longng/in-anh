@@ -122,7 +122,7 @@ namespace In_Anh.Controllers
                     {
                         Type = result,
                         OrginUrl = filePaths.ToList(),
-                        Url= Urls
+                        Url=Urls
                     });
 
                 }

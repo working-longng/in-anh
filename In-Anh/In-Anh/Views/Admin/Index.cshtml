@@ -15,6 +15,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Address</th>
+                <th scope="col">Total Images</th>
                 <th scope="col">Note</th>
                 <th scope="col">Order Day</th>
                 <th scope="col">Process</th>
@@ -30,6 +31,7 @@
                     <th>@item.Name</th>
                     <th>@item.Phone</th>
                     <th>@item.Address</th>
+                    <th>(@item.Images.Sum(x=>x.OrginUrl.Count)) / @item.Total</th>
                     <th>@item.Note</th>
 
                     <td>@item.DayOrder.ToLocalTime()</td>

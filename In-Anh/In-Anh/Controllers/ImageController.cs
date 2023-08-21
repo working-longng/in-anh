@@ -71,7 +71,6 @@ namespace In_Anh.Controllers
                 var lstRabitMQSendData= new List<RabitMQSendData>();
                 ConnectionFactory factory = new ConnectionFactory();
                 factory.Uri = new Uri("amqp://admin:admin@jinnie.shop/%2f");
-
                 ConnectionFactory.DefaultAddressFamily = AddressFamily.InterNetwork;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 //Create the RabbitMQ connection using connection factory details as i mentioned above
@@ -79,12 +78,10 @@ namespace In_Anh.Controllers
                 IModel channel = connection.CreateModel();
                 for (int i = 0; i < data.Files.Count; i++)
                 {
-
                     var file = data.Files[i];
                     if (file.Length > 0)
                     {
                         byte[] fileSream;
-
                        await using (var memoryStream = new MemoryStream())
                         {
                             file.OpenReadStream();
@@ -99,12 +96,10 @@ namespace In_Anh.Controllers
                             TypeActive = (Active)type
                         });
                         var body = Encoding.UTF8.GetBytes(json);
-                        Thread.Sleep(50);
                         _rabitMQProducer.SendProductMessage(connection, channel, body);
-
-                    }
+						Thread.Sleep(20);
+					}
                 }
-
                 Thread.Sleep(2000);
                 channel.Dispose();
                 connection.Dispose();
@@ -214,7 +209,7 @@ namespace In_Anh.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> CreareOrderID(string orderID, string phone, string address, string name, string note)
+        public async Task<ActionResult> CreareOrderID(string orderID, string phone, string address, string name, string note,int total)
         {
             try
             {
@@ -230,8 +225,8 @@ namespace In_Anh.Controllers
                     IsActive = false,
                     Phone = phone,
                     DayOrder = new DateTime(DateTime.Now.Ticks),
-                    Active = Active.Inactive
-                    
+                    Active = Active.Inactive,
+                    Total = total
                 };
                 if (userGetOrder == null)
                 {

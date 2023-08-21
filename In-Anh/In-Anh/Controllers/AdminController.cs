@@ -38,12 +38,19 @@ namespace In_Anh.Controllers
             try
             {
                 //var a = GetListImage("0762414222", "31236", "2023-8-12");
+
                 var userGetOrder = _ordersCollection.Find(_ => true ).ToList().SelectMany(y => y.ListDetail).Where(c=>c.OrderId.Contains(keyw) || c.Phone.Contains(keyw)).OrderByDescending(x => x.DayOrder).Skip(0 * PAGING).Take(PAGING).ToList();
                 var count = _ordersCollection.Find(_ => keyw == "" ? true : _.Phone.Contains(keyw)).ToList().SelectMany(y => y.ListDetail).Count();
                 ViewBag.IsLogin = true;
                 var ttp = Math.Ceiling((decimal)count / (decimal)PAGING);
                 ViewBag.TotalPage = ttp;
                 TempData["TotalPage"] = (int)ttp;
+                foreach (var item in userGetOrder)
+                {
+                  item.Images = GetListImage(item.Phone, item.OrderId, item.DayOrder.ToString("yyyy-M-dd"));
+                  
+                }
+                
                 return View(userGetOrder);
             }
             catch (Exception)

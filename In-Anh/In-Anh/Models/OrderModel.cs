@@ -33,6 +33,7 @@ namespace In_Anh.Models
         public Active? Active  { get; set; }
         public List<string> Urls { get; set; }
         public List<ImageModel>? Images { get; set; }
+        public int? Total { get; set; }  
     }
    
     public enum Active

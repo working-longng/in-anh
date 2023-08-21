@@ -500,13 +500,15 @@
                 async: true,
                 success: function (result) {
                     $.LoadingOverlay("hide");
-                    $.LoadingOverlay("hide");
-                    //setTimeout(() => {
-                    //    $('.ssi-push-please').trigger('click');
-                    //    $(document.querySelector('#exampleModal')).modal('hide');
-                    //}, 100);
+                    if ($('#mytoast').data('isshow').toString().toLowerCase() == 'true') {
+                        $(document.querySelector('#mytoast')).toast('show');
+                        $('#mytoast').data('isshow', false);
+                        $(document.querySelector('#exampleModal')).modal('hide');
+                    }
+                    
                 }, error: function (e) {
                     console.log(e);
+                    /*$.LoadingOverlay("hide");*/
                     $.LoadingOverlay("hide");
                 }
 
