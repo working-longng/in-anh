@@ -494,6 +494,11 @@
                 url: "/Image/Create",
                 type: "post",
                 data: formdatas,
+                headers: {
+                    
+                    "Content-Length": Array.from(formdatas.keys()).length,
+                    
+                },
                 beforeSend: function () { $.LoadingOverlay("show"); },
                 contentType: false,
                 processData: false,
