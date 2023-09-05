@@ -24,7 +24,7 @@ namespace In_Anh.RabitMQ
                 channel.QueueDeclareNoWait(queue: "image",
                       durable: true,
                       exclusive: false,
-                      autoDelete: true,
+                      autoDelete: false,
                       arguments: null);
 
                 //Serialize the message

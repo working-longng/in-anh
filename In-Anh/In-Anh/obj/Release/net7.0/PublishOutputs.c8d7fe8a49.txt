@@ -28,6 +28,7 @@ C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Grpc.
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Grpc.Core.Api.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Grpc.Net.Client.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Grpc.Net.Common.dll
+C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Lucene.Net.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Magick.NET-Q16-AnyCPU.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Magick.NET.Core.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -43,7 +44,9 @@ C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Mongo
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\MongoDB.Driver.Core.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\MongoDB.Libmongocrypt.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\RabbitMQ.Client.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\SharpCompress.dll
+C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\ICSharpCode.SharpZipLib.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\SixLabors.ImageSharp.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\Snappier.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\obj\Release\net7.0\PubTmp\Out\System.Drawing.Common.dll

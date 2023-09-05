@@ -26,9 +26,9 @@ namespace In_Anh.RabitMQ
                     HostName = "jinnie.shop",
                     // port = 5672, default value
                     VirtualHost = "/",
-                    UserName = "guest",
-                    Password = "guest"
-                };
+                    UserName = "admin",
+                    Password = "admin"
+				};
 
                 this.connection = factory.CreateConnection();
                 this.channel = this.connection.CreateModel();
@@ -40,7 +40,7 @@ namespace In_Anh.RabitMQ
                 this.channel.QueueDeclare(queue: "image",
                                     durable: true,
                                     exclusive: false,
-                                    autoDelete: true,
+                                    autoDelete: false,
                                     arguments: null);
                 //this.channel.QueueBind("queue.in", "exchange", "in");
 
@@ -52,7 +52,7 @@ namespace In_Anh.RabitMQ
                 //                    arguments: null);
                 //this.channel.QueueBind("queue.out", "exchange", "out");
 
-                this.channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+                this.channel.BasicQos(prefetchSize: 0, prefetchCount: 5, global: false);
 
                 Console.WriteLine(" [*] Waiting for messages.");
 
@@ -94,8 +94,8 @@ namespace In_Anh.RabitMQ
             var data = JsonConvert.DeserializeObject<RabitMQSendData>(message);
 
 
-            var fileName = Guid.NewGuid().ToString() + ".jpg";
-            var filePath = data.Path + fileName;
+            var fileName = data.FileName;
+            var filePath = data.Path +"\\"+ fileName;
 
             using (var memoryStream = new MemoryStream(data.File))
             {
@@ -114,11 +114,14 @@ namespace In_Anh.RabitMQ
                 }
 
 
-                using (FileStream f = File.Create(filePath))
+                if (!File.Exists(filePath))
                 {
+					using (FileStream f = File.Create(filePath))
+					{
 
-                    f.Dispose();
-                }
+						f.Dispose();
+					}
+				}
                 memoryStream.Position = 0;
                 using (MagickImage image = new MagickImage(memoryStream))
                 {
@@ -127,6 +130,7 @@ namespace In_Anh.RabitMQ
                     image.Write(filePath);
                     image.Dispose();
                 }
+                memoryStream.Close();
             }
             //this.channel.BasicPublish(exchange: "exchange",
             //                     routingKey: "out",

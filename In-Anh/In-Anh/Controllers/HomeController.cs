@@ -16,7 +16,14 @@ namespace In_Anh.Controllers
 
         public IActionResult Index()
         {
-            Languages lang = new Languages().LanguageVN();
+			int worker = 0;
+			int io = 0;
+			ThreadPool.GetAvailableThreads(out worker, out io);
+
+			Console.WriteLine("Thread pool threads available at startup: ");
+			Console.WriteLine("   Worker threads: {0:N0}", worker);
+			Console.WriteLine("   Asynchronous I/O threads: {0:N0}", io);
+			Languages lang = new Languages().LanguageVN();
             ViewBag.Language = lang;
             ViewBag.IsLogin = isLogin();
             if (isLogin())
