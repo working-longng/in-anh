@@ -20,7 +20,7 @@ jobs:
         dotnet-version: '7'
   
     - run: |
-             stop-webapppool jinnie.shop
+             
              stop-iissite -Name jinnie.shop -Confirm: $false
              Start-Sleep -s 5
              dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
