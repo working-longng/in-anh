@@ -4,15 +4,12 @@ on:
     branches: [ "main" ]
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-            os: [self-hosted, self-hosted]
+    runs-on: self-hosted
   
     steps:
     
     
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - uses: actions/setup-dotnet@v3
@@ -22,7 +19,6 @@ jobs:
     - run: |
              stop-webapppool jinnie.shop
              stop-iissite -Name jinnie.shop -Confirm: $false
-             Start-Sleep -s 5
-             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
              start-webapppool jinnie.shop
-             start-iissite jinnie.shop 
+             start-iissite jinnie.shop
+    - run: dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
