@@ -8,32 +8,7 @@ jobs:
   
     steps:
     - run: |
-
-              Import-Module WebAdministration
-
-
-              $appPoolName = $OctopusParameters['jinnie.shop']
-
-              if ( (Get-WebAppPoolState -Name $appPoolName).Value -eq "Stopped" )
-              {
-               Write-Host "AppPool already stopped: " + $appPoolName
-              }
-              else
-              {
-              Write-Host "Shutting down the AppPool: " + $appPoolName
-              Write-Host (Get-WebAppPoolState $appPoolName).Value
-
-
-              Stop-WebAppPool -Name $appPoolName
-              }
-
-              do
-              {
-              Write-Host (Get-WebAppPoolState $appPoolName).Value
-              Start-Sleep -Seconds 1
-              }
-              until ( (Get-WebAppPoolState -Name $appPoolName).Value -eq "Stopped" )
-              Import-Module "WebAdministration"
+              
               stop-webapppool jinnie.shop
               stop-iissite -Name jinnie.shop -Confirm: $false
               dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
