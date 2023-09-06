@@ -12,7 +12,7 @@ jobs:
     steps:
     - run: |
              
-             stop-iissite -Name jinnie.shop -Confirm: $false
+             runas.exe /savecred /user:long stop-iissite -Name jinnie.shop -Confirm: $false
              Start-Sleep -s 5
              dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
              start-webapppool jinnie.shop
