@@ -1,4 +1,4 @@
-name: .NET Core Desktop
+ame: .NET Core Desktop
 on:
   push:
     branches: [ "main" ]
@@ -7,10 +7,16 @@ jobs:
     runs-on: self-hosted
   
     steps:
+    
+    
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7'
+  
     - run: |
+            
+             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
              
-              stop-webapppool jinnie.shop
-              stop-iissite -Name jinnie.shop -Confirm: $false
-              dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
-              start-webapppool jinnie.shop
-              start-iissite jinnie.shop
