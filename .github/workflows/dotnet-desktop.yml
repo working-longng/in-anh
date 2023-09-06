@@ -8,7 +8,7 @@ jobs:
   
     steps:
     - run: |
-              
+              msdeploy.exe -verb:sync -source:recycleApp -dest:recycleApp="jinnie.shop",wmsvc=remote-computer,userName=long,Password=000000Long –allowUntrusted
               stop-webapppool jinnie.shop
               stop-iissite -Name jinnie.shop -Confirm: $false
               dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
