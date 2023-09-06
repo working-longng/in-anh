@@ -1,4 +1,4 @@
-ame: .NET Core Desktop
+name: .NET Core Desktop
 on:
   push:
     branches: [ "main" ]
