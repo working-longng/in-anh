@@ -1,16 +1,16 @@
-name: Run as admin test
+name: .NET Core Desktop
 on:
   push:
-    branches:
-    - test-run-as-admin
+    branches: [ "main" ]
 jobs:
-  run-as-admin-test:
-  runs-on: [self-hosted, windows]
-  steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2 # repo contains the RunAsAdmin.ps1
-    - name: Run as Admin
-      run: |
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+            os: [self-hosted, self-hosted]
+  
+    steps:
+    - run: |
         whoami
         $myWindowsID=[System.Security.Principal.WindowsIdentity]::GetCurrent()
         echo "myWindowsID=$myWindowsID"
