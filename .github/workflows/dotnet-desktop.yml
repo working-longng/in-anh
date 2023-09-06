@@ -4,30 +4,13 @@ on:
     branches: [ "main" ]
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-            os: [self-hosted, self-hosted]
+    runs-on: self-hosted
   
     steps:
     - run: |
-        whoami
-        $myWindowsID=[System.Security.Principal.WindowsIdentity]::GetCurrent()
-        echo "myWindowsID=$myWindowsID"
-        $myWindowsPrincipal=new-object System.Security.Principal.WindowsPrincipal($myWindowsID)
-        echo "myWindowsPrincipal=$myWindowsPrincipal"
-        $adminRole=[System.Security.Principal.WindowsBuiltInRole]::Administrator
-        New-Item -Path "$LocalTestDir\sysout.txt -ItemType File
-        if ($myWindowsPrincipal.IsInRole($adminRole)) `
-        { 
-          echo "is admin" 
-        } `
-        else { `
-          echo "is not admin"; `
-          $passThruArgs = '-NoProfile -ExecutionPolicy Bypass -command', '&', "$env:GITHUB_WORKSPACE\RunAsAdmin.ps1", $arg, '*>', "`"$LocalTestDir\sysout.txt`""; `
-          Start-Process powershell -Wait -Verb RunAs -ArgumentList $passThruArgs; `
-          Get-Content "$LocalTestDir\sysout.txt"; `
-        }`
-        dir "C:\var"
-    - name: check
-      run: dir "C:\var"
+             
+             stop-iissite -Name jinnie.shop -Confirm: $false
+             Start-Sleep -s 5
+             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+             start-webapppool jinnie.shop
+             start-iissite jinnie.shop 
