@@ -1,19 +1,33 @@
-name: .NET Core Desktop
+name: Run as admin test
 on:
   push:
-    branches: [ "main" ]
+    branches:
+    - test-run-as-admin
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-            os: [self-hosted, self-hosted]
-  
-    steps:
-    - run: |
-             
-             runas.exe /savecred /user:long stop-iissite -Name jinnie.shop -Confirm: $false
-             Start-Sleep -s 5
-             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
-             start-webapppool jinnie.shop
-             start-iissite jinnie.shop 
+  run-as-admin-test:
+  runs-on: [self-hosted, windows]
+  steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2 # repo contains the RunAsAdmin.ps1
+    - name: Run as Admin
+      run: |
+        whoami
+        $myWindowsID=[System.Security.Principal.WindowsIdentity]::GetCurrent()
+        echo "myWindowsID=$myWindowsID"
+        $myWindowsPrincipal=new-object System.Security.Principal.WindowsPrincipal($myWindowsID)
+        echo "myWindowsPrincipal=$myWindowsPrincipal"
+        $adminRole=[System.Security.Principal.WindowsBuiltInRole]::Administrator
+        New-Item -Path "$LocalTestDir\sysout.txt -ItemType File
+        if ($myWindowsPrincipal.IsInRole($adminRole)) `
+        { 
+          echo "is admin" 
+        } `
+        else { `
+          echo "is not admin"; `
+          $passThruArgs = '-NoProfile -ExecutionPolicy Bypass -command', '&', "$env:GITHUB_WORKSPACE\RunAsAdmin.ps1", $arg, '*>', "`"$LocalTestDir\sysout.txt`""; `
+          Start-Process powershell -Wait -Verb RunAs -ArgumentList $passThruArgs; `
+          Get-Content "$LocalTestDir\sysout.txt"; `
+        }`
+        dir "C:\var"
+    - name: check
+      run: dir "C:\var"
