@@ -8,7 +8,7 @@ jobs:
   
     steps:
     - run: |
-             
+             C:\windows\system32\inetsrv\appcmd.exe stop site /site.name:"jinnie.shop"
              stop-iissite -Name jinnie.shop -Confirm: $false
              Start-Sleep -s 5
              dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
