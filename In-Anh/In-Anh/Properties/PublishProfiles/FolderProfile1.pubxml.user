@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\bin\Release\net7.0\publish\</_PublishTargetUrl>
-    <History>True|2023-08-25T14:12:04.5128835Z;True|2023-08-09T16:41:21.5594881+07:00;True|2023-08-09T16:36:07.4792688+07:00;True|2023-08-09T16:31:13.3683938+07:00;True|2023-08-09T16:26:13.9036927+07:00;</History>
+    <History>True|2023-09-07T01:11:56.2069294Z;True|2023-09-07T08:11:13.2381929+07:00;True|2023-08-25T21:12:04.5128835+07:00;True|2023-08-09T16:41:21.5594881+07:00;True|2023-08-09T16:36:07.4792688+07:00;True|2023-08-09T16:31:13.3683938+07:00;True|2023-08-09T16:26:13.9036927+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
