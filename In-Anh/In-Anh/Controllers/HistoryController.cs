@@ -43,7 +43,7 @@ namespace In_Anh.Controllers
             }
             foreach (var item in data)
             {
-                item.Images = GetListImage(item.Phone, item.OrderId, item.DayOrder.ToString("yyyy-M-dd"));
+                item.Images = GetListImage(item.Phone, item.OrderId, item.DayOrder.ToString("yyyy-M-d"));
             }
             return View(data);
         }
@@ -84,7 +84,7 @@ namespace In_Anh.Controllers
             }
             foreach (var item in data)
             {
-                item.Images = GetListImage(item.Phone, item.OrderId,item.DayOrder.ToString("yyyy-mm"));
+                item.Images = GetListImage(item.Phone, item.OrderId,item.DayOrder.ToString("yyyy-M-d"));
             }
             var partialViewHtml = await this.RenderViewAsync("_RenderItem", data, true);
             return new JsonResult(new

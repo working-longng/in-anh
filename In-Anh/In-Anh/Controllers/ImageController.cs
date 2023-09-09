@@ -25,6 +25,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using AngleSharp.Dom;
+using Microsoft.AspNetCore.Http.Extensions;
 
 namespace In_Anh.Controllers
 {
@@ -124,7 +125,7 @@ namespace In_Anh.Controllers
 			try
 			{
 				var userGetOrder = _ordersCollection.FindAsync(x => x.Phone == phone).Result.FirstOrDefault();
-
+				var port = Request.Host.Port;
 				var detail = new OrderDetail()
 				{
 					OrderId = orderID,
@@ -136,7 +137,8 @@ namespace In_Anh.Controllers
 					Phone = phone,
 					DayOrder = new DateTime(DateTime.Now.Ticks),
 					Active = Active.Inactive,
-					Total = total
+					Total = total,
+					Port = port.ToString()
 				};
 				if (userGetOrder == null)
 				{

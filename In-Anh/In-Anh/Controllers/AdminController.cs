@@ -10,7 +10,7 @@ namespace In_Anh.Controllers
 {
     public class AdminController : BaseController
     {
-        private const int PAGING = 43;
+        private const int PAGING = 12;
 
         public AdminController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer) : base(config, setting, rabitMQProducer)
         {
@@ -47,7 +47,7 @@ namespace In_Anh.Controllers
                 TempData["TotalPage"] = (int)ttp;
                 foreach (var item in userGetOrder)
                 {
-                  item.Images = GetListImage(item.Phone, item.OrderId, item.DayOrder.ToString("yyyy-M-dd"));
+                  item.Images = GetListImage(item.Phone, item.OrderId, item.DayOrder.ToString("yyyy-M-d"));
                   
                 }
                 
