@@ -96,7 +96,8 @@ namespace In_Anh.Controllers
 							OrderID = id,
 							File = bytes,
 							FileName = file.FileName.Replace(".","") + DateTime.Now.Millisecond + ".jpg",
-							Path = path,
+							Path = filePath,
+							CDNPath = path,
 							TypeActive = (Active)type
 						});
 						var body = Encoding.UTF8.GetBytes(json);

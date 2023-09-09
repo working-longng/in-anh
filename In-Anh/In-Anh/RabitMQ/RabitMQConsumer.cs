@@ -106,7 +106,7 @@ namespace In_Anh.RabitMQ
                     image.Write(filePath);
                     image.Dispose();
                 }
-                var issv = SaveImageAsync(data.OrderID, filePath, data.Type);
+                var issv = SaveImageAsync(data.OrderID, data.CDNPath + fileName, data.Type);
 
                 memoryStream.Close();
             }
