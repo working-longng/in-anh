@@ -8,7 +8,9 @@ jobs:
    # strategy:
    #     matrix:
     #        os: [self-hosted, self-hosted]
-  
+    defaults:
+      run:
+        shell: cmd
     steps:
     
     
