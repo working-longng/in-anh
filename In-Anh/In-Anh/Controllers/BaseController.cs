@@ -103,7 +103,7 @@ namespace In_Anh.Controllers
 
         public List<ImageModel> GetListImage(string phone,int port, string orderID, string date)
         {
-            string path = _config["Cdn:UrlCdn"]+":"+port;
+            string path = _config["Cdn:UrlCdn"]+":"+port+"\\";
 
             var lstimgs = new List<ImageModel>();
             foreach (var item in Enum.GetNames(typeof(ImageType)))
