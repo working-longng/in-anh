@@ -16,6 +16,7 @@ namespace In_Anh.Models
         public List<string> OrginUrl { get; set; }
         public ImageType Type { get; set; }
         public double? Price { get; set; }
+        public string? Port { get; set; }
 
     }
     public enum ImageType

@@ -23,7 +23,7 @@
                         <div class="card-body">
                             <div class="mb-3 d-flex justify-content-between">
                                 <div>
-                                    <span class="me-3">@item.DayOrder.ToLocalTime().ToString("dd/MM/yyyy")</span>
+                                    <span class="me-3">@item.DayOrder.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</span>
                                     <span class="me-3">#@item.OrderId</span>
                                     @*<span class="me-3">Visa -1234</span>*@
                                     <span class="badge rounded-pill bg-info">
@@ -61,25 +61,25 @@
                                                         @switch ((int)img.Type)
                                                         {
                                                             case 0:
-                                                                <img src="D:\CDM\@img.Url.FirstOrDefault()" alt="" width="35" height="35" class="img-fluid">
+                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
                                                                 break;
                                                             case 1:
-                                                                <img src="D:\CDM\@img.Url.FirstOrDefault()" alt="" width="35" height="35" class="img-fluid">
+                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
                                                                 break;
                                                             case 2:
-                                                                <img src="'D:\CDM\'@img.Url.FirstOrDefault()" alt="" width="35" height="35" class="img-fluid">
+                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
                                                                 break;
                                                             case 3:
-                                                                <img src="https://www.bootdey.com/image/400x400/87CEFA/000000" alt="" width="35" height="35" class="img-fluid">
+                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
                                                                 break;
                                                             case 4:
-                                                                <img src="https://www.bootdey.com/image/400x400/87CEFA/000000" alt="" width="35" height="35" class="img-fluid">
+                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
                                                                 break;
                                                             case 5:
-                                                                <img src="https://www.bootdey.com/image/400x400/87CEFA/000000" alt="" width="35" height="35" class="img-fluid">
+                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
                                                                 break;
                                                             case 6:
-                                                                <img src="https://www.bootdey.com/image/400x400/87CEFA/000000" alt="" width="35" height="35" class="img-fluid">
+                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
                                                                 break;
                                                             default: break;
                                                         }
@@ -90,7 +90,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td> @img.Url.Count</td>
+                                            <td> @img.OrginUrl.Count</td>
                                             <td class="text-end">$79.99</td>
                                         </tr>
                                     }

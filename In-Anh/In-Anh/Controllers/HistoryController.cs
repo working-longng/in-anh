@@ -25,7 +25,8 @@ namespace In_Anh.Controllers
             ViewBag.PageSize = pageSize;
             ViewBag.IsLogin = false;
             var lstId = GetOrderIdsUserCookies();
-            
+            var cdnpath = _config["Cdn:UrlCdn"];
+            ViewBag.Cdn = cdnpath;
             var phone = GetPhoneUserCookies();
             var orderLst = new List<OrderDetail>() { };
             if (string.IsNullOrEmpty(phone) || lstId == null || lstId.Length ==0)
@@ -52,7 +53,18 @@ namespace In_Anh.Controllers
                 {
                     port = 446;
                 }
-                item.Images = GetListImage(item.Phone,port, item.OrderId, item.DayOrder.ToString("yyyy-M-d"));
+                if (item.Images != null)
+                {
+                    foreach (var item1 in item.Images)
+                    {
+                        var lstTemp = new List<string>();
+                        foreach (var item2 in item1.OrginUrl)
+                        {
+                            lstTemp.Add(cdnpath + ":" + port + "\\" + item2);
+                        }
+                        item1.OrginUrl = lstTemp;
+                    }
+                }
             }
             return View(data);
         }
@@ -60,10 +72,9 @@ namespace In_Anh.Controllers
         {
             Languages lang = new Languages().LanguageVN();
             ViewBag.Language = lang;
-            
             ViewBag.IsLogin = false;
-
-
+            var cdnpath = _config["Cdn:UrlCdn"];
+            ViewBag.Cdn = cdnpath;
             var lstId = GetOrderIdsUserCookies();
             var phone = GetPhoneUserCookies();
             var orderLst = new List<OrderDetail>() { };
@@ -91,6 +102,7 @@ namespace In_Anh.Controllers
                     Message = "File Not Valid"
                 });
             }
+
             foreach (var item in data)
             {
                 var port = 0;
@@ -102,8 +114,20 @@ namespace In_Anh.Controllers
                 {
                     port = 446;
                 }
-                item.Images = GetListImage(item.Phone,port, item.OrderId,item.DayOrder.ToString("yyyy-M-d"));
+                if (item.Images != null)
+                {
+                    foreach (var item1 in item.Images)
+                    {
+                        var lstTemp = new List<string>();
+                        foreach (var item2 in item1.OrginUrl)
+                        {
+                            lstTemp.Add(cdnpath + ":" + port + "\\" + item2);
+                        }
+                        item1.OrginUrl = lstTemp;
+                    }
+                }
             }
+
             var partialViewHtml = await this.RenderViewAsync("_RenderItem", data, true);
             return new JsonResult(new
             {

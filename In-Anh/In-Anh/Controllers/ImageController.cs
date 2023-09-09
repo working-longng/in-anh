@@ -26,6 +26,7 @@ using System.Net;
 using System.Text;
 using AngleSharp.Dom;
 using Microsoft.AspNetCore.Http.Extensions;
+using System.Numerics;
 
 namespace In_Anh.Controllers
 {
@@ -68,9 +69,9 @@ namespace In_Anh.Controllers
 				string nameType = Enum.GetName(typeof(ImageType), type) ?? "1x1";
 				var id = GetOrderIdUserCookies();
 				var path = UserPhone + "\\" + year + "-" + month + "-" + day + "\\" + id + "\\" + nameType + "\\";
-				;
+				
 				var filePath = localFile + path;
-				var lstRabitMQSendData = new List<RabitMQSendData>();
+				
 				ConnectionFactory factory = new ConnectionFactory();
 				factory.Uri = new Uri("amqp://admin:admin@jinnie.shop/%2f");
 				ConnectionFactory.DefaultAddressFamily = AddressFamily.InterNetwork;
@@ -91,9 +92,11 @@ namespace In_Anh.Controllers
 
 						var json = JsonConvert.SerializeObject(new RabitMQSendData()
 						{
+							Type = (ImageType) type,
+							OrderID = id,
 							File = bytes,
 							FileName = file.FileName.Replace(".","") + DateTime.Now.Millisecond + ".jpg",
-							Path = filePath,
+							Path = path,
 							TypeActive = (Active)type
 						});
 						var body = Encoding.UTF8.GetBytes(json);
@@ -275,6 +278,8 @@ namespace In_Anh.Controllers
 		{
 			return 0.03937007F * dpi * valueMl * 10;
 		}
+
+		
 
 	}
 }
