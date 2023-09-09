@@ -6,9 +6,11 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
-        matrix:
-            os: [self-hosted, self-hosted]
-  
+       matrix:
+           os: [self-hosted, self-hosted]
+    defaults:
+      run:
+        shell: cmd
     steps:
     
     
@@ -20,6 +22,7 @@ jobs:
         dotnet-version: '7'
   
     - run: |
-            
-             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+            NET STOP WAS /Y 
+            dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+            NET START W3SVC
              
