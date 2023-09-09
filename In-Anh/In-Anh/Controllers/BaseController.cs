@@ -101,9 +101,9 @@ namespace In_Anh.Controllers
             return true;
         }
 
-        public List<ImageModel> GetListImage(string phone, string orderID, string date)
+        public List<ImageModel> GetListImage(string phone,int port, string orderID, string date)
         {
-            string path = _config["Cdn:LocalPath"];
+            string path = _config["Cdn:UrlCdn"]+":"+port;
 
             var lstimgs = new List<ImageModel>();
             foreach (var item in Enum.GetNames(typeof(ImageType)))

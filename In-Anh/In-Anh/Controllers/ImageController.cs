@@ -125,7 +125,10 @@ namespace In_Anh.Controllers
 			try
 			{
 				var userGetOrder = _ordersCollection.FindAsync(x => x.Phone == phone).Result.FirstOrDefault();
-				var port = Request.Host.Port;
+				var port = Dns.GetHostEntry(Dns.GetHostName())
+   .AddressList
+   .First(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+   .ToString();
 				var detail = new OrderDetail()
 				{
 					OrderId = orderID,
@@ -138,7 +141,7 @@ namespace In_Anh.Controllers
 					DayOrder = new DateTime(DateTime.Now.Ticks),
 					Active = Active.Inactive,
 					Total = total,
-					Port = port.ToString()
+					Port = port
 				};
 				if (userGetOrder == null)
 				{

@@ -47,7 +47,16 @@ namespace In_Anh.Controllers
                 TempData["TotalPage"] = (int)ttp;
                 foreach (var item in userGetOrder)
                 {
-                  item.Images = GetListImage(item.Phone, item.OrderId, item.DayOrder.ToString("yyyy-M-d"));
+                    var port = 0;
+                    if (item.Port == "192.168.1.4")
+                    {
+                        port = 444;
+                    }
+                    else
+                    {
+                        port = 446;
+                    }
+                    item.Images = GetListImage(item.Phone,port, item.OrderId, item.DayOrder.ToString("yyyy-M-d"));
                   
                 }
                 
