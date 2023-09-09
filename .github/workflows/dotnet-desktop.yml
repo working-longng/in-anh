@@ -4,10 +4,10 @@ on:
     branches: [ "main" ]
 jobs:
   build:
-    runs-on: self-hosted #${{ matrix.os }}
-   # strategy:
-   #     matrix:
-    #        os: [self-hosted, self-hosted]
+    runs-on: ${{ matrix.os }}
+    strategy:
+       matrix:
+           os: [self-hosted, self-hosted]
     defaults:
       run:
         shell: cmd
