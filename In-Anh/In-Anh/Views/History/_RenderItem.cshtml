@@ -52,47 +52,50 @@
                             </div>
                             <table class="table table-borderless">
                                 <tbody>
-                                    @foreach (var img in item?.Images)
+                                    @if (item.Images != null)
                                     {
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center mb-2">
-                                                    <div class="flex-shrink-0">
-                                                        @switch ((int)img.Type)
-                                                        {
-                                                            case 0:
-                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
-                                                                break;
-                                                            case 1:
-                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
-                                                                break;
-                                                            case 2:
-                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
-                                                                break;
-                                                            case 3:
-                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
-                                                                break;
-                                                            case 4:
-                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
-                                                                break;
-                                                            case 5:
-                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
-                                                                break;
-                                                            case 6:
-                                                                <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
-                                                                break;
-                                                            default: break;
-                                                        }
+                                        @foreach (var img in item.Images)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <div class="flex-shrink-0">
+                                                            @switch ((int)img.Type)
+                                                            {
+                                                                case 0:
+                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    break;
+                                                                case 1:
+                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    break;
+                                                                case 2:
+                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    break;
+                                                                case 3:
+                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    break;
+                                                                case 4:
+                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    break;
+                                                                case 5:
+                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    break;
+                                                                case 6:
+                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    break;
+                                                                default: break;
+                                                            }
+                                                        </div>
+                                                        <div class="flex-lg-grow-1 ms-3">
+                                                            <h6 class="small mb-0">Ảnh @img.Type.ToString().Replace("t","")</h6>
+                                                            @*<span class="small">Số Lượng @img.Url.Count</span>*@
+                                                        </div>
                                                     </div>
-                                                    <div class="flex-lg-grow-1 ms-3">
-                                                        <h6 class="small mb-0">Ảnh @img.Type.ToString().Replace("t","")</h6>
-                                                        @*<span class="small">Số Lượng @img.Url.Count</span>*@
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td> @img.OrginUrl.Count</td>
-                                            <td class="text-end">$79.99</td>
-                                        </tr>
+                                                </td>
+                                                <td> @img.OrginUrl.Count</td>
+                                                <td class="text-end">$79.99</td>
+                                            </tr>
+                                        }
                                     }
 
                                 </tbody>
