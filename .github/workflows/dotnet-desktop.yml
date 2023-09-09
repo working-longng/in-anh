@@ -22,7 +22,7 @@ jobs:
         dotnet-version: '7'
   
     - run: |
-            iisreset /stop
+            NET STOP WAS /Y 
             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
-            iisreset /start
+            NET START W3SVC
              
