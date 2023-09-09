@@ -22,6 +22,7 @@ jobs:
         dotnet-version: '7'
   
     - run: |
-            appcmd stop sites "jinnie.shop"
-   #          dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+            iisreset /stop
+            dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+            iisreset /start
              
