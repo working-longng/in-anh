@@ -4,10 +4,10 @@ on:
     branches: [ "main" ]
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-            os: [self-hosted, self-hosted]
+    runs-on: self-hosted #${{ matrix.os }}
+   # strategy:
+   #     matrix:
+    #        os: [self-hosted, self-hosted]
   
     steps:
     
@@ -20,6 +20,6 @@ jobs:
         dotnet-version: '7'
   
     - run: |
-            
-             dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+            appcmd stop sites "jinnie.shop"
+   #          dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
              
