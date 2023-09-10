@@ -64,6 +64,19 @@ builder.Services.Configure<KestrelServerOptions>(options =>
 {
     options.Limits.MaxRequestBodySize = int.MaxValue; // if don't set default value is: 30 MB
 });
+
+builder.Services.Configure<IISServerOptions>(options => {
+    options.MaxRequestBodySize = int.MaxValue;
+});
+
+builder.Services.Configure<FormOptions>(x =>
+{
+    x.ValueLengthLimit = int.MaxValue;
+    x.MultipartBodyLengthLimit = int.MaxValue;
+    x.BufferBodyLengthLimit = int.MaxValue;
+    x.MultipartBoundaryLengthLimit = int.MaxValue;
+});
+
 builder.Services.AddHostedService<RabitMQConsumer>();
 var app = builder.Build();
 //app.UseDeveloperExceptionPage();
