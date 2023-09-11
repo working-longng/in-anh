@@ -121,6 +121,16 @@ namespace In_Anh.Controllers
             //    (filter, update);
             return BadRequest();
         }
+        public async Task<ActionResult> RemoveOrderAsync(string phone, string orderID)
+        {
+            var filter = Builders<OrderModel>.Filter.And(Builders<OrderModel>.Filter.Eq(x => x.Phone, phone), Builders<OrderModel>.Filter.Where(x => x.ListDetail.Any(y => y.OrderId == orderID)));
+            var a = _ordersCollection.Find(filter).FirstOrDefault();
+            var data = await _ordersCollection.DeleteOneAsync(filter);
+                    return Ok();
+            //await _ordersCollection.UpdateOneAsync
+            //    (filter, update);
+           
+        }
         // GET: AdminController/Details/5
         public ActionResult Details(int id)
         {

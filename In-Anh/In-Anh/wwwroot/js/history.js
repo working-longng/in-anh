@@ -45,35 +45,28 @@ var historyinanh = {
             }
         });
     },
-    cancle: function () {
-        
-        if (confirm("Bạn Muốn Hủy Đơn Này") == true) {
+    cancle: function (phone, id) {
+       var a= confirm("Bạn Muốn Hủy Đơn Này");
+        if (a) {
             $.ajax({
-                url: "/History/CancleOrder",
+                url: "/History/RemoveOrder",
                 type: "get",
-                beforeSend: function (phone,id) {
+                beforeSend: function (phone, id) {
                     $.LoadingOverlay("show");
                 },
-                data: { phone:phone, orderId: id },
+                data: { phone: phone, orderId: id },
                 success: function (result) {
-
                     $.LoadingOverlay("hide");
 
+                    alert("Thành Công");
 
-                    if (result.code == 200) {
-                        alert("Thành Công");
-                    } else {
-                        alert("Thất Bại")
-                    }
-
-
-
+                    location.href = "/History";
                 }, error: function () {
 
                 }
             });
-        } else {
-            
         }
+
+        
     }
 }

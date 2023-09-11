@@ -898,7 +898,7 @@
         en: {
             success: 'Success',
             sucUpload: 'Successful upload',
-            chooseFiles: 'Choose files',
+            chooseFiles: 'Chọn files',
             uploadFailed: 'Upload failed',
             serverError: 'Internal server error',
             error: 'Error',
@@ -906,7 +906,7 @@
             aborted: 'Aborted',
             files: 'files',
             upload: 'Upload',
-            clear: 'Clear',
+            clear: 'Xóa',
             drag: 'Drag n Drop',
             sizeError: '$1 exceed the size limit of $2',// $1=file name ,$2=max ie( example.jpg has has exceed the size limit of 2mb)
             extError: '$1 file types are not supported',//$1=file extension ie(exe files are not supported)

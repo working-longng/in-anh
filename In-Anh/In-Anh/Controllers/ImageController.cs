@@ -103,7 +103,7 @@ namespace In_Anh.Controllers
 							Type = (ImageType) type,
 							OrderID = id,
 							File = bytes,
-							FileName = file.FileName.Replace(".","") + DateTime.Now.Millisecond + ".jpg",
+							FileName = file.FileName.Replace(".","") + Guid.NewGuid() + ".jpg",
 							Path = filePath,
 							CDNPath = path,
 							TypeActive = (Active)type

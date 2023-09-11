@@ -6,7 +6,8 @@
     display: none;
 }
 select.image-size-select{
-    min-width:134px;
+    font-size:17px;
+    min-width:170px;
 }
 
 @media (max-width: 768px) {

@@ -33,7 +33,19 @@ namespace In_Anh.Controllers
             {
                 return View(orderLst);
             }
-            var orderqr = _ordersCollection?.AsQueryable()?.Where(x => x.Phone == phone).FirstOrDefault()?.ListDetail.Where(x => lstId.Contains(x.OrderId)).ToList();
+            var orderqrall = _ordersCollection?.AsQueryable()?.Where(x => x.Phone == phone).FirstOrDefault()?.ListDetail;
+            var orderqr = new List<OrderDetail>();
+           if(orderqrall != null)
+            {
+                foreach (var item in orderqrall)
+                {
+                    if (lstId.Contains(item.OrderId))
+                    {
+                        orderqr.Add(item);
+                    }
+                }
+            }
+                
             
             var data = orderqr?.OrderByDescending(y=>y.DayOrder).Take(pageSize).ToList();
             
@@ -87,7 +99,20 @@ namespace In_Anh.Controllers
                     Message = "File Not Valid"
                 });
             }
-            var orderqr = _ordersCollection?.AsQueryable()?.Where(x => x.Phone == phone).FirstOrDefault()?.ListDetail.Where(x => lstId.Contains(x.OrderId)).ToList();
+
+            var orderqrall = _ordersCollection?.AsQueryable()?.Where(x => x.Phone == phone).FirstOrDefault()?.ListDetail;
+            var orderqr = new List<OrderDetail>();
+           if(orderqrall != null)
+            {
+                foreach (var item in orderqrall)
+                {
+                    if (lstId.Contains(item.OrderId))
+                    {
+                        orderqr.Add(item);
+                    }
+                }
+            }
+           
             
 
             var data = orderqr?.OrderByDescending(y => y.DayOrder).Skip(page * pageSize).Take(pageSize).ToList();
@@ -102,32 +127,6 @@ namespace In_Anh.Controllers
                     Message = "File Not Valid"
                 });
             }
-
-            foreach (var item in data)
-            {
-                var port = 0;
-                if (item.Port == "192.168.1.4")
-                {
-                    port = 444;
-                }
-                else
-                {
-                    port = 446;
-                }
-                if (item.Images != null)
-                {
-                    foreach (var item1 in item.Images)
-                    {
-                        var lstTemp = new List<string>();
-                        foreach (var item2 in item1.OrginUrl)
-                        {
-                            lstTemp.Add(cdnpath + ":" + port + "\\" + item2);
-                        }
-                        item1.OrginUrl = lstTemp;
-                    }
-                }
-            }
-
             var partialViewHtml = await this.RenderViewAsync("_RenderItem", data, true);
             return new JsonResult(new
             {
@@ -138,6 +137,26 @@ namespace In_Anh.Controllers
 
         }
         // GET: HistoryController/Details/5
+        [HttpGet]
+        public async Task<ActionResult> RemoveOrderAsync(string phone, string orderID)
+        {
+            var filter = Builders<OrderModel>.Filter.And(Builders<OrderModel>.Filter.Eq(x => x.Phone, phone), Builders<OrderModel>.Filter.Where(x => x.ListDetail.Any(y => y.OrderId == orderID)));
+            var a = _ordersCollection.Find(filter).FirstOrDefault();
 
+            var oldData = _ordersCollection.FindAsync(filter).Result.FirstOrDefault();
+            if (oldData != null)
+            {
+                var dataDetails = oldData.ListDetail.ToList();
+                var dataDetail = dataDetails.Find(x => x.OrderId == orderID);
+                if (dataDetail != null)
+                {
+                    dataDetails.Remove(dataDetails.Find(x => x.OrderId == orderID));
+                    var update = Builders<OrderModel>.Update
+                     .Set(x => x.ListDetail, dataDetails);
+                    var data = await _ordersCollection.FindOneAndUpdateAsync(filter, update);
+                }
+            }
+            return Ok();
+        }
     }
 }
