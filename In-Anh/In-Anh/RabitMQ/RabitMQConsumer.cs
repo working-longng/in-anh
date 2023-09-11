@@ -43,6 +43,7 @@ namespace In_Anh.RabitMQ
                 UserName = "admin",
                 Password = "admin"
             };
+            factory.NetworkRecoveryInterval = TimeSpan.FromSeconds(15);
             connection = factory.CreateConnection();
             channel = connection.CreateModel();
             channel.QueueDeclare(queue: "image",
