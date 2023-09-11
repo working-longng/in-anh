@@ -54,18 +54,26 @@ namespace In_Anh.Controllers
 
 		// POST: ImageController/Create
 		[HttpPost]
-
-		public async Task<ActionResult> CreateAsync(IFormCollection data)
+        [DisableRequestSizeLimit]
+        public async Task<ActionResult> CreateAsync(IFormCollection data)
 		{
 			try
 			{
+				if(data == null) {
+                    return new JsonResult(new
+                    {
+                        Code = 400,
+                        Data = new { },
+                        Message = "Nodata"
+                    });
+                }
 				var UserPhone = string.IsNullOrWhiteSpace(GetPhoneUserCookies().ToString()) ? "spam" : GetPhoneUserCookies().ToString();
 				var localFile = _config["Cdn:LocalPath"];
 				var year = DateTime.Now.Year;
 				var month = DateTime.Now.Month;
 				var day = DateTime.Now.Day;
 				var type = 0;
-				int.TryParse(data["type"].ToString(), out type);
+				int.TryParse(data?["type"].ToString(), out type);
 				string nameType = Enum.GetName(typeof(ImageType), type) ?? "1x1";
 				var id = GetOrderIdUserCookies();
 				var path = UserPhone + "\\" + year + "-" + month + "-" + day + "\\" + id + "\\" + nameType + "\\";

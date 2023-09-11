@@ -20,12 +20,13 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+
 builder.Services.Configure<FormOptions>(o =>
 {
     o.ValueLengthLimit = int.MaxValue;
     o.MultipartBodyLengthLimit = long.MaxValue;
 });
-
 
 builder.Services.AddSingleton<IImageMgDatabase>(provider =>
     provider.GetRequiredService<IOptions<ImageMgDatabase>>().Value);
@@ -55,15 +56,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
            ValidateIssuerSigningKey = true
        };
    });
-builder.Services.Configure<FormOptions>(o =>  // currently all set to max, configure it to your needs!
-{
-    o.ValueLengthLimit = int.MaxValue;
-    o.MultipartBodyLengthLimit = long.MaxValue; // <-- !!! long.MaxValue
-    o.MultipartBoundaryLengthLimit = int.MaxValue;
-    o.MultipartHeadersCountLimit = int.MaxValue;
-    o.MultipartHeadersLengthLimit = int.MaxValue;
-});
-
 
 
 builder.Services.AddHostedService<RabitMQConsumer>();

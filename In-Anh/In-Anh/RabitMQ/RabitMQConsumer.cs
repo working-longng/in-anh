@@ -119,7 +119,20 @@ namespace In_Anh.RabitMQ
 
             var filter = Builders<OrderModel>.Filter.And(Builders<OrderModel>.Filter.Where(x => x.ListDetail.Any(y => y.OrderId == orderID)));
             var a = _ordersCollection.Find(filter).FirstOrDefault();
-
+            var ip = Dns.GetHostEntry(Dns.GetHostName())
+   .AddressList
+   .First(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+   .ToString();
+            var port = 0;
+            if (ip == "192.168.1.4")
+            {
+                port = 444;
+            }
+            else
+            {
+                port = 446;
+            }
+           var cdn =  _config["Cdn:UrlCdn"];
             var oldData = _ordersCollection.FindAsync(filter).Result.FirstOrDefault();
             if (oldData != null)
             {
@@ -135,7 +148,7 @@ namespace In_Anh.RabitMQ
                             new ImageModel()
                             {
                                 Type = type,
-                                OrginUrl= new List<string>{ urlImg }
+                                OrginUrl= new List<string>{ cdn+":"+port+ "\\"+urlImg }
                             }
                         };
                     }
@@ -147,13 +160,13 @@ namespace In_Anh.RabitMQ
                             new ImageModel()
                             {
                                 Type = type,
-                                OrginUrl= new List<string>{ urlImg }
+                                OrginUrl= new List<string>{ cdn + ":" + port + "\\" + urlImg }
                             }
                         );
                         }
                         else
                         {
-                            dataDetails.Find(x => x.OrderId == orderID)?.Images?.ToList().Find(x => x.Type == type)?.OrginUrl.Add(urlImg);
+                            dataDetails.Find(x => x.OrderId == orderID)?.Images?.ToList().Find(x => x.Type == type)?.OrginUrl.Add(cdn + ":" + port + "\\" + urlImg);
                         }
                         
                     }

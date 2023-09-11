@@ -21,17 +21,14 @@
 
   <ItemGroup>
     <Content Remove="bundleconfig.json" />
-    <Content Remove="web.config" />
   </ItemGroup>
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="bundleconfig.json" />
-    <_ContentIncludedByDefault Remove="web.config" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="bundleconfig.json" />
-    <None Include="web.config" />
   </ItemGroup>
 
   <ItemGroup>
