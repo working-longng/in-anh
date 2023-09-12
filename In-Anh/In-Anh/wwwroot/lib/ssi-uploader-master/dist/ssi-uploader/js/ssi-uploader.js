@@ -500,11 +500,10 @@
                 async: true,
                 success: function (result) {
                     $.LoadingOverlay("hide");
-                    if ($('#mytoast').data('isshow').toString().toLowerCase() == 'true') {
-                        $(document.querySelector('#mytoast')).toast('show');
-                        $('#mytoast').data('isshow', false);
-                        $(document.querySelector('#exampleModal')).modal('hide');
-                    }
+                    $(document.querySelector('#mytoast')).toast('show');
+                    $('#mytoast').data('isshow', false);
+                    $(document.querySelector('#exampleModal')).modal('hide');
+                    $(document.querySelector('#exampleModalss')).modal('hide');
                     
                 }, error: function (e) {
                     console.log(e);

@@ -66,7 +66,7 @@ var uploader = {
             transformFile: true,
 
             // The maximum size of each file.
-            maxFileSize: "40",
+            maxFileSize: "90",
 
             // is in form
             inForm: false,
@@ -142,7 +142,7 @@ var uploader = {
             transformFile: true,
 
             // The maximum size of each file.
-            maxFileSize: "40",
+            maxFileSize: "90",
 
             // is in form
             inForm: false,
@@ -218,7 +218,7 @@ var uploader = {
             transformFile: true,
 
             // The maximum size of each file.
-            maxFileSize: "40",
+            maxFileSize: "90",
 
             // is in form
             inForm: false,
@@ -294,7 +294,7 @@ var uploader = {
             transformFile: true,
 
             // The maximum size of each file.
-            maxFileSize: "40",
+            maxFileSize: "90",
 
             // is in form
             inForm: false,
@@ -370,7 +370,7 @@ var uploader = {
             transformFile: true,
 
             // The maximum size of each file.
-            maxFileSize: "40",
+            maxFileSize: "90",
 
             // is in form
             inForm: false,
@@ -446,7 +446,7 @@ var uploader = {
             transformFile: true,
 
             // The maximum size of each file.
-            maxFileSize: "40",
+            maxFileSize: "90",
 
             // is in form
             inForm: false,
@@ -522,7 +522,7 @@ var uploader = {
             transformFile: true,
 
             // The maximum size of each file.
-            maxFileSize: "40",
+            maxFileSize: "90",
 
             // is in form
             inForm: false,
