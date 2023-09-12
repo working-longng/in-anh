@@ -92,8 +92,8 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td> @img.OrginUrl.Count</td>
-                                                <td class="text-end"> @(img?.Price.Value.ToString("##,##0")) đ</td>
+                                                <td> @img.OrginUrl.Count x  @(img?.Price.Value.ToString("##,##0")) đ </td>
+                                                <td class="text-end"> @((img?.Price.Value * img.OrginUrl.Count).Value.ToString("##,##0")) đ</td>
                                             </tr>
                                         }
                                     }

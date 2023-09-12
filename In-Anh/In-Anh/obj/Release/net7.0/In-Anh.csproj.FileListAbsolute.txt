@@ -274,3 +274,4 @@ C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\bin\Release\net7.0\Lucene.Net.dll
 C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\bin\Release\net7.0\ICSharpCode.SharpZipLib.dll
 C:\Users\Long Nguyen\Desktop\anh\in-anh\In-Anh\In-Anh\bin\Release\net7.0\Lucene.Net.dll
 C:\Users\Long Nguyen\Desktop\anh\in-anh\In-Anh\In-Anh\bin\Release\net7.0\ICSharpCode.SharpZipLib.dll
+C:\Users\Long\Desktop\ANHANHAN\In-Anh\In-Anh\bin\Release\net7.0\web.config
