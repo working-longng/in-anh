@@ -73,7 +73,7 @@ namespace In_Anh.RabitMQ
             return Task.CompletedTask;
         }
 
-        private void OnMessageRecieved(object model, BasicDeliverEventArgs args)
+        private async void OnMessageRecieved(object model, BasicDeliverEventArgs args)
         {
             var body = args.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
@@ -107,7 +107,7 @@ namespace In_Anh.RabitMQ
                     image.Write(filePath);
                     image.Dispose();
                 }
-                var issv = SaveImageAsync(data.OrderID, data.CDNPath + fileName, data.Type);
+                var issv = await SaveImageAsync(data.OrderID, data.CDNPath + fileName, data.Type);
 
                 memoryStream.Close();
             }
