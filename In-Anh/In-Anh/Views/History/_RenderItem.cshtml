@@ -63,25 +63,25 @@
                                                             @switch ((int)img.Type)
                                                             {
                                                                 case 0:
-                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src="'@img.OrginUrl.FirstOrDefault()''" alt="" width="40" height="60" class="img-fluid">
                                                                     break;
                                                                 case 1:
-                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src="'@img.OrginUrl.FirstOrDefault()''" alt="" width="40" height="60" class="img-fluid">
                                                                     break;
                                                                 case 2:
-                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src="'@img.OrginUrl.FirstOrDefault()''" alt="" width="40" height="60" class="img-fluid">
                                                                     break;
                                                                 case 3:
-                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src="'@img.OrginUrl.FirstOrDefault()''" alt="" width="40" height="60" class="img-fluid">
                                                                     break;
                                                                 case 4:
-                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src="'@img.OrginUrl.FirstOrDefault()''" alt="" width="40" height="60" class="img-fluid">
                                                                     break;
                                                                 case 5:
-                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src="'@img.OrginUrl.FirstOrDefault()''" alt="" width="40" height="60" class="img-fluid">
                                                                     break;
                                                                 case 6:
-                                                                    <img src="@img.OrginUrl.FirstOrDefault()" alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src="'@img.OrginUrl.FirstOrDefault()''" alt="" width="40" height="60" class="img-fluid">
                                                                     break;
                                                                 default: break;
                                                             }
@@ -93,7 +93,7 @@
                                                     </div>
                                                 </td>
                                                 <td> @img.OrginUrl.Count</td>
-                                                <td class="text-end"> @String.Format("{0:n}", @img.Price) đ</td>
+                                                <td class="text-end"> @(img?.Price.Value.ToString("##,##0")) đ</td>
                                             </tr>
                                         }
                                     }
@@ -102,7 +102,7 @@
                                 <tfoot>
                                     <tr>
                                         <td colspan="2">Tổng Tiền</td>
-                                        <td class="text-end">@String.Format("{0:n}", @item?.Images?.Select(x=>x.Price).Sum()) đ</td>
+                                        <td class="text-end">@(item?.Images?.Select(x => x.Price * x.OrginUrl.Count())?.Sum().Value.ToString("##,##0")) đ</td>
                                     </tr>
                                    @* <tr>
                                         <td colspan="2">Shipping</td>
