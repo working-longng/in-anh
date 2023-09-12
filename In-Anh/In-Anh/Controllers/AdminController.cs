@@ -45,20 +45,7 @@ namespace In_Anh.Controllers
                 var ttp = Math.Ceiling((decimal)count / (decimal)PAGING);
                 ViewBag.TotalPage = ttp;
                 TempData["TotalPage"] = (int)ttp;
-                foreach (var item in userGetOrder)
-                {
-                    var port = 0;
-                    if (item.Port == "192.168.1.4")
-                    {
-                        port = 444;
-                    }
-                    else
-                    {
-                        port = 446;
-                    }
-                    item.Images = GetListImage(item.Phone,port, item.OrderId, item.DayOrder.ToString("yyyy-M-d"));
-                  
-                }
+                
                 
                 return View(userGetOrder);
             }

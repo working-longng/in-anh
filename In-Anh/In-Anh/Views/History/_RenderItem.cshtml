@@ -4,9 +4,11 @@
     var lang = ViewBag.Language == null ? null : ViewBag.Language as Languages;
     var page = ViewBag.Page == null ? 0 : ViewBag.Page;
     var pageSize = ViewBag.PageSize == null ? 2 : ViewBag.PageSize;
+
 }
 @foreach (var item in Model)
 {
+
     <div class="container-fluid mt-5 mb-5">
 
         <div class="container">
@@ -56,6 +58,7 @@
                                     {
                                         @foreach (var img in item.Images)
                                         {
+
                                             <tr>
                                                 <td>
                                                     <div class="d-flex align-items-center">
@@ -92,30 +95,58 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="pricemd"> @img.OrginUrl.Count x  @(img?.Price.Value.ToString("##,##0")) đ </td>
-                                                <td class="pricemd"> @((img?.Price.Value * img.OrginUrl.Count).Value.ToString("##,##0")) đ</td>
+                                                @{
+                                                    var isShows = item.Images.Select(x => x.OrginUrl.Count).Sum() == item.Total ? true : false;
+
+                                                }
+                                                @if (isShows)
+                                                {
+                                                    <td class="pricemd"> @img.OrginUrl.Count x  @(img?.Price.Value.ToString("##,##0")) đ </td>
+                                                    <td class="pricemd text-end"> @((img?.Price.Value * img.OrginUrl.Count).Value.ToString("##,##0")) đ</td>
+                                                }
                                             </tr>
                                         }
                                     }
-                                    
+
                                 </tbody>
                                 <tfoot>
-                                    <tr>
-                                        <td colspan="2">Tổng Tiền</td>
-                                        <td class="text-end">@(item?.Images?.Select(x => x.Price * x.OrginUrl.Count())?.Sum().Value.ToString("##,##0")) đ</td>
-                                    </tr>
-                                   @* <tr>
-                                        <td colspan="2">Shipping</td>
-                                        <td class="text-end">$20.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">Discount (Code: NEWYEAR)</td>
-                                        <td class="text-danger text-end">-$10.00</td>
-                                    </tr>
-                                    <tr class="fw-bold">
-                                        <td colspan="2">TOTAL</td>
-                                        <td class="text-end">$169,98</td>
-                                    </tr>*@
+                                    @* <tr>
+                                <td colspan="2">Tổng Tiền</td>
+                                <td class="text-end">@(item?.Images?.Select(x => x.Price * x.OrginUrl.Count())?.Sum().Value.ToString("##,##0")) đ</td>
+                                </tr>*@
+                                    @{
+
+                                        double shipprice = 20000;
+                                        double totalPrice = 0;
+                                        var css = "";
+                                        var cssHidden = "hidden";
+                                        Double.TryParse(item?.Images?.Select(x => x.Price * x.OrginUrl.Count())?.Sum().ToString(), out totalPrice);
+                                        if (totalPrice > 50000)
+                                        {
+                                            shipprice = 0;
+                                            css = "text-decoration-line-through";
+                                            cssHidden = "";
+                                        }
+
+                                    }
+                                    @{
+                                        var isShow = item.Images.Select(x => x.OrginUrl.Count).Sum() == item.Total ? true : false; ;
+                                    
+                                    }
+                                    
+                                    @if (isShow)
+                                    {
+                                        <tr>
+                                            <td colspan="2">Phí Ship </td>
+                                            <td class="text-end"><span class=@css>20,000 đ</span>   <span class=@cssHidden>   0đ</span></td>
+                                        </tr>
+
+                                        <tr class="fw-bold">
+                                            <td colspan="2">Tổng Tiền</td>
+                                            <td class="text-end">@((totalPrice + shipprice).ToString("##,##0")) đ</td>
+                                        </tr>
+                                    }
+
                                 </tfoot>
                             </table>
                         </div>
@@ -130,7 +161,7 @@
                         <div class="card-body">
                             <h3 class="h6">Thông tin giao hàng</h3>
                             @*<strong>FedEx</strong>
-                            <span><a href="#" class="text-decoration-underline" target="_blank">FF1234567890</a> <i class="bi bi-box-arrow-up-right"></i> </span>*@
+                        <span><a href="#" class="text-decoration-underline" target="_blank">FF1234567890</a> <i class="bi bi-box-arrow-up-right"></i> </span>*@
                             <hr>
                             <h3 class="h6">Địa Chỉ: </h3>
                             <address>

@@ -501,7 +501,6 @@
                 success: function (result) {
                     $.LoadingOverlay("hide");
                     $(document.querySelector('#mytoast')).toast('show');
-                    $('#mytoast').data('isshow', false);
                     $(document.querySelector('#exampleModal')).modal('hide');
                     $(document.querySelector('#exampleModalss')).modal('show');
                     

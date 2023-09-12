@@ -101,35 +101,7 @@ namespace In_Anh.Controllers
             return true;
         }
 
-        public List<ImageModel> GetListImage(string phone,int port, string orderID, string date)
-        {
-            string path = _config["Cdn:UrlCdn"]+":"+port+"\\";
-
-            var lstimgs = new List<ImageModel>();
-            foreach (var item in Enum.GetNames(typeof(ImageType)))
-            {
-                var type = item.ToString();
-
-                var filePath = path + phone + "\\" + date + "\\" + orderID + "\\" + type + "\\";
-                if (Directory.Exists(filePath))
-                {
-                    string[] filePaths = Directory.GetFiles(filePath, "*.jpg",
-                                        SearchOption.TopDirectoryOnly);
-                    var Urls = filePaths.ToList().Select(x => x.ToString().Replace(@path,"")).ToList();
-                    Enum.TryParse(type, true, out ImageType result);
-
-                    lstimgs.Add(new ImageModel()
-                    {
-                        Type = result,
-                        OrginUrl = filePaths.ToList(),
-                        Url=Urls
-                    });
-
-                }
-            }
-
-            return lstimgs;
-        }
+       
         public UserModel GetUserValid(string token)
         {
                         
