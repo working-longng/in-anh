@@ -117,7 +117,34 @@ namespace In_Anh.RabitMQ
 
         private async Task<bool> SaveImageAsync(string orderID, string urlImg, ImageType type)
         {
+            double price = 0;
 
+            switch (type)
+            {
+                case ImageType.t4x6:
+                    price = 2000;
+                    break;
+                case ImageType.t6x9:
+                    price = 3000;
+                    break;
+                case ImageType.t9x12:
+                    price = 7000;
+                    break;
+                case ImageType.t10x15:
+                    price = 9000;
+                    break;
+                case ImageType.t13x18:
+                    price = 12000;
+                    break;
+                case ImageType.t15x21:
+                    price = 15000;
+                    break;
+                case ImageType.t20x30:
+                    price = 30000;
+                    break;
+                default:
+                    break;
+            }
             var filter = Builders<OrderModel>.Filter.And(Builders<OrderModel>.Filter.Where(x => x.ListDetail.Any(y => y.OrderId == orderID)));
             var a = _ordersCollection.Find(filter).FirstOrDefault();
             var ip = Dns.GetHostEntry(Dns.GetHostName())
@@ -144,11 +171,13 @@ namespace In_Anh.RabitMQ
                     var dataImg = dataOrderDetail.Images?.FirstOrDefault();
                     if (dataImg == null)
                     {
+                        
                         dataOrderDetail.Images = new List<ImageModel>
                         {
                             new ImageModel()
                             {
                                 Type = type,
+                                Price= price,
                                 OrginUrl= new List<string>{ cdn+":"+port+ "\\"+urlImg }
                             }
                         };
@@ -161,7 +190,8 @@ namespace In_Anh.RabitMQ
                             new ImageModel()
                             {
                                 Type = type,
-                                OrginUrl= new List<string>{ cdn + ":" + port + "\\" + urlImg }
+                                Price = price,
+                                OrginUrl = new List<string>{ cdn + ":" + port + "\\" + urlImg }
                             }
                         );
                         }

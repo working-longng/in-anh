@@ -93,18 +93,18 @@
                                                     </div>
                                                 </td>
                                                 <td> @img.OrginUrl.Count</td>
-                                                <td class="text-end">$79.99</td>
+                                                <td class="text-end"> @String.Format("{0:n}", @img.Price) đ</td>
                                             </tr>
                                         }
                                     }
-
+                                    
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td colspan="2">Subtotal</td>
-                                        <td class="text-end">$159,98</td>
+                                        <td colspan="2">Tổng Tiền</td>
+                                        <td class="text-end">@String.Format("{0:n}", @item?.Images?.Select(x=>x.Price).Sum()) đ</td>
                                     </tr>
-                                    <tr>
+                                   @* <tr>
                                         <td colspan="2">Shipping</td>
                                         <td class="text-end">$20.00</td>
                                     </tr>
@@ -115,7 +115,7 @@
                                     <tr class="fw-bold">
                                         <td colspan="2">TOTAL</td>
                                         <td class="text-end">$169,98</td>
-                                    </tr>
+                                    </tr>*@
                                 </tfoot>
                             </table>
                         </div>

@@ -214,55 +214,87 @@ namespace In_Anh.Controllers
 					{
 						foreach (var item in im.Url)
 						{
-							using (Image imsc = Image.Load(item))
-							{
-								if (im.Type == ImageType.t4x6)
-								{
-									int w = (int)MilimeterToPixel(40);
-									int h = (int)MilimeterToPixel(60);
-									int howManyCountWidth = (int)MilimeterToPixel(210) / w;
-									int howManyCountHeight = (int)MilimeterToPixel(297) / h;
+                            using (var httpClient = new HttpClient())
+                            {
+                                //Issue the GET request to a URL and read the response into a 
+                                //stream that can be used to load the image
+                                var imageContent = await httpClient.GetByteArrayAsync("<your image url>");
 
-									int fspacingx = (int)MilimeterToPixel(1);
-									int spacingx = (int)MilimeterToPixel(2);
+                                using (var imageBuffer = new MemoryStream(imageContent))
+                                {
+                                    using (Image imsc = Image.Load(imageBuffer))
+                                    {
+                                        if (im.Type == ImageType.t4x6)
+                                        {
+                                            int w = (int)MilimeterToPixel(40);
+                                            int h = (int)MilimeterToPixel(60);
+                                            int howManyCountWidth = (int)MilimeterToPixel(210) / w;
+                                            int howManyCountHeight = (int)MilimeterToPixel(297) / h;
+                                            int fspacingx = (int)MilimeterToPixel(1);
+                                            int spacingx = (int)MilimeterToPixel(2);
+                                            int fspacingy = fspacingx;
+                                            int spacingy = ((int)MilimeterToPixel(297) - (howManyCountHeight * h) - fspacingy) / howManyCountHeight;
+                                            imsc.Mutate(c => c.Resize(w, h));
+                                            var poin = new Point();
+                                            var index = im.Url.IndexOf(item);
+                                            var posionx = 0;
+                                            var posiony = 0;
+                                            var numberMod = index % howManyCountWidth;
+                                            var numberNoMod = index / howManyCountWidth;
+                                            var totalSpcx = 0;
+                                            var totalSpcy = 0;
+                                            if (numberMod == 0)
+                                            {
+                                                totalSpcx = fspacingx;
+                                            }
+                                            else
+                                            {
+                                                totalSpcx = fspacingx + numberMod * (w + spacingx);
+                                            }
+                                            if (numberNoMod == 0)
+                                            {
+                                                totalSpcy = fspacingy;
+                                            }
+                                            else
+                                            {
+                                                totalSpcy = fspacingy + numberNoMod * (h + spacingy);
+                                            }
+                                            poin.X = totalSpcx;
+                                            poin.Y = totalSpcy;
+                                            image.Mutate(c => c.DrawImage(imsc, poin, 1));
+                                            imsc.Dispose();
+                                        }
+										else if(im.Type == ImageType.t6x9)
+										{
 
-									int fspacingy = fspacingx;
-									int spacingy = ((int)MilimeterToPixel(297) - (howManyCountHeight * h) - fspacingy) / howManyCountHeight;
-									imsc.Mutate(c => c.Resize(w, h));
-									var poin = new Point();
-									var index = im.Url.IndexOf(item);
-									var posionx = 0;
-									var posiony = 0;
-									var numberMod = index % howManyCountWidth;
-									var numberNoMod = index / howManyCountWidth;
+										}
+                                        else if (im.Type == ImageType.t9x12)
+                                        {
 
-									var totalSpcx = 0;
-									var totalSpcy = 0;
+                                        }
+                                        else if (im.Type == ImageType.t10x15)
+                                        {
 
-									if (numberMod == 0)
-									{
-										totalSpcx = fspacingx;
-									}
-									else
-									{
-										totalSpcx = fspacingx + numberMod * (w + spacingx);
-									}
-									if (numberNoMod == 0)
-									{
-										totalSpcy = fspacingy;
-									}
-									else
-									{
-										totalSpcy = fspacingy + numberNoMod * (h + spacingy);
-									}
+                                        }
+                                        else if (im.Type == ImageType.t13x18)
+                                        {
 
+                                        }
+                                        else if (im.Type == ImageType.t15x21)
+                                        {
 
-									poin.X = totalSpcx;
-									poin.Y = totalSpcy;
-									image.Mutate(c => c.DrawImage(imsc, poin, 1));
-									imsc.Dispose();
-								}
-							}
+                                        }
+                                        else if (im.Type == ImageType.t20x30)
+                                        {
+
+                                        }
+                                    }
+
+                                    //Do something with image
+                                }
+                            }
+
+                           
 						}
 					}
 				}
