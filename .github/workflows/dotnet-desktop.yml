@@ -1,32 +1,25 @@
 name: .NET Core Desktop
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
-       matrix:
-           os: [self-hosted, self-hosted]
+      matrix:
+        os: [self-hosted, self-hosted]
     defaults:
       run:
         shell: cmd
     steps:
-    - uses: actions/checkout@v3.0.1
-      with:
-        fetch-depth: 0
-        command: echo hello
-        attempt_limit: 3
-        attempt_delay: 2000
+      - uses: actions/checkout@v3.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v3.0.1
+        with:
+          dotnet-version: '7'
 
-    
-    
-    - uses: actions/setup-dotnet@v3.0.1
-      with:
-        dotnet-version: '7'
-  
-    - run: |
-            NET STOP WAS /Y 
-            dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
-            NET START W3SVC
-             
+      - run: |
+          NET STOP WAS /Y 
+          dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+          NET START W3SVC
