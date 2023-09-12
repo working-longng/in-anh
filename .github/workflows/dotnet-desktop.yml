@@ -12,14 +12,16 @@ jobs:
       run:
         shell: cmd
     steps:
-    
-    
-    - uses: actions/checkout@v3.0.1
+    - uses: Wandalen/wretry.action@master
       with:
-        max_attempts: 2
-				retry_on: error
-				timeout_seconds: 5
-        fetch-depth: 0
+        action: actions/checkout@v3.0.1
+        with: |
+          fetch-depth: 0
+        attempt_limit: 3
+        attempt_delay: 2000
+
+    
+    
     - uses: actions/setup-dotnet@v3.0.1
       with:
         dotnet-version: '7'
