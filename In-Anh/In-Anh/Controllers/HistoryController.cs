@@ -54,30 +54,7 @@ namespace In_Anh.Controllers
             {
                 return View(orderLst);
             }
-            foreach (var item in data)
-            {
-                var port = 0;
-                if(item.Port == "192.168.1.4")
-                {
-                    port = 444;
-                }
-                else
-                {
-                    port = 446;
-                }
-                if (item.Images != null)
-                {
-                    foreach (var item1 in item.Images)
-                    {
-                        var lstTemp = new List<string>();
-                        foreach (var item2 in item1.OrginUrl)
-                        {
-                            lstTemp.Add(cdnpath + ":" + port + "\\" + item2);
-                        }
-                        item1.OrginUrl = lstTemp;
-                    }
-                }
-            }
+           
             return View(data);
         }
         public async Task<ActionResult> GetData(int page)
