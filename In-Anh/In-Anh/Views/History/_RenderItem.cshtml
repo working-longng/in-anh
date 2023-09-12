@@ -58,30 +58,30 @@
                                         {
                                             <tr>
                                                 <td>
-                                                    <div class="d-flex align-items-center mb-2">
+                                                    <div class="d-flex align-items-center">
                                                         <div class="flex-shrink-0">
                                                             @switch ((int)img.Type)
                                                             {
                                                                 case 0:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 1:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 2:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 3:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 4:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 5:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 6:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60" class="img-fluid">
+                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 default: break;
                                                             }
@@ -92,8 +92,8 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td> @img.OrginUrl.Count x  @(img?.Price.Value.ToString("##,##0")) đ </td>
-                                                <td class="text-end"> @((img?.Price.Value * img.OrginUrl.Count).Value.ToString("##,##0")) đ</td>
+                                                <td class="pricemd"> @img.OrginUrl.Count x  @(img?.Price.Value.ToString("##,##0")) đ </td>
+                                                <td class="pricemd"> @((img?.Price.Value * img.OrginUrl.Count).Value.ToString("##,##0")) đ</td>
                                             </tr>
                                         }
                                     }
@@ -128,20 +128,19 @@
                     <div class="card mb-4">
                         <!-- Shipping information -->
                         <div class="card-body">
-                            <h3 class="h6">Shipping Information</h3>
-                            <strong>FedEx</strong>
-                            <span><a href="#" class="text-decoration-underline" target="_blank">FF1234567890</a> <i class="bi bi-box-arrow-up-right"></i> </span>
+                            <h3 class="h6">Thông tin giao hàng</h3>
+                            @*<strong>FedEx</strong>
+                            <span><a href="#" class="text-decoration-underline" target="_blank">FF1234567890</a> <i class="bi bi-box-arrow-up-right"></i> </span>*@
                             <hr>
-                            <h3 class="h6">Address</h3>
+                            <h3 class="h6">Địa Chỉ: </h3>
                             <address>
-                                <strong>John Doe</strong><br>
-                                1355 Market St, Suite 900<br>
-                                San Francisco, CA 94103<br>
-                                <abbr title="Phone">P:</abbr> (123) 456-7890
+                                <strong>@item?.Name</strong><br>
+                                <p>@item?.Address</p>
+                                <abbr title="Phone"><b>SĐT:</b></abbr> @item?.Phone
                             </address>
                         </div>
                         <div class="card-body">
-                            <h3 class="h6">@lang?.Note</h3>
+                            <h3 class="h6">@lang?.Note:</h3>
                             <p>@item.Note</p>
                         </div>
                     </div>
