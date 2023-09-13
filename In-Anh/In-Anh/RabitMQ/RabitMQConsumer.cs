@@ -229,6 +229,7 @@ namespace In_Anh.RabitMQ
                 sb.Clear();
                 
             }
+            return true;
         }
     }
 }
