@@ -165,11 +165,11 @@ namespace In_Anh.RabitMQ
                 var client = new MongoClient(port == 444 ? _config["ImageMgDatabase:ConnectionString"] : _config["ImageMgDatabase:ConnectionString1"]);
 
                 var database = client.GetDatabase(_config["ImageMgDatabase:DatabaseName"]);
-                Thread.Sleep(2000);
+                
                 _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
-                Thread.Sleep(2000);
+                
                 var oldData = _ordersCollection.FindAsync(filter).Result.FirstOrDefault();
-                Thread.Sleep(2000);
+                
                 if (oldData != null)
                 {
                     var dataDetails = oldData.ListDetail.ToList();
@@ -215,6 +215,28 @@ namespace In_Anh.RabitMQ
                         var data = await _ordersCollection.FindOneAndUpdateAsync(filter, update);
                         return true;
                     }
+                    else
+                    {
+                        StringBuilder sb = new StringBuilder();
+
+                        sb.Append(1);
+
+
+                        // flush every 20 seconds as you do it
+                        File.AppendAllText("D:\\" + "log.txt", sb.ToString());
+                        sb.Clear();
+                    }
+                }
+                else
+                {
+                    StringBuilder sb = new StringBuilder();
+
+                    sb.Append(0);
+
+
+                    // flush every 20 seconds as you do it
+                    File.AppendAllText("D:\\" + "log.txt", sb.ToString());
+                    sb.Clear();
                 }
                 return false;
             }
