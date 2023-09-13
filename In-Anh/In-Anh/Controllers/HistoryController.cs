@@ -48,13 +48,16 @@ namespace In_Anh.Controllers
                 
             
             var data = orderqr?.OrderByDescending(y=>y.DayOrder).Take(pageSize).ToList();
-            
+
             
             if (data ==null || !data.Any())
             {
                 return View(orderLst);
             }
-           
+            foreach (var item in data)
+            {
+                item.Images = _imagesCollection.FindAsync(x => x.Id == item.OrderId).Result.ToList().GroupBy(x => x.Type).Select(x => new ImageModel() { Type = x.Key, Price = x.FirstOrDefault()?.Price, OrginUrl = x.ToList().SelectMany(y => y.OrginUrl).ToList() }).ToList();
+            }
             return View(data);
         }
         public async Task<ActionResult> GetData(int page)
@@ -103,6 +106,10 @@ namespace In_Anh.Controllers
                     Data = new { },
                     Message = "File Not Valid"
                 });
+            }
+            foreach (var item in data)
+            {
+                item.Images = _imagesCollection.FindAsync(x => x.Id == item.OrderId).Result.ToList().GroupBy(x => x.Type).Select(x => new ImageModel() { Type = x.Key, Price = x.FirstOrDefault()?.Price, OrginUrl = x.ToList().SelectMany(y => y.OrginUrl).ToList() }).ToList();
             }
             var partialViewHtml = await this.RenderViewAsync("_RenderItem", data, true);
             return new JsonResult(new

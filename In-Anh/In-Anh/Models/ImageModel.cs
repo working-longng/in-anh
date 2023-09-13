@@ -13,7 +13,7 @@ namespace In_Anh.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public List<string> Url { get; set; }
-        public List<string> OrginUrl { get; set; }
+        public List<string>? OrginUrl { get; set; }
         public ImageType Type { get; set; }
         public double? Price { get; set; }
         public string? Port { get; set; }

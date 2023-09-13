@@ -20,6 +20,7 @@ namespace In_Anh.RabitMQ
         public IConfiguration _config;
 
         public IMongoCollection<OrderModel> _ordersCollection;
+        public IMongoCollection<ImageModel> _imagesCollection;
 
         public readonly IRabitMQProducer _rabitMQProducer;
 
@@ -166,69 +167,23 @@ namespace In_Anh.RabitMQ
 
                 var database = client.GetDatabase(_config["ImageMgDatabase:DatabaseName"]);
 
-                _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
-
-                var oldData = _ordersCollection.FindAsync(filter).Result.FirstOrDefault();
-
-                if (oldData != null)
+                _imagesCollection = database.GetCollection<ImageModel>(_config["ImageMgDatabase:ImagesCollectionName"]);
+                await _imagesCollection.InsertOneAsync(new ImageModel()
                 {
-                    var dataDetails = oldData.ListDetail.ToList();
-                    var dataOrderDetail = dataDetails.Find(x => x.OrderId == orderID);
-                    if (dataOrderDetail != null)
-                    {
-                        var dataImg = dataOrderDetail.Images?.FirstOrDefault();
-                        if (dataImg == null)
-                        {
+                    Id = orderID,
+                    Type = type,
+                    Price = price,
+                    OrginUrl = new List<string> { cdn + ":" + port + "\\" + urlImg }
+                });
 
-                            dataOrderDetail.Images = new List<ImageModel>
-                        {
-                            new ImageModel()
-                            {
-                                Type = type,
-                                Price= price,
-                                OrginUrl= new List<string>{ cdn+":"+port+ "\\"+urlImg }
-                            }
-                        };
-                        }
-                        else
-                        {
-                            if (dataDetails.Find(x => x.OrderId == orderID)?.Images?.ToList().Find(x => x.Type == type) == null)
-                            {
-                                dataOrderDetail?.Images?.Add(
-                                new ImageModel()
-                                {
-                                    Type = type,
-                                    Price = price,
-                                    OrginUrl = new List<string> { cdn + ":" + port + "\\" + urlImg }
-                                }
-                            );
-                            }
-                            else
-                            {
-                                dataDetails.Find(x => x.OrderId == orderID)?.Images?.ToList().Find(x => x.Type == type)?.OrginUrl.Add(cdn + ":" + port + "\\" + urlImg);
-                            }
 
-                        }
 
-                        var update = Builders<OrderModel>.Update
-                         .Set(x => x.ListDetail, dataDetails);
-                        var rs = _ordersCollection.UpdateOneAsync(filter, update).Result;
-                        return true;
-                    }
-                    else
-                    {
-                        
-                    }
-                }
-                else
-                {
-                    
-                }
-                return false;
+
+                return true;
             }
             catch (Exception e)
             {
-                
+
 
             }
             return true;

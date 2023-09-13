@@ -66,25 +66,25 @@
                                                             @switch ((int)img.Type)
                                                             {
                                                                 case 0:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
+                                                                    <img src='@img.OrginUrl?.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 1:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
+                                                                    <img src='@img.OrginUrl?.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 2:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
+                                                                    <img src='@img.OrginUrl?.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 3:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
+                                                                    <img src='@img.OrginUrl?.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 4:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
+                                                                    <img src='@img.OrginUrl?.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 5:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
+                                                                    <img src='@img.OrginUrl?.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 case 6:
-                                                                    <img src='@img.OrginUrl.FirstOrDefault()' alt="" width="40" height="60">
+                                                                    <img src='@img.OrginUrl?.FirstOrDefault()' alt="" width="40" height="60">
                                                                     break;
                                                                 default: break;
                                                             }
@@ -96,13 +96,15 @@
                                                     </div>
                                                 </td>
                                                 @{
-                                                    var isShows = item.Images.Select(x => x.OrginUrl.Count).Sum() == item.Total ? true : false;
+                                                    var isShows = item.Images.Select(x => x.OrginUrl?.Count).Sum() == item.Total ? true : false;
 
                                                 }
                                                 @if (isShows)
                                                 {
-                                                    <td class="pricemd"> @img.OrginUrl.Count x  @(img?.Price.Value.ToString("##,##0")) đ </td>
-                                                    <td class="pricemd text-end"> @((img?.Price.Value * img.OrginUrl.Count).Value.ToString("##,##0")) đ</td>
+                                                    <td class="pricemd"> @img.OrginUrl?.Count x  @(img.Price.GetValueOrDefault().ToString("##,##0")) đ </td>
+                                                    <td class="pricemd text-end"> @((img.Price.GetValueOrDefault() * (img.OrginUrl == null ? 0 : img.OrginUrl.Count)).ToString("##,##0")) đ</td>
+                                                }else{
+                                                    <td class="pricemd"> Đang tải dữ liệu hình ảnh, bạn chờ xí nghe ^^ hiện đủ lên ngay </td>
                                                 }
                                             </tr>
                                         }
@@ -120,7 +122,7 @@
                                         double totalPrice = 0;
                                         var css = "";
                                         var cssHidden = "hidden";
-                                        Double.TryParse(item?.Images?.Select(x => x.Price * x.OrginUrl.Count())?.Sum().ToString(), out totalPrice);
+                                        Double.TryParse(item?.Images?.Select(x => x.Price * (x.OrginUrl == null ? 0 : x.OrginUrl.Count()))?.Sum().ToString(), out totalPrice);
                                         if (totalPrice > 50000)
                                         {
                                             shipprice = 0;
@@ -130,7 +132,7 @@
 
                                     }
                                     @{
-                                        var isShow = item.Images.Select(x => x.OrginUrl.Count).Sum() == item.Total ? true : false; ;
+                                        var isShow = item?.Images?.Select(x => x.OrginUrl?.Count).Sum() == item?.Total ? true : false; ;
                                     
                                     }
                                     
@@ -172,7 +174,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="h6">@lang?.Note:</h3>
-                            <p>@item.Note</p>
+                            <p>@item?.Note</p>
                         </div>
                     </div>
                 </div>

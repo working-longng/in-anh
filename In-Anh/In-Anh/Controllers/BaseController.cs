@@ -22,6 +22,7 @@ namespace In_Anh.Controllers
         public readonly IMongoCollection<UserModel> _usersCollection;
         public readonly IMongoCollection<OrderModel> _ordersCollection;
         public readonly IMongoCollection<HistoryModel> _historysCollection;
+        public readonly IMongoCollection<ImageModel> _imagesCollection;
         public readonly IRabitMQProducer _rabitMQProducer;
 
         public BaseController(IConfiguration config, IImageMgDatabase setting, IRabitMQProducer rabitMQProducer)
@@ -32,6 +33,7 @@ namespace In_Anh.Controllers
             _usersCollection = database.GetCollection<UserModel>(_config["ImageMgDatabase:UserCollectionName"]);
             _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
             _historysCollection = database.GetCollection<HistoryModel>(_config["ImageMgDatabase:HistoryCollectionName"]);
+            _imagesCollection = database.GetCollection<ImageModel>(_config["ImageMgDatabase:ImagesCollectionName"]);
             _rabitMQProducer = rabitMQProducer;
 
         }
