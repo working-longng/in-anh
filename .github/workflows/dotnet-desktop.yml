@@ -16,4 +16,5 @@ jobs:
       - run: |
           NET STOP WAS /Y 
           dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
+          Copy-Item ./publishCode/* D:/Site -Recurse -Force
           NET START W3SVC
