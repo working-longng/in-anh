@@ -19,7 +19,7 @@ namespace In_Anh.RabitMQ
 
         public IConfiguration _config;
 
-        public readonly IMongoCollection<OrderModel> _ordersCollection;
+        public  IMongoCollection<OrderModel> _ordersCollection;
 
         public readonly IRabitMQProducer _rabitMQProducer;
 
@@ -27,9 +27,7 @@ namespace In_Anh.RabitMQ
         public RabitMQConsumer(IConfiguration config)
         {
             _config = config;
-            var client = new MongoClient(_config["ImageMgDatabase:ConnectionString"]);
-            var database = client.GetDatabase(_config["ImageMgDatabase:DatabaseName"]);
-            _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
+           
 
         }
         private IModel channel = null;
@@ -146,7 +144,7 @@ namespace In_Anh.RabitMQ
                     break;
             }
             var filter = Builders<OrderModel>.Filter.And(Builders<OrderModel>.Filter.Where(x => x.ListDetail.Any(y => y.OrderId == orderID)));
-            var a = _ordersCollection.Find(filter).FirstOrDefault();
+            
             var ip = Dns.GetHostEntry(Dns.GetHostName())
    .AddressList
    .First(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
@@ -161,6 +159,11 @@ namespace In_Anh.RabitMQ
                 port = 446;
             }
            var cdn =  _config["Cdn:UrlCdn"];
+
+            var client = new MongoClient(port == 444 ? _config["ImageMgDatabase:ConnectionString"] : _config["ImageMgDatabase:ConnectionString1"]);
+            var database = client.GetDatabase(_config["ImageMgDatabase:DatabaseName"]);
+            _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
+            Thread.Sleep(1000);
             var oldData = _ordersCollection.FindAsync(filter).Result.FirstOrDefault();
             if (oldData != null)
             {
