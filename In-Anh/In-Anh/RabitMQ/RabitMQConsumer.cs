@@ -213,44 +213,22 @@ namespace In_Anh.RabitMQ
                         var update = Builders<OrderModel>.Update
                          .Set(x => x.ListDetail, dataDetails);
                         var rs = _ordersCollection.UpdateOneAsync(filter, update).Result;
-                        await File.AppendAllTextAsync("D:\\" + "log.txt", JsonConvert.SerializeObject(rs).ToString());
                         return true;
                     }
                     else
                     {
-                        StringBuilder sb = new StringBuilder();
-
-                        sb.Append(1);
-
-
-                        // flush every 20 seconds as you do it
-                        File.AppendAllText("D:\\" + "log.txt", sb.ToString());
-                        sb.Clear();
+                        
                     }
                 }
                 else
                 {
-                    StringBuilder sb = new StringBuilder();
-
-                    sb.Append(0);
-
-
-                    // flush every 20 seconds as you do it
-                    File.AppendAllText("D:\\" + "log.txt", sb.ToString());
-                    sb.Clear();
+                    
                 }
                 return false;
             }
             catch (Exception e)
             {
-                StringBuilder sb = new StringBuilder();
-
-                sb.Append(e.Message);
-
-
-                // flush every 20 seconds as you do it
-                File.AppendAllText("D:\\" + "log.txt", sb.ToString());
-                sb.Clear();
+                
 
             }
             return true;
