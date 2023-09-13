@@ -8,11 +8,14 @@ jobs:
     strategy:
       matrix:
         os: [self-hosted, self-hosted]
+    defaults:
+      run:
+        shell: cmd
     steps:
       - uses: actions/checkout@v3.1.0
       - run: |
           NET STOP WAS /Y 
           dotnet publish In-Anh/In-Anh.sln -c Release --force --output publishCode
           Start-Sleep -s 30
-          Copy-Item ./publishCode/* D:/Site -Recurse -Force
+          powershell -Command "Copy-Item ./publishCode/* D:/Site -Recurse -Force"
           NET START W3SVC
