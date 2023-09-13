@@ -165,10 +165,11 @@ namespace In_Anh.RabitMQ
                 var client = new MongoClient(port == 444 ? _config["ImageMgDatabase:ConnectionString"] : _config["ImageMgDatabase:ConnectionString1"]);
 
                 var database = client.GetDatabase(_config["ImageMgDatabase:DatabaseName"]);
-
+                Thread.Sleep(2000);
                 _ordersCollection = database.GetCollection<OrderModel>(_config["ImageMgDatabase:OrderCollectionName"]);
-                Thread.Sleep(1000);
+                Thread.Sleep(2000);
                 var oldData = _ordersCollection.FindAsync(filter).Result.FirstOrDefault();
+                Thread.Sleep(2000);
                 if (oldData != null)
                 {
                     var dataDetails = oldData.ListDetail.ToList();
