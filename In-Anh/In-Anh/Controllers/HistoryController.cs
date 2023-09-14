@@ -24,6 +24,7 @@ namespace In_Anh.Controllers
             ViewBag.Page = 0;
             ViewBag.PageSize = pageSize;
             ViewBag.IsLogin = false;
+            ViewBag.Current = "History";
             var lstId = GetOrderIdsUserCookies();
             var cdnpath = _config["Cdn:UrlCdn"];
             ViewBag.Cdn = cdnpath;

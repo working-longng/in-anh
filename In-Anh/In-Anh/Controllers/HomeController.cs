@@ -25,6 +25,7 @@ namespace In_Anh.Controllers
 			Console.WriteLine("   Asynchronous I/O threads: {0:N0}", io);
 			Languages lang = new Languages().LanguageVN();
             ViewBag.Language = lang;
+            ViewBag.Current = "Home";
             ViewBag.IsLogin = isLogin();
             if (isLogin())
             {
